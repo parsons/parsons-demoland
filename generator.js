@@ -12,7 +12,7 @@
 // The githubURL variable is attached to the link in the
 // top-right corner.
 // ————————————————————————————————————————————————————————————
-const introTitle = `Welcome to the DEMOLAND template site!`;
+const introTitle = `Welcome to the Parsons DEMOLAND site!`;
 const introSubtitle = `DEMOLAND is an open source website template that allows you to distribute editable code demos (HTML, CSS, JavaScript) entirely within your web browser. By&nbsp;<a href="https://gdwithgd.com/" target="_blank">GD&nbsp;with&nbsp;GD</a>.`;
 const info = `
 	<p>
@@ -31,7 +31,7 @@ const info = `
 		If you launch your own DEMOLAND, I’d appreciate it if you left these credits in. And <a href="mailto:gabriel@noreplica.com">sent me an email</a> just to share your work!
 	</p>
 `;
-const githubURL = `https://github.com/gabrieldrozdov/demoland-template`;
+const githubURL = `https://github.com/parsons/parsons-demoland`;
 
 // ————————————————————————————————————————————————————————————
 // DON’T EDIT THIS
