@@ -6,43 +6,15 @@
 		"color": "var(--pink)",
 		"demos": {
 			"example-demo-1": {
-				"name": "Example Demo 1",
+				"name": "A single HTML element",
 				"color": "var(--pink)"
 			},
 			"example-demo-2": {
-				"name": "Example Demo 2",
+				"name": "A few common HTML elements",
 				"color": "var(--pink)"
 			},
 			"example-demo-3": {
-				"name": "Example Demo 3",
-				"color": "var(--pink)"
-			},
-			"example-demo-4": {
-				"name": "Example Demo 4",
-				"color": "var(--pink)"
-			},
-			"example-demo-5": {
-				"name": "Example Demo 5",
-				"color": "var(--pink)"
-			},
-			"example-demo-6": {
-				"name": "Example Demo 6",
-				"color": "var(--pink)"
-			},
-			"example-demo-7": {
-				"name": "Example Demo 7",
-				"color": "var(--pink)"
-			},
-			"example-demo-8": {
-				"name": "Example Demo 8",
-				"color": "var(--pink)"
-			},
-			"example-demo-9": {
-				"name": "Example Demo 9",
-				"color": "var(--pink)"
-			},
-			"example-demo-10": {
-				"name": "Example Demo 10",
+				"name": "A complete HTML page",
 				"color": "var(--pink)"
 			}
 		}
