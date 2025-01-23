@@ -2,7 +2,7 @@
 	"week-1": {
 		"title": "Week 1",
 		"subtitle": "1/24/25",
-		"desc": "Coming soon!",
+		"desc": "Introduction to HTML",
 		"color": "var(--pink)",
 		"demos": {
 			"example-demo-1": {
