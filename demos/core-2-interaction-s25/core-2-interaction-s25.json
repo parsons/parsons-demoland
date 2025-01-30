@@ -18,5 +18,17 @@
 				"color": "var(--pink)"
 			}
 		}
+	},
+	"week-2": {
+		"title": "Week 2",
+		"subtitle": "1/31/25",
+		"desc": "A brief introduction (or review) of CSS.",
+		"color": "var(--green)",
+		"demos": {
+			"example-demo-1": {
+				"name": "Linking an external stylesheet",
+				"color": "var(--green)"
+			}
+		}
 	}
 }
