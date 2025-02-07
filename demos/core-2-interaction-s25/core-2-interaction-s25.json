@@ -30,5 +30,17 @@
 				"color": "var(--green)"
 			}
 		}
+	},
+	"week-3": {
+		"title": "Week 3",
+		"subtitle": "2/7/25",
+		"desc": "Exploring how designers consider structure, visual style, motion, and accessibility in the design of a single component in a design system.",
+		"color": "var(--red)",
+		"demos": {
+			"example-demo-1": {
+				"name": "An article card component",
+				"color": "var(--red)"
+			}
+		}
 	}
 }
