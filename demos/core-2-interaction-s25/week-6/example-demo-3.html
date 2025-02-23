@@ -3,9 +3,35 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Example Demo</title>
+	<title>Absolute v. Relative Units</title>
+
+	<style>
+		p {
+			padding: 10px;
+			border: 2px dotted blue;
+		}
+
+		.bypixels {
+			width: 200px;
+		}
+
+		.bypercent {
+			width: 25%; /* 25% of the width of the parent element */
+		}
+
+		.byviewportwidth {
+			width: 25vw; /* 25% of the viewport width */
+		}
+
+		.byviewportheight {
+			width: 25vh; /* 25% of the viewport height */
+		}
+	</style>
 </head>
 <body>
-	Hello world!
+	<p class="bypixels">Sized by pixel</p>
+	<p class="bypercent">Sized by percent</p>
+	<p class="byviewportwidth">Sized by viewport width</p>
+	<p class="byviewportheight">Sized by viewport height</p>
 </body>
 </html>

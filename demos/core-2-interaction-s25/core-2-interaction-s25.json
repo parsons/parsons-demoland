@@ -42,5 +42,33 @@
 				"color": "var(--red)"
 			}
 		}
+	},
+	"week-6": {
+		"title": "Week 6",
+		"subtitle": "2/28/25",
+		"desc": "We'll dive into the fundamental concept of a box as a container to hold text and other elements.",
+		"color": "var(--yellow)",
+		"demos": {
+			"example-demo-1": {
+				"name": "The Box Model",
+				"color": "var(--yellow)"
+			},
+			"example-demo-2": {
+				"name": "Inline v. Block Display",
+				"color": "var(--yellow)"
+			},
+			"example-demo-3": {
+				"name": "Absolute v. Relative Units",
+				"color": "var(--yellow)"
+			},
+			"example-demo-4": {
+				"name": "Form Basics",
+				"color": "var(--yellow)"
+			},
+			"example-demo-5": {
+				"name": "Sample Form Elements",
+				"color": "var(--yellow)"
+			}
+		}
 	}
 }
