@@ -70,5 +70,41 @@
 				"color": "var(--yellow)"
 			}
 		}
+	},
+	"week-7": {
+		"title": "Week 7",
+		"subtitle": "3/7/25",
+		"desc": "We'll dive into some parallel examples showing the same layout using different techniques.",
+		"color": "var(--blue)",
+		"demos": {
+			"example-demo-1": {
+				"name": "Centering: Using Margins",
+				"color": "var(--blue)"
+			},
+			"example-demo-2": {
+				"name": "Centering: Using Flexbox",
+				"color": "var(--blue)"
+			},
+			"example-demo-3": {
+				"name": "Centering: Using Grids",
+				"color": "var(--blue)"
+			},
+			"example-demo-4": {
+				"name": "Sample Layout: Inline Block",
+				"color": "var(--blue)"
+			},
+			"example-demo-5": {
+				"name": "Sample Layout: Flexbox",
+				"color": "var(--blue)"
+			},
+			"example-demo-6": {
+				"name": "Sample Layout: Grids",
+				"color": "var(--blue)"
+			},
+			"example-demo-7": {
+				"name": "Sample Layout: Grid Template Area",
+				"color": "var(--blue)"
+			}
+		}
 	}
 }
