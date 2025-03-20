@@ -1,11 +1,134 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Example Demo</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid Positioning Demo</title>
+    <style>
+        /* Reset and Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            height: 200vh; /* Enables scrolling */
+        }
+
+        /* Envelope (Container) */
+        .envelope {
+            display: grid;
+            grid-template-columns: repeat(5, 20%); /* 20% 20% 20% 20% 20% */
+            background-color: rgba(255,255,0,.75);
+
+            position: relative; /* Acts as a reference for children to use absolute position */
+        }
+
+
+        /* Column Style */
+        .column {
+            height: 200px;
+            padding: 1em;
+            text-align: center;
+        }
+
+        
+        /* Positioning Variations */
+        .static-box {
+            position: static; /* If position is not specified, static is the default */
+            width: 100%; /* This div follows the normal flow, so 100% will mean 20% of the envelope  */
+            
+            background-color: red;
+        }
+
+        .relative-box {
+            position: relative;
+            width: 100%; /* This div follows the normal flow, so 100% will mean 20% of the envelope  */
+            top: 10px;
+            left: 10px;
+
+            background-color: green;
+        }
+
+        .absolute-box {
+            position: absolute;
+            width: 20%; /* Out-of-flow: so 20% will mean 20% of the envelope  */
+            top: -100px; /* Out-of-flow: positioned according to the parent envelope */
+            left: 40%; /* Out-of-flow: positioned according to the parent envelope */
+
+            background-color: blue;
+            opacity: .75;
+            z-index: -10; /* Z-index by default is 0 for elements other than static */
+        }
+
+        .fixed-box {
+            position: fixed;
+            width: 20%; /* Out-of-flow: so 20% will mean 20% of the envelope  */      
+            top: 40vh; /* Out-of-flow: positioned according to the viewport */ 
+            right: 20%; /* Out-of-flow: positioned according to the viewport */ 
+
+            background-color: coral;
+        }
+
+        .sticky-box {
+            /* Sticky: Acts like relative, fixed, but also needs a parent container */
+            position: sticky; /* By default, is relative until its parent container crosses the threshold and becomes "stuck" */ 
+            /* Here it is specified by top; the element becomes "unstuck" when this element reaches the end of its parent container */
+            top: 100px; /* Defined against the viewport */
+
+            /* We have to specify the actual column because the previous two divs were 'taken-out' of the columns, so if we didn't specify this, then this div would be the 3rd column by default */
+            grid-column: 5/6; /* This is our last (5th) column */
+
+            background-color: fuchsia;
+        }
+
+        /* Spacing for scroll effect */
+        .spacer {
+            height: 40vh; /* Forces more scrolling */
+        }
+
+        a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 75%;
+            height: 25%;
+            margin: 0 auto;
+            background-color: white;
+            color: black;
+            text-decoration: none;
+            border-radius: 1em;
+
+            transition: transform 0.5s ease-in-out; /* property duration timing-function */
+        }
+
+        a:hover {
+            background-color: aqua;
+            transform: translate(0.5em, 0.5em); /* X, Y; think of this like relative positioning */
+            transition: transform 0.5s ease-in-out; /* property duration timing-function */
+            /* Translate is generally more efficient and less taxing on the processor; and so we use it for effects */
+        }
+
+
+    </style>
 </head>
 <body>
-	Hello world!
+
+    <div class="spacer"></div> <!-- Extra space to allow scrolling -->
+
+    <div class="envelope">
+        <div class="column static-box">Static</div>
+        <div class="column relative-box">Relative</div>
+        <div class="column absolute-box">Absolute</div>
+        <div class="column fixed-box">
+			Fixed
+            <a href="https://www.papertoilet.com/" target="_blank">Link</a>
+        </div>
+        <div class="column sticky-box">Sticky</div>
+
+        <div class="spacer"></div> <!-- To force the envelope to scroll -->
+    </div>
+
 </body>
 </html>

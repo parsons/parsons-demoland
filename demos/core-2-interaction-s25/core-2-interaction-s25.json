@@ -106,5 +106,21 @@
 				"color": "var(--blue)"
 			}
 		}
+	},
+	"week-8": {
+		"title": "Week 8",
+		"subtitle": "3/21/25",
+		"desc": "We'll dive into all of the ways you can position an element.",
+		"color": "var(--pink)",
+		"demos": {
+			"example-demo-1": {
+				"name": "Normal-Flow versus Out-of-Flow",
+				"color": "var(--pink)"
+			},
+			"example-demo-2": {
+				"name": "Positioning 6 Different Ways",
+				"color": "var(--pink)"
+			}
+		}
 	}
 }

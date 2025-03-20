@@ -1,11 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Example Demo</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flow Demo</title>
+    <style>
+        /* Reset and Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .envelope {
+            width: 75%;
+            margin: 2em auto;
+            padding: 1em;
+            font-size: 1.5em;
+            background-color: yellow;
+            position: relative;
+        }
+
+        .relative-box {
+            background-color: red;
+            color: white;
+            position: relative;
+            top: .5em;
+            left: .5em;
+        }
+
+        .absolute-box {
+            background-color: blue;
+            color: white;
+            position: absolute;
+            top: 1.5em;
+            left: 1.5em;
+        }
+
+        .fixed-box {
+            background-color: green;
+            color: white;
+            position: fixed;
+            bottom: 1.5em;
+            right: 1.5em;
+        }
+
+    </style>
 </head>
 <body>
-	Hello world!
+
+
+    <div class="envelope">
+        Most everything in a regular HTML document with CSS styling flows "normally." Boxes that have display set as "inline-block" flow one after another. Boxes displayed as "block" will stack one after another. Boxes within a parent container set with the display of "flex" will follow the specified flex box rules. Boxes within a parent container set with the display of "grid" will follow the specified row and column rules. Even specifying <span class="relative-box">relative</span> positioning will preserve the space that the element was originally supposed to be in. But, there are two special positioning properties like <span class="absolute-box">absolute</span> and <span class="fixed-box">fixed</span> that will take an element out of the normal flow. When that happens, it is as if that element was not there at all. Keep this especially in mind when you are using absolute and fixed child elements within a parent that has display set as flex or grid.
+    </div>
+
 </body>
 </html>
