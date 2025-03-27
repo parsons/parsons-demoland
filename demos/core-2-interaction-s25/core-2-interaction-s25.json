@@ -122,5 +122,21 @@
 				"color": "var(--pink)"
 			}
 		}
+	},
+	"week-9": {
+		"title": "Week 9",
+		"subtitle": "3/28/25",
+		"desc": "We'll be creating microinteractions with the help of CSS transforms, transitions, and animations.",
+		"color": "var(--green)",
+		"demos": {
+			"example-demo-1": {
+				"name": "Transforms, Transitions, and Animations",
+				"color": "var(--green)"
+			},
+			"example-demo-2": {
+				"name": "3D Transforms",
+				"color": "var(--green)"
+			}
+		}
 	}
 }

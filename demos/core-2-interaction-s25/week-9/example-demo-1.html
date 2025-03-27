@@ -1,11 +1,321 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Example Demo</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid of Microinteractions with CSS Transforms, Transitions, and Animations</title>
+
+    <!-- Use link for your variable fonts so that it loads properly -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:ital,opsz,wdth,wght,GRAD@0,8..144,50..150,100..900,-50..100;1,8..144,50..150,100..900,-50..100&display=swap" rel="stylesheet">
+
+
+    <style>
+        /* Reset Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .envelope {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr); /* fr means fractional width */
+            grid-template-rows: repeat(3, 1fr);
+            width: 100%;
+            height: 100vh;
+        }
+
+        .envelope > div { /* This is an advanced selector which basically means all of the immediate children DIVs of the parent .envelope will get this style */
+            display: grid;
+            place-items: center; /* Quick easy way to vertically and horizontally center something */
+            background-color: black;
+        }
+
+
+        /* Scale: Button */
+
+        button {
+            padding: 1em 2em;
+            font-size: 1.25em;
+            border: none;
+            border-radius: 2em;
+            transition: transform 0.5s ease,
+                         background-color 0.8s linear 0.5s; /* property, duration, easing function, delay */
+            /* Easing Functions: https://easings.net/ */
+        }
+
+        button:hover {
+            background-color: yellow;
+            transform: scale(1.25, 1.25); /* Accepts x, y scale; number or percentage */
+        }
+
+        button:active {
+            transform: scale(95%); /* Shorthand for both x and y */
+        }
+
+
+        /* Translate X: Toggle */
+
+        .toggle {
+            position: relative;
+            background-color: #ccc;
+
+            width: 100px;
+            height: 50px;
+            border-radius: 50px;
+
+            cursor: pointer; /* Allows the mouse cursor to become a pointer when hovering over this element */
+
+            transition: background-color 0.3s linear;
+        }
+
+        .knob {
+            background: white;
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+
+            position: absolute;
+            top: 4px;
+            left: 4px;
+
+            transition: transform 0.3s linear;
+        }
+
+        .toggle:hover {
+            background-color: grey;
+        }
+
+        .toggle:active {
+            background-color: limegreen;
+        }
+
+        .toggle:active > .knob {
+            transform: translate(50px, 0); /* x, y */
+        }
+
+        /* Rotate: Dial */
+
+        .dial {
+            position: relative;
+            background-color: #ccc;
+
+            width: 100px;
+            height: 100px;
+            border-radius: 50px;
+
+            cursor: pointer; /* Allows the mouse cursor to become a pointer when hovering over this element */
+
+            transition: background-color 0.3s linear;
+        }
+
+        .knob2 {
+            background: white;
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+
+            position: absolute;
+            top: 14px;
+            left: 14px;
+
+            transition: transform 1s linear;
+        }
+
+        .dial:hover {
+            background-color: grey;
+        }
+
+        .dial:active {
+            background-color: blue;
+        }
+
+        .dial:active > .knob2 {
+            transform-origin: 36px 36px; /* Expressed in x,y. By default, it is the center of the element: https://developer.mozilla.org/en-US/docs/Web/CSS/transform-origin */
+            transform: rotate(360deg);
+        }
+
+        /* Rotate and Translate: Hamburger Menu */
+        .hamburger {
+            display: block;
+            width: 90px;
+        }
+
+        /* Each div represents a line in the hamburger icon */
+        .hamburger > div {
+            background-color: white;
+            height: 10px; /* Each line is 10px high with a 16px margin above and below */
+            margin: 16px 0;
+            border-radius: 5px;
+            transition: transform 0.5s ease, 
+                        opacity 0.5s ease;
+        }
+
+        .hamburger:hover > div {
+            background-color: red;
+        }
+
+
+        .hamburger:hover > div:nth-child(1) { /* This is a way of specifying the specific child based on its order */
+            transform: translate(0, 26px) rotate(45deg); /* Move down 26px (10px height + 16px bottom margin) and rotate clockwise */
+            /* Order of the transform matters! https://developer.mozilla.org/en-US/docs/Web/CSS/transform */
+        }
+
+        .hamburger:hover > div:nth-child(2) {
+            opacity: 0; /* Fade out the middle line */
+        }
+
+        .hamburger:hover > div:nth-child(3) {
+            transform: translate(0, -26px) rotate(-45deg); /* Move up and rotate anticlockwise */
+        }
+
+
+        /* Animation: Beachball */
+
+        .beachball {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background: conic-gradient( /* https://developer.mozilla.org/en-US/docs/Web/CSS/gradient/conic-gradient */
+                red,
+                orange,
+                yellow,
+                green,
+                blue,
+                purple,
+                red
+            );
+        }
+
+        .beachball:hover {
+            transform-origin: 50% 50%; /* Percentage of the element; also the same as "center" or "0 0" in pixels */
+
+            /* The Long way...
+            https://developer.mozilla.org/en-US/docs/Web/CSS/animation
+            https://www.freecodecamp.org/news/css-transition-vs-css-animation-handbook/
+            */
+
+            animation-name: spin; /* Name of the keyframe animation */
+            animation-duration: 1.5s;
+            animation-timing-function: linear; /* Easing function */
+            animation-iteration-count: infinite; /* How many times does this run */
+            
+            /* The short way
+            animation: spin 1.5s linear infinite; 
+            */
+
+            /* Animation Tool: https://keyframes.app/animate */
+
+            /* You can also chain animations together: https://seven.hashnode.dev/chaining-animations-in-css */
+        }
+    
+        @keyframes spin { /* This name can be anything */
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg); /* One full rotation */
+            }
+        }
+
+        /* Notes on Animations: While you can animate almost anything, stick to lightweight properties like transform and opacity will be smoother (GPU-optimized). Properties like width/height, top/left/right/bottom will cause the entire layout to be recalculated and repainted and will be much slower. */
+
+
+
+        /* Animation: Variable Fonts */
+        /* If using an external source, make sure to use link rather than @import so that the fonts load properly */
+        /* https://fonts.withgoogle.com/roboto-serif */
+
+        /* Tips on animating letters: https://etceteratype.co/blog/animating-a-variable-font-with-css */
+
+
+        .myfont {
+            font-size: 4em;
+            color: white;
+
+            /* These properties are specific to this particular variable font */
+            /* https://fonts.google.com/specimen/Roboto+Serif/tester */
+            font-family: "Roboto Serif", serif;
+            font-weight: 100; /* 100 to 900 */
+            font-variation-settings: "grad" -50, /* -50 to 100 */
+                                    "wdth" 50; /* 50 to 150 */
+                                    
+        }
+
+        .myfont:hover {
+            animation: crazytext 2s ease infinite; /* Using the short form */
+        }
+
+        @keyframes crazytext {
+            0% {
+                font-weight: 100;
+                font-variation-settings: "grad" -50,
+                                          "wdth" 50;
+            }
+            25% {
+                font-weight: 900;
+                font-variation-settings: "grad" -50,
+                                         "wdth" 50;
+            }
+            50% {
+                font-weight: 900;
+                font-variation-settings: "grad" 100,
+                                         "wdth" 50;
+            }
+            75% {
+                font-weight: 100;
+                font-variation-settings: "grad" -50,
+                                         "wdth" 150;
+            }
+            100% {
+                font-weight: 100;
+                font-variation-settings: "grad" -50,
+                                          "wdth" 50;
+            }
+        }
+
+
+    </style>
 </head>
 <body>
-	Hello world!
+
+    <div class="envelope">
+        <div>
+            <!-- Scale: Button -->
+            <button>Scale</button>
+        </div>
+        <div>
+            <!-- Translate X: Toggle -->
+            <div class="toggle">
+                <div class="knob"></div>
+            </div>
+        </div>
+        <div>
+            <!-- Rotate: Dial -->
+            <div class="dial">
+                <div class="knob2"></div>
+            </div>
+        </div>
+        <div>
+            <!-- Rotate and Translate: Hamburger Menu -->
+            <!-- Using a link just for kicks -->
+            <a href="http://textfiles.com/underconstruction/" target="_blank" class="hamburger">
+                <div></div>
+                <div></div>
+                <div></div>
+            </a>
+        </div>
+        <div>
+            <!-- Animation: Beachball -->
+            <div class="beachball"></div>
+        </div>
+        <div>
+            <!-- Animation: Variable Fonts -->
+            <div class="myfont">Fugio</div>
+        </div>
+    </div>
+
 </body>
 </html>
