@@ -138,5 +138,17 @@
 				"color": "var(--green)"
 			}
 		}
+	},
+	"week-10": {
+		"title": "Week 10",
+		"subtitle": "4/4/25",
+		"desc": "We'll continue pushing the boundaries of CSS.",
+		"color": "var(--red)",
+		"demos": {
+			"example-demo-1": {
+				"name": "Experimental CSS",
+				"color": "var(--red)"
+			}
+		}
 	}
 }
