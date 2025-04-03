@@ -146,7 +146,7 @@
 		"color": "var(--red)",
 		"demos": {
 			"example-demo-1": {
-				"name": "Experimental CSS",
+				"name": "Advanced and Experimental CSS",
 				"color": "var(--red)"
 			}
 		}
