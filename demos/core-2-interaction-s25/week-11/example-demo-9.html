@@ -1,11 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Example Demo</title>
+	<title>Functions</title>
 </head>
+
 <body>
-	Hello world!
+	<script>
+		function simpleFunction(num1, num2) {
+			return num1 + num2
+		}
+
+		let result1 = simpleFunction(1, 2);
+		let result2 = simpleFunction(100, -100);
+
+		function isEven(num) {
+			if (num % 2 == 0) {
+				return true
+			} else {
+				return false
+			}
+		}
+
+		let result3 = isEven(2);
+		let result4 = isEven(3);
+	</script>
 </body>
+
 </html>

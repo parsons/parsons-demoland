@@ -150,5 +150,73 @@
 				"color": "var(--red)"
 			}
 		}
+	},
+	"week-11": {
+		"title": "Week 11",
+		"subtitle": "4/11/25",
+		"desc": "Introducing JavaScript, a way of dynamically altering a page’s content and style.",
+		"color": "var(--yellow)",
+		"demos": {
+			"example-demo-1": {
+				"name": "A Normal Website",
+				"color": "var(--yellow)"
+			},
+			"example-demo-2": {
+				"name": "Sneak Peek: Toggling Classes",
+				"color": "var(--yellow)"
+			},
+			"example-demo-3": {
+				"name": "Sneak Peek: Randomizing CSS",
+				"color": "var(--yellow)"
+			},
+			"example-demo-4": {
+				"name": "Sneak Peek: Adding HTML",
+				"color": "var(--yellow)"
+			},
+			"example-demo-5": {
+				"name": "Sneak Peek: Repeating Code",
+				"color": "var(--yellow)"
+			},
+			"example-demo-6": {
+				"name": "Sneak Peek: Generative Art",
+				"color": "var(--yellow)"
+			},
+			"example-demo-7": {
+				"name": "Variables",
+				"color": "var(--yellow)"
+			},
+			"example-demo-8": {
+				"name": "Operators",
+				"color": "var(--yellow)"
+			},
+			"example-demo-9": {
+				"name": "Functions",
+				"color": "var(--yellow)"
+			},
+			"example-demo-10": {
+				"name": "Conditionals",
+				"color": "var(--yellow)"
+			},
+			"example-demo-11": {
+				"name": "Targeting Elements and Adding Event Listeners",
+				"color": "var(--yellow)"
+			},
+			"example-demo-12": {
+				"name": "Modifying CSS",
+				"color": "var(--yellow)"
+			},
+			"example-demo-13": {
+				"name": "Modifying CSS, Dynamically",
+				"color": "var(--yellow)"
+			},
+			"example-demo-14": {
+				"name": "Toggling Classes",
+				"color": "var(--yellow)"
+			},
+			"weekly-challenge": {
+				"name": "Weekly Challenge",
+				"color": "var(--yellow)"
+			}
+		}
 	}
 }

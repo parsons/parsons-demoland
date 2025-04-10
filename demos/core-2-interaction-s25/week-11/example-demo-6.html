@@ -3,9 +3,53 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Example Demo</title>
+	<title>A normal website, with a twist</title>
+
+	<style>
+		body {
+			margin: 0;
+		}
+		#container {
+			width: 100vw;
+			height: 100dvh;
+			position: relative;
+		}
+		.floater {
+			position: absolute;
+			transition: .2s;
+		}
+	</style>
 </head>
 <body>
-	Hello world!
+	<div id="container"></div>
+
+	<script>
+		function generateFloaters() {
+			let temp = '';
+			for (let i=0; i<20; i++) {
+				temp += `<div class="floater"></div>`;
+			}
+			document.querySelector('#container').innerHTML = temp;
+		}
+
+		function animateFloaters() {
+			for (let floater of document.querySelectorAll('.floater')) {
+				floater.style.left = `${Math.random()*100}vw`;
+				floater.style.top = `${Math.random()*100}vh`;
+				floater.style.width = `${Math.random()*20}vw`;
+				floater.style.height = `${Math.random()*20}vh`;
+				floater.style.borderRadius = `${Math.random()*50}%`;
+				floater.style.transition = `${Math.random()}s`;
+
+				let red = Math.round(Math.random()*255);
+				let green = Math.round(Math.random()*255);
+				let blue = Math.round(Math.random()*255);
+				floater.style.backgroundColor = `rgb(${red}, ${green}, ${blue})`;
+			}
+		}
+
+		generateFloaters();
+		setInterval(animateFloaters, 1000);
+	</script>
 </body>
 </html>

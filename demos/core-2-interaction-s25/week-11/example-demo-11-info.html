@@ -1,0 +1,22 @@
+<h1>
+	<span>JavaScript</span>
+	Targeting elements and adding event listeners
+</h1>
+<p>
+	So far, we’ve had our *developer* hats on. How do we write JavaScript in a way that’s useful to the user?
+</p>
+<p>
+	We can run JavaScript on demand when we interact with an HTML element. Here’s how we do that:
+</p>
+<ol>
+	<li>Use <strong class="info-code">document.querySelector("")</strong> to <strong>target</strong> an element. If we’re targeting an element by class, we can say something like <span class="info-code">".className"</span>, or if we’re targeting by ID we can say <span class="info-code">"#className"</span>. The difference is whether we use a period or a hashtag/number sign.</li>
+	<li>Assign that element to a variable.</li>
+	<li>Use <strong class="info-code">.addEventListener()</strong> to run code when the element is interacted with.</li>
+</ol>
+<p>
+	There are a few special things about the function we’re using here:
+</p>
+<ul>
+	<li>It doesn’t return anything. Instead, it just runs some code. Anything a function does that it’s returned anything is called a <strong>side effect</strong>. In this case, we’re using the <strong class="info-code">alert()</strong> built-in function to cause an alert dialog to appear.</li>
+	<li>This function doesn’t have a name. That means we can’t refer to it from anywhere else. A function without a name is called an <strong>anonymous</strong> function.</li>
+</ul>
