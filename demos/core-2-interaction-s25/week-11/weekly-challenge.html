@@ -29,7 +29,7 @@
 			transition: .5s;
 		}
 
-		/* Finished class examples */
+		/* Finished class example */
 		.clean {
 			margin: 0 auto;
 			max-width: 40em;
@@ -39,23 +39,12 @@
 			font-size: 24px;
 			line-height: 1.4em;
 		}
-		.poetic {
-			font-family: "Georgia", serif;
-			letter-spacing: -0.1em;
-			text-align: center;
-			font-size: 80px;
-			word-spacing: 2em;
-			line-height: 3em;
-		}
 
-		/* Add your new styles here! */
+		/* Add your new classes here! */
 		.pretty {
 
 		}
 		.ugly {
-
-		}
-		.serious {
 
 		}
 	</style>
@@ -68,15 +57,20 @@
 		<h2>Finished examples</h2>
 		<div class="controls-buttons">
 			<button id="reset">Reset all styles</button>
-			<button id="buttonClean">Make the text *clean*</button>
-			<button id="buttonPoetic">Make the text *poetic*</button>
+			<button id="buttonClean">Make the text *clean*<br>(using classes)</button>
+			<button id="buttonPoetic">Make the text *poetic*<br>(using inline CSS)</button>
 		</div>
 
-		<h2>For you to finish</h2>
+		<h2>For you to finish, using <code>.classList</code>!</h2>
 		<div class="controls-buttons">
 			<button id="buttonPretty">Make the text *pretty*</button>
 			<button id="buttonUgly">Make the text *ugly*</button>
-			<button id="buttonSerious">Make the text *serious*</button>
+		</div>
+
+		<h2>For you to finish, using <code>.style</code>!</h2>
+		<div class="controls-buttons">
+			<button id="buttonScary">Make the text *scary*</button>
+			<button id="buttonFriendly">Make the text *friendly*</button>
 		</div>
 	</nav>
 	
@@ -87,8 +81,8 @@
 		<ol>
 			<li>I’ve added 4 buttons with unique IDs that don’t do anything as of now.</li>
 			<li>Assign each of these buttons to new <strong>variables</strong> using JavaScript in the <code>&lt;script&gt;</code> element. Hint: you’ll need to use <code>document.querySelector()</code>!</li>
-			<li>Make each of those buttons interactive by using <code>.addEventListener()</code>. Inside of the listener’s function, add the relevant CSS class to the <code>container</code> element. Note that I’ve already created placeholder class names for you.</li>
-			<li>Add styles to each class in CSS portion of this document that corresponds to the class you just added via JavaScript.</li>
+			<li>Make each of those buttons interactive by using <code>.addEventListener()</code> and have them customize the CSS for the text you’re currently reading. As indicated, use <code>.classList</code> to add CSS classes or use <code>.style</code> to add inline CSS styles.</li>
+			<li>Note: for the <code>.classList</code> buttons, add styles to each class in CSS portion of this document that corresponds to the classes you just add via JavaScript.</li>
 		</ol>
 		<p>And like magic, the site is now dynamic without needing to reload the page at all!</p>
 	</main>
@@ -96,25 +90,39 @@
 	<script>
 		let container = document.querySelector('#container');
 
-		// Reset all styles
-		let buttonReset = document.querySelector('#reset');
-		buttonReset.addEventListener('click', function() {
+		// A reusable function for resetting all styles
+		function resetAllStyles() {
 			container.removeAttribute('class'); // This removes all previous classes
-		})
+			container.removeAttribute('style'); // This removes all previous styles
+		}
+
+		// Reset all styles
+		// If we call a named function in an event listener, we write it without parentheses ()
+		let buttonReset = document.querySelector('#reset');
+		buttonReset.addEventListener('click', resetAllStyles)
 
 		// *Clean* button example
+		// This button adds a CSS class
 		let buttonClean = document.querySelector('#buttonClean');
 		buttonClean.addEventListener('click', function() {
-			container.removeAttribute('class'); // This removes all previous classes
+			resetAllStyles();
 			container.classList.add('clean');
 		})
 
 		// *Poetic* button example
+		// This button adds inline CSS
 		let buttonPoetic = document.querySelector('#buttonPoetic');
 		buttonPoetic.addEventListener('click', function() {
-			container.removeAttribute('class'); // This removes all previous classes
-			container.classList.add('poetic');
+			resetAllStyles();
+			container.style.fontFamily = "Georgia";
+			container.style.letterSpacing = "-0.1em";
+			container.style.textAlign = "center";
+			container.style.fontSize = "80px";
+			container.style.wordSpacing = "2em";
+			container.style.lineHeight = "3em";
 		})
+
+		// ———— USE .classList FOR THESE BUTTONS ———— //
 
 		// Add your code for the *pretty* button here!
 
@@ -122,7 +130,12 @@
 		// Add your code for the *ugly* button here!
 
 
-		// Add your code for the *serious* button here!
+		// ———— USE .style FOR THESE BUTTONS ———— //
+
+		// Add your code for the *scary* button here!
+
+
+		// Add your code for the *friendly* button here!
 
 
 	</script>
