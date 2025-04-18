@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Randomization</title>
+</head>
+<body>
+
+	<script>
+
+		// Let’s say we want a number between -40 and 60
+		let min = -40;
+		let max = 60;
+		
+		// ————————
+		// STEP 1
+		// Generate a random decimal number between 0 and 1 (float)
+
+		let randomFloat = Math.random()
+
+		// ————————
+		// STEP 2
+		// Calculate the total range of numbers you want
+		// Subtract the max by the min
+
+		let range = max - min;
+
+		// ————————
+		// STEP 3
+		// Multiply your random float by the range
+		// This will result in a positive number
+
+		let randomPositive = randomFloat * range;
+
+		// ————————
+		// STEP 4
+		// Add the minimum possible number
+		// This will get you a number in the correct range
+
+		let randomFullRange = randomPositive + min;
+
+		// ————————
+		// STEP 5 (optional)
+		// Round your number up, down, or automatically
+
+		let roundedUp = Math.ceil(randomFullRange);
+		let roundedDown = Math.floor(randomFullRange);
+		let roundedAuto = Math.round(randomFullRange);
+
+		// ————————
+		// As a function (from MDN: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random#getting_a_random_number_between_two_values)
+
+		function getRandomArbitrary(min, max) {
+			return Math.random() * (max - min) + min;
+		}
+
+		function getRandomInt(min, max) {
+			const minCeiled = Math.ceil(min);
+			const maxFloored = Math.floor(max);
+			return Math.floor(Math.random() * (maxFloored - minCeiled) + minCeiled); // The maximum is exclusive and the minimum is inclusive
+		}
+
+	</script>
+</body>
+</html>

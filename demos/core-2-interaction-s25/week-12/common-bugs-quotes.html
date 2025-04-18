@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Common Bugs</title>
+</head>
+<body>
+	<script>
+
+		// —————————
+		// EXAMPLE 1
+		// We can use either single quotes or double quotes
+		// We just need to be consistent
+		// If we forget an end quote, we’ll get an error
+
+		let myVar1 = "Hello!"; // double quotes
+		let myVar2 = 'Goodbye!'; // single quotes
+		// let test1 = "Hello!'; // error, mismatching quotes
+
+		// —————————
+		// EXAMPLE 2
+		// If we need to use quotes in quotes, we need to either alternate styles or use "escape characters"
+
+		let myVar3 = "It's lecture time!"; // alternate quotes
+		let myVar4 = 'It\'s lecture time!'; // escape character
+		// let test2 = 'It's lecture time!'; // error, string ends early
+
+		// —————————
+		// EXAMPLE 3
+		// We can also use the back tick character to create a string
+		// This is the symbol in the top-left of your keyboard
+
+		let myVar5 = `It's lecture time!`;
+
+		// —————————
+		// EXAMPLE 4
+		// Use quotes to create strings
+		// If you want different data types or to reference variables, don’t use quotes
+
+		let myVar6 = "Hello!";
+		let myVar7 = 1 + 1; // 2, adding numbers
+		let myVar8 = "1" + "1"; // 11, adding strings
+		// let test3 = Hello! // error, not a string because no quotes
+
+	</script>
+</body>
+</html>

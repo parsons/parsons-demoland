@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Weekly Challenge</title>
+</head>
+<body>
+
+	<button id="buttonPrev">Previous fortune</button>
+	<button id="buttonNext">Next fortune</button>
+	<button id="buttonRandom">Random fortune</button>
+	<div id="output">You will have a <span style='font-size: 40px; color: blue;'>GLORIOUS</span> day.</div>
+
+	<script>
+		
+		// Array of all your fortunes
+		// TODO: Add 10 more strings to this array
+		let fortunes = [
+			"You will have a <span style='font-size: 40px; color: blue;'>GLORIOUS</span> day.",
+			"You will consume much <span style='letter-spacing: 1em; color: orange;'>cheese</span>.",
+			"TODO",
+			"TODO",
+			"TODO",
+			"TODO",
+			"TODO",
+			"TODO",
+			"TODO",
+			"TODO",
+			"TODO",
+			"TODO",
+		]
+
+		// Global variable to track your current fortune
+		let currentFortuneIndex = 0;
+
+		// Output element
+		let output = document.querySelector('#output');
+
+		// ——————————
+		// This function has already been started for you
+
+		function nextFortune() {
+			currentFortuneIndex = currentFortuneIndex + 1; // same as currentFortuneIndex++;
+			
+			if (currentFortuneIndex == fortunes.length) {
+				// TODO: Wrap the index back to 0 when it's too high!
+				alert("Finish this code!");
+			}
+
+			output.innerHTML = fortunes[currentFortuneIndex];
+		}
+
+		let buttonNext = document.querySelector("#buttonNext");
+		buttonNext.addEventListener('click', nextFortune);
+
+		// ——————————
+		// TODO: Finish this function!
+
+		function prevFortune() {
+			alert("Finish this code!");
+		}
+
+		let buttonPrev = document.querySelector("#buttonPrev");
+		buttonPrev.addEventListener('click', prevFortune);
+
+		// ——————————
+		// TODO: Finish this function!
+
+		function randomFortune() {
+			alert("Finish this code!");
+		}
+
+		let buttonRandom = document.querySelector("#buttonRandom");
+		buttonRandom.addEventListener('click', randomFortune);
+
+	</script>
+	
+</body>
+</html>

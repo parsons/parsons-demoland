@@ -218,5 +218,85 @@
 				"color": "var(--yellow)"
 			}
 		}
+	},
+	"week-12": {
+		"title": "Week 12",
+		"subtitle": "4/11/25",
+		"desc": "Arrays and randomization.",
+		"color": "var(--blue)",
+		"demos": {
+			"last-weeks-challenge": {
+				"name": "Last Week’s Challenge",
+				"color": "var(--blue)"
+			},
+			"common-bugs-naming-variables": {
+				"name": "Common Bugs: Naming Variables",
+				"color": "var(--blue)"
+			},
+			"common-bugs-quotes": {
+				"name": "Common Bugs: Quotes",
+				"color": "var(--blue)"
+			},
+			"common-bugs-brackets": {
+				"name": "Common Bugs: Brackets",
+				"color": "var(--blue)"
+			},
+			"recap": {
+				"name": "Recap: Variables, Operators, Conditionals, and Events",
+				"color": "var(--yellow)"
+			},
+			"changing-content": {
+				"name": "Changing Content",
+				"color": "var(--yellow)"
+			},
+			"arrays": {
+				"name": "Arrays",
+				"color": "var(--green)"
+			},
+			"using-arrays-1": {
+				"name": "Arrays: Navigating Entries",
+				"color": "var(--green)"
+			},
+			"using-arrays-2": {
+				"name": "Arrays: Edge Cases",
+				"color": "var(--green)"
+			},
+			"common-bugs-scope": {
+				"name": "Common Bugs: Scope",
+				"color": "var(--green)"
+			},
+			"using-arrays-3": {
+				"name": "Arrays: Moving Backwards",
+				"color": "var(--green)"
+			},
+			"using-arrays-4": {
+				"name": "Arrays: Putting It Together",
+				"color": "var(--green)"
+			},
+			"using-arrays-5": {
+				"name": "Arrays: Other Kinds of Data",
+				"color": "var(--green)"
+			},
+			"randomization": {
+				"name": "Randomization",
+				"color": "var(--red)"
+			},
+			"using-randomization-1": {
+				"name": "Randomization: Within a Range",
+				"color": "var(--red)"
+			},
+			"using-randomization-1a": {
+				"name": "Randomization: Applied to CSS",
+				"color": "var(--red)"
+			},
+			"using-randomization-2": {
+				"name": "Randomization: Random Entry in an Array",
+				"color": "var(--red)"
+			},
+			"weekly-challenge": {
+				"name": "Weekly Challenge",
+				"color": "var(--pink)"
+			}
+		}
 	}
 }
