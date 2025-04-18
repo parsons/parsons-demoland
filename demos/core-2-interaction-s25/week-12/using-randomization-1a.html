@@ -13,7 +13,7 @@
 </head>
 <body>
 
-	<button id="myButton">Click me!</button>
+	<button id="myButton">Hover over me!</button>
 
 	<script>
 
@@ -22,7 +22,7 @@
 		}
 
 		let button = document.querySelector("#myButton");
-		button.addEventListener('click', function() {
+		button.addEventListener('mouseover', function() {
 			button.style.fontSize = getRandomArbitrary(10, 100) + "px";
 			button.style.letterSpacing = getRandomArbitrary(-.5, 2) + "em";
 			button.style.transform = "rotate(" + getRandomArbitrary(-180, 180) + "deg)";
