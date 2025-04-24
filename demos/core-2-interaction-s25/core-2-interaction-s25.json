@@ -298,5 +298,57 @@
 				"color": "var(--pink)"
 			}
 		}
+	},
+	"week-13": {
+		"title": "Week 13",
+		"subtitle": "4/25/25",
+		"desc": "Repeating code, loops, and libraries.",
+		"color": "var(--pink)",
+		"demos": {
+			"last-weeks-challenge": {
+				"name": "Last Week’s Challenge",
+				"color": "var(--pink)"
+			},
+			"sneak-peek": {
+				"name": "Sneak Peek",
+				"color": "var(--pink)"
+			},
+			"creating-new-elements": {
+				"name": "Creating New Elements",
+				"color": "var(--green)"
+			},
+			"template-literals": {
+				"name": "Template Literals",
+				"color": "var(--green)"
+			},
+			"repeating-code": {
+				"name": "Repeating Code",
+				"color": "var(--green)"
+			},
+			"while-loops": {
+				"name": "\"while\" Loops",
+				"color": "var(--blue)"
+			},
+			"for-loops": {
+				"name": "\"for\" Loops",
+				"color": "var(--blue)"
+			},
+			"looping-through-an-array": {
+				"name": "Looping Through an Array",
+				"color": "var(--blue)"
+			},
+			"targeting-multiple-elements": {
+				"name": "Targeting Multiple Elements",
+				"color": "var(--blue)"
+			},
+			"javascript-libraries": {
+				"name": "JavaScript Libraries",
+				"color": "var(--blue)"
+			},
+			"weekly-challenge": {
+				"name": "Weekly Challenge",
+				"color": "var(--blue)"
+			}
+		}
 	}
 }

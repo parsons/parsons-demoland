@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Weekly Challenge</title>
+</head>
+<body>
+
+	<button id="buttonPrev">Previous fortune</button>
+	<button id="buttonNext">Next fortune</button>
+	<button id="buttonRandom">Random fortune</button>
+	<div id="output">Example fortune <span style='font-size: 40px; color: blue;'>1</span></div>
+
+	<script>
+		
+		// Array of all your fortunes
+		let fortunes = [
+			"Example fortune <span style='font-size: 40px; color: blue;'>1</span>",
+			"Example fortune <span style='font-size: 40px; color: blue;'>2</span>",
+			"Example fortune <span style='font-size: 40px; color: blue;'>3</span>",
+			"Example fortune <span style='font-size: 40px; color: blue;'>4</span>",
+			"Example fortune <span style='font-size: 40px; color: blue;'>5</span>",
+			"Example fortune <span style='font-size: 40px; color: blue;'>6</span>",
+			"Example fortune <span style='font-size: 40px; color: blue;'>7</span>",
+			"Example fortune <span style='font-size: 40px; color: blue;'>8</span>",
+			"Example fortune <span style='font-size: 40px; color: blue;'>9</span>",
+			"Example fortune <span style='font-size: 40px; color: blue;'>10</span>"
+		]
+
+		// Global variable to track your current fortune
+		let currentFortuneIndex = 0;
+
+		// Output element
+		let output = document.querySelector('#output');
+
+		// ——————————
+
+		function nextFortune() {
+			// Increase the fortune index by 1
+			currentFortuneIndex++;
+			
+			// If too high, set back to the first index
+			if (currentFortuneIndex == fortunes.length) {
+				currentFortuneIndex = 0;
+			}
+
+			// Output the fortune at that index
+			output.innerHTML = fortunes[currentFortuneIndex];
+		}
+
+		let buttonNext = document.querySelector("#buttonNext");
+		buttonNext.addEventListener('click', nextFortune);
+
+		// ——————————
+
+		function prevFortune() {
+			// Decrease the fortune index by 1
+			currentFortuneIndex--;
+			
+			// If too low, set to the highest possible index
+			if (currentFortuneIndex < 0) {
+				currentFortuneIndex = fortunes.length - 1;
+			}
+
+			// Output the fortune at that index
+			output.innerHTML = fortunes[currentFortuneIndex];
+		}
+
+		let buttonPrev = document.querySelector("#buttonPrev");
+		buttonPrev.addEventListener('click', prevFortune);
+
+		// ——————————
+
+		function randomFortune() {
+			// Get a random index number
+			currentFortuneIndex = Math.floor(Math.random()*fortunes.length);
+
+			// Output the fortune at that index
+			output.innerHTML = fortunes[currentFortuneIndex];
+		}
+
+		let buttonRandom = document.querySelector("#buttonRandom");
+		buttonRandom.addEventListener('click', randomFortune);
+
+	</script>
+	
+</body>
+</html>

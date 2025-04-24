@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<div id="container1"></div>
+	<div id="container2"></div>
+
+	<script>
+		let fish = [
+			"koi",
+			"gold",
+			"trout",
+			"carp",
+			"salmon",
+			"tuna"
+		]
+
+		// —————————
+		// METHOD 1
+		// Use a "for" loop to incremenent the counter variable
+
+		let container1 = document.querySelector("#container1");
+
+		for (let i=0; i<fish.length; i++) {
+			let entry = fish[i];
+			container1.textContent += entry;
+		}
+
+		// —————————
+		// METHOD 2
+		// Use a "for...of" loop to navigate the array, one entry at a time
+
+		let container2 = document.querySelector("#container2");
+
+		for (let entry of fish) {
+			container2.textContent += entry;
+		}
+	</script>
+</body>
+</html>
