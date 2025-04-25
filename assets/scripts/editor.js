@@ -463,6 +463,9 @@ function populateInfo() {
 	const title = document.querySelector('.title');
 	for (let chapterKey of Object.keys(bookData)) {
 		let chapter = bookData[chapterKey];
+		if (chapter['active'] == false) {
+			continue
+		}
 		let firstDemo = Object.keys(chapter['demos'])[0];
 		let chapterSubtitle = '';
 		if (chapter['subtitle'] != '') {
