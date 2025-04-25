@@ -4,6 +4,7 @@
 		"subtitle": "1/24/25",
 		"desc": "A brief introduction (or review) of HTML.",
 		"color": "var(--pink)",
+		"active": true,
 		"demos": {
 			"example-demo-1": {
 				"name": "A single HTML element",
@@ -24,6 +25,7 @@
 		"subtitle": "1/31/25",
 		"desc": "A brief introduction (or review) of CSS.",
 		"color": "var(--green)",
+		"active": true,
 		"demos": {
 			"example-demo-1": {
 				"name": "Linking an external stylesheet",
@@ -36,6 +38,7 @@
 		"subtitle": "2/7/25",
 		"desc": "Exploring how designers consider structure, visual style, motion, and accessibility in the design of a single component in a design system.",
 		"color": "var(--red)",
+		"active": true,
 		"demos": {
 			"example-demo-1": {
 				"name": "An article card component",
@@ -48,6 +51,7 @@
 		"subtitle": "2/28/25",
 		"desc": "We'll dive into the fundamental concept of a box as a container to hold text and other elements.",
 		"color": "var(--yellow)",
+		"active": true,
 		"demos": {
 			"example-demo-1": {
 				"name": "The Box Model",
@@ -76,6 +80,7 @@
 		"subtitle": "3/7/25",
 		"desc": "We'll dive into some parallel examples showing the same layout using different techniques.",
 		"color": "var(--blue)",
+		"active": true,
 		"demos": {
 			"example-demo-1": {
 				"name": "Centering: Using Margins",
@@ -112,6 +117,7 @@
 		"subtitle": "3/21/25",
 		"desc": "We'll dive into all of the ways you can position an element.",
 		"color": "var(--pink)",
+		"active": true,
 		"demos": {
 			"example-demo-1": {
 				"name": "Normal-Flow versus Out-of-Flow",
@@ -128,6 +134,7 @@
 		"subtitle": "3/28/25",
 		"desc": "We'll be creating microinteractions with the help of CSS transforms, transitions, and animations.",
 		"color": "var(--green)",
+		"active": true,
 		"demos": {
 			"example-demo-1": {
 				"name": "Transforms, Transitions, and Animations",
@@ -144,6 +151,7 @@
 		"subtitle": "4/4/25",
 		"desc": "We'll continue pushing the boundaries of CSS.",
 		"color": "var(--red)",
+		"active": true,
 		"demos": {
 			"example-demo-1": {
 				"name": "Advanced and Experimental CSS",
@@ -156,6 +164,7 @@
 		"subtitle": "4/11/25",
 		"desc": "Introducing JavaScript, a way of dynamically altering a page’s content and style.",
 		"color": "var(--yellow)",
+		"active": true,
 		"demos": {
 			"example-demo-1": {
 				"name": "A Normal Website",
@@ -224,6 +233,7 @@
 		"subtitle": "4/11/25",
 		"desc": "Arrays and randomization.",
 		"color": "var(--blue)",
+		"active": true,
 		"demos": {
 			"last-weeks-challenge": {
 				"name": "Last Week’s Challenge",
@@ -304,6 +314,7 @@
 		"subtitle": "4/25/25",
 		"desc": "Repeating code, loops, and libraries.",
 		"color": "var(--pink)",
+		"active": true,
 		"demos": {
 			"last-weeks-challenge": {
 				"name": "Last Week’s Challenge",
@@ -311,6 +322,10 @@
 			},
 			"sneak-peek": {
 				"name": "Sneak Peek",
+				"color": "var(--pink)"
+			},
+			"recap": {
+				"name": "Recap",
 				"color": "var(--pink)"
 			},
 			"creating-new-elements": {
@@ -348,6 +363,47 @@
 			"weekly-challenge": {
 				"name": "Weekly Challenge",
 				"color": "var(--blue)"
+			}
+		}
+	},
+	"week-14": {
+		"title": "Week 14",
+		"subtitle": "5/2/25",
+		"desc": "Objects, APIs, and input elements.",
+		"color": "var(--green)",
+		"active": false,
+		"demos": {
+			"last-weeks-challenge": {
+				"name": "Last Week’s Challenge",
+				"color": "var(--green)"
+			},
+			"sneak-peek": {
+				"name": "Sneak Peek",
+				"color": "var(--green)"
+			},
+			"recap": {
+				"name": "Recap",
+				"color": "var(--green)"
+			},
+			"inputs": {
+				"name": "Inputs",
+				"color": "var(--pink)"
+			},
+			"building-an-interface": {
+				"name": "Building an Interface",
+				"color": "var(--pink)"
+			},
+			"objects": {
+				"name": "Objects",
+				"color": "var(--pink)"
+			},
+			"tracking-settings-with-objects": {
+				"name": "Tracking Settings with Objects",
+				"color": "var(--pink)"
+			},
+			"apis": {
+				"name": "APIs",
+				"color": "var(--pink)"
 			}
 		}
 	}

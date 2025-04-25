@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Recap</title>
+</head>
+<body>
+
+	<script>
+
+		// ————————————————
+		// ARRAYS
+
+		// Arrays and indices
+		let dogs = [
+			"pug",
+			"beagle",
+			"lab",
+			"poodle"
+		]
+		dogs[0]; // first entry
+		dogs[dogs.length-1]; // last entry
+
+		// Edge cases
+		let index = 0;
+
+		index--; // decrease index by 1, can also write index = index - 1
+		if (index < 0) {
+			index = dogs.length - 1; // reset for below 0
+		}
+		
+		index++; // increase index by 1, can also write index = index + 1
+		if (index == dogs.length) {
+			index = 0; // reset if past the last index
+		}
+
+		
+		// ————————————————
+		// RANDOMIZATION
+		
+		// Generate a random number between 0 and 1
+		Math.random();
+
+		// Generate a random number in a range
+		function getRandomArbitrary(min, max) {
+			return Math.random() * (max - min) + min;
+		}
+		getRandomArbitrary(-100, 100);
+
+		function getRandomInt(min, max) {
+			const minCeiled = Math.ceil(min);
+			const maxFloored = Math.floor(max);
+			return Math.floor(Math.random() * (maxFloored - minCeiled) + minCeiled); // The maximum is exclusive and the minimum is inclusive
+		}
+		getRandomInt(-100, 100);
+
+		// Get random entry from an array
+		function randomEntry(arr) {
+			let randomIndex = Math.floor(Math.random()*arr.length);
+			return arr[randomIndex];
+		}
+		randomEntry(dogs);
+
+	</script>
+</body>
+</html>
