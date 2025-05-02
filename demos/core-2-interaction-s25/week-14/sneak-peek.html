@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Wikipedia Randomizer</title>
+
+	<style>
+		* {
+			box-sizing: border-box;
+			margin: 0;
+			padding: 0;
+		}
+		.container {
+			display: flex;
+			flex-wrap: wrap;
+			padding: 10px;
+			gap: 10px;
+		}
+		.container a {
+			flex-grow: 1;
+			text-decoration: none;
+			font-family: sans-serif;
+			background-color: blue;
+			color: white;
+			text-align: center;
+			padding: 10px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+		.container a:active {
+			background-color: black !important;
+		}
+	</style>
+
+	<!-- Import Tone.js -->
+	<script src="https://cdn.jsdelivr.net/npm/tone@latest/build/Tone.js"></script>
+</head>
+
+<body>
+
+	<div class="container"></div>
+
+	<script>
+		// ———————————
+		// Tone.js code from last week
+		let synth = new Tone.Synth().toDestination();
+		function playRandomNote() {
+			Tone.start();
+			let notes = ["C", "D", "E", "F", "G", "A", "B"];
+			let randomOctave = Math.round(Math.random() * 5 + 1);
+			let randomNote = notes[Math.floor(Math.random() * notes.length)];
+			synth.triggerAttackRelease(randomNote + randomOctave, "64n");
+		}
+		// ———————————
+
+		// This is a long URL that fetches random articles using Wikipedia’s random API
+		// More info here: https://www.mediawiki.org/wiki/API:Random
+		let url = "https://en.wikipedia.org/w/api.php?origin=*&action=query&format=json&list=random&rnnamespace=0&rnlimit=200";
+
+		// We use fetch to get data from APIs
+		fetch(url)
+			.then(function (response) { return response.json(); }) // tries to return a JSON file
+			.then(function (response) {
+
+				// This is the raw JSON data from Wikipedia
+				// This is just a JavaScript object
+				console.log(response);
+
+				// We want to look at one specific entry in the object
+				// This contains all the articles we fetched
+				let wikipediaData = response.query.random;
+				console.log(wikipediaData);
+				
+				// Go through all the keys in the wikipediaData object
+				for (let key in wikipediaData) {
+
+					// Get the entry for each key
+					let entry = wikipediaData[key];
+
+					// Get the title of the entry
+					let articleName = entry.title;
+
+					// Create a new element
+					let newLink = document.createElement('a');
+					newLink.href = `https://en.wikipedia.org/wiki/${articleName}`; // the actual article URL
+					newLink.target = "_blank"; // open in new tab
+					newLink.textContent = articleName; // the article name
+
+					// Add the element to the container
+					let container = document.querySelector('.container');
+					container.append(newLink);
+
+					// Make the links play sounds on hover
+					newLink.addEventListener('mouseenter', function() {
+						playRandomNote();
+
+						// Randomize the links color
+						let red = Math.round(Math.random()*255);
+						let green = Math.round(Math.random()*255);
+						let blue = Math.round(Math.random()*255);
+						newLink.style.backgroundColor = `rgb(${red}, ${green}, ${blue})`;
+					});
+				}
+
+			})
+
+	</script>
+</body>
+
+</html>

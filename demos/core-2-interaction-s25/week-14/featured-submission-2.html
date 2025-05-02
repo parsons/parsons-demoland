@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weekly Challenge </title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            background: #ffeef8;
+            overflow: hidden;
+        }
+        #container {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            width: 100vw;
+            height: 100vh;
+            padding: 10px;
+            gap: 8px;
+        }
+        #container div {
+            width: 40px;
+            height: 40px;
+            border-radius: 10px;
+            transition: background-color 0.4s, transform 0.3s;
+            cursor: pointer;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+        }
+        #container div:hover {
+            transform: scale(1.3) rotate(10deg);
+        }
+    </style>
+
+    <!-- Import Tone.js -->
+    <script src="https://cdn.jsdelivr.net/npm/tone@latest/build/Tone.js"></script>
+</head>
+<body>
+
+    <div id="container"></div>
+
+    <script>
+        // Tone.js code
+        let synth = new Tone.Synth({
+            oscillator: { type: "triangle" }
+        }).toDestination();
+
+        function playRandomNote() {
+            Tone.start();
+            let notes = ["C", "D", "E", "F", "G", "A", "B"];
+            let randomOctave = Math.floor(Math.random() * 2) + 4; // softer octave
+            let randomNote = notes[Math.floor(Math.random() * notes.length)];
+            synth.triggerAttackRelease(randomNote + randomOctave, "8n");
+        }
+
+        let container = document.querySelector("#container");
+
+        function generateDivs() {
+            container.innerHTML = "";
+
+            let randomTimes = Math.floor(Math.random() * 101);
+            for (let i = 0; i < randomTimes; i++) {
+                let newElement = document.createElement("div");
+
+                // Soft pastel random colors
+                let red = Math.round(Math.random() * 100 + 155); // lighter colors
+                let green = Math.round(Math.random() * 100 + 155);
+                let blue = Math.round(Math.random() * 100 + 155);
+                newElement.style.backgroundColor = `rgb(${red}, ${green}, ${blue})`;
+
+                container.append(newElement);
+
+                newElement.addEventListener('mouseenter', function() {
+                    playRandomNote();
+
+                    // New random pastel color on hover
+                    let red = Math.round(Math.random() * 100 + 155);
+                    let green = Math.round(Math.random() * 100 + 155);
+                    let blue = Math.round(Math.random() * 100 + 155);
+                    newElement.style.backgroundColor = `rgb(${red}, ${green}, ${blue})`;
+                });
+            }
+        }
+
+        generateDivs();
+        setInterval(generateDivs, 1000);
+    </script>
+    
+</body>
+</html>
+

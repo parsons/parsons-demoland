@@ -371,14 +371,30 @@
 		"subtitle": "5/2/25",
 		"desc": "Objects, APIs, and input elements.",
 		"color": "var(--green)",
-		"active": false,
+		"active": true,
 		"demos": {
-			"last-weeks-challenge": {
-				"name": "Last Week’s Challenge",
+			"next-week": {
+				"name": "Next Week",
 				"color": "var(--green)"
 			},
 			"sneak-peek": {
 				"name": "Sneak Peek",
+				"color": "var(--green)"
+			},
+			"last-weeks-challenge": {
+				"name": "Last Week’s Challenge",
+				"color": "var(--green)"
+			},
+			"featured-submission-1": {
+				"name": "Featured Submission 1",
+				"color": "var(--green)"
+			},
+			"featured-submission-2": {
+				"name": "Featured Submission 2",
+				"color": "var(--green)"
+			},
+			"featured-submission-3": {
+				"name": "Featured Submission 3",
 				"color": "var(--green)"
 			},
 			"recap": {
@@ -397,13 +413,34 @@
 				"name": "Objects",
 				"color": "var(--pink)"
 			},
-			"tracking-settings-with-objects": {
+			"tracking-settings": {
 				"name": "Tracking Settings with Objects",
+				"color": "var(--pink)"
+			},
+			"document-object-model": {
+				"name": "The Document Object Model (DOM)",
 				"color": "var(--pink)"
 			},
 			"apis": {
 				"name": "APIs",
 				"color": "var(--pink)"
+			},
+			"weekly-challenge": {
+				"name": "Weekly Challenge",
+				"color": "var(--blue)"
+			}
+		}
+	},
+	"week-15": {
+		"title": "Week 15",
+		"subtitle": "5/9/25",
+		"desc": "",
+		"color": "var(--red)",
+		"active": false,
+		"demos": {
+			"last-weeks-challenge": {
+				"name": "Last Week’s Challenge",
+				"color": "var(--green)"
 			}
 		}
 	}
