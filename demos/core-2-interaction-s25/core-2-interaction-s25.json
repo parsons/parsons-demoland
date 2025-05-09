@@ -436,11 +436,31 @@
 		"subtitle": "5/9/25",
 		"desc": "",
 		"color": "var(--red)",
-		"active": false,
+		"active": true,
 		"demos": {
 			"last-weeks-challenge": {
 				"name": "Last Week’s Challenge",
 				"color": "var(--green)"
+			},
+			"featured-submission-1": {
+				"name": "Featured Submission 1",
+				"color": "var(--pink)"
+			},
+			"featured-submission-2": {
+				"name": "Featured Submission 2",
+				"color": "var(--pink)"
+			},
+			"featured-submission-3": {
+				"name": "Featured Submission 3",
+				"color": "var(--pink)"
+			},
+			"featured-submission-4": {
+				"name": "Featured Submission 4",
+				"color": "var(--pink)"
+			},
+			"recap": {
+				"name": "So, What Did We Learn?",
+				"color": "var(--blue)"
 			}
 		}
 	}
