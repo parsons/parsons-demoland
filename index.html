@@ -4,8 +4,18 @@
 		<head>
 			<meta charset="UTF-8">
 			<meta name="viewport" content="width=device-width, initial-scale=1.0">
-			<title>DEMOLAND</title>
+			<title>DEMOLAND, by GD with GD</title>
+
+			<meta name="author" content="Gabriel Drozdov / GD with GD">
+			<meta name="keywords" content="Web Design, Web Development, Creative Coding, Design Education, Code Education, Storytelling, Pedagogy">
+			<meta name="description" content="In-browser code editor with a library of tutorials!">
+			<meta property="og:url" content="https://demoland.gdwithgd.com/">
+			<meta name="og:title" property="og:title" content="Demoland, by GD with GD">
+			<meta property="og:description" content="In-browser code editor with a library of tutorials!">
+			<meta property="og:image" content="./assets/meta/opengraph.jpg">
 			<link rel="icon" type="png" href="./assets/meta/favicon.png">
+			<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💻</text></svg>">
+
 			<link rel="stylesheet" href="./assets/styles/home.css">
 		</head>
 		<body>
@@ -13,11 +23,19 @@
 				<div class="toggles">
 					<button onclick="toggleInfo()">
 						<svg viewBox="0 0 100 100"><rect x="45" y="40" width="10" height="50"/><circle cx="50" cy="20" r="10"/></svg>
+						<span>Info</span>
 					</button>
-					<a href="https://github.com/parsons/parsons-demoland" target="_blank">
-						<svg viewBox="0 0 1024 1024">
-							<path class="cls-1" d="M512,0C229.12,0,0,229.12,0,512,0,738.56,146.56,929.92,350.08,997.76c25.6,4.48,35.2-10.88,35.2-24.32,0-12.16-.64-52.48-.64-95.36-128.64,23.68-161.92-31.36-172.16-60.16-5.76-14.72-30.72-60.16-52.48-72.32-17.92-9.6-43.52-33.28-.64-33.92,40.32-.64,69.12,37.12,78.72,52.48,46.08,77.44,119.68,55.68,149.12,42.24,4.48-33.28,17.92-55.68,32.64-68.48-113.92-12.8-232.96-56.96-232.96-252.8,0-55.68,19.84-101.76,52.48-137.6-5.12-12.8-23.04-65.28,5.12-135.68,0,0,42.88-13.44,140.8,52.48,40.96-11.52,84.48-17.28,128-17.28s87.04,5.76,128,17.28c97.92-66.56,140.8-52.48,140.8-52.48,28.16,70.4,10.24,122.88,5.12,135.68,32.64,35.84,52.48,81.28,52.48,137.6,0,196.48-119.68,240-233.6,252.8,18.56,16,34.56,46.72,34.56,94.72,0,68.48-.64,123.52-.64,140.8,0,13.44,9.6,29.44,35.2,24.32,202.24-67.84,348.8-259.84,348.8-485.76C1024,229.12,794.88,0,512,0Z"/>
-						</svg>
+					<a href="editor/?book=tutorial&chapter=tutorial&demo=welcome">
+						<svg viewBox="0 0 100 100"><path d="M59,81c0,4.971-4.029,9-9,9s-9-4.029-9-9,4.029-9,9-9,9,4.029,9,9ZM50,10c-13.81,0-25,11.19-25,25h10c0-8.28,6.72-15,15-15s15,6.72,15,15-6.72,15-15,15h-5v15h10v-5.501c11.413-2.316,20-12.402,20-24.499,0-13.81-11.19-25-25-25Z"/></svg>
+						<span>Tutorial</span>
+					</a>
+					<a href="editor/">
+						<svg viewBox="0 0 100 100"><polygon points="90 45 55 45 55 10 45 10 45 45 10 45 10 55 45 55 45 90 55 90 55 55 90 55 90 45"/></svg>
+						<span>Blank Demo</span>
+					</a>
+					<a href="https://cheatsheet.gdwithgd.com/" target="_blank">
+						<svg viewBox="0 0 100 100"><path d="M59.07,12.65L16.64,55.08v28.27h28.29l42.43-42.42-28.29-28.28ZM40.79,73.36l-14.15-14.14L59.07,26.78l14.14,14.15-32.42,32.43Z"/></svg>
+						<span>Cheatsheet</span>
 					</a>
 				</div>
 				<div class="info" data-active="0">
@@ -25,20 +43,14 @@
 						<svg viewBox="0 0 100 100"><polygon points="81.82 74.749 57.071 50 81.82 25.251 74.749 18.18 50 42.929 25.251 18.18 18.18 25.251 42.929 50 18.18 74.749 25.251 81.82 50 57.071 74.749 81.82 81.82 74.749"/></svg>
 					</button>
 					
-	<p>
-		DEMOLAND is an open source website template that allows you to distribute editable code demos (HTML, CSS, JavaScript) entirely within your web browser. This project was created by <a href="https://gdwithgd.com/" target="_blank">GD&nbsp;with&nbsp;GD</a> to make teaching code easier, without the need for subscribing to any premium code distribution services.
-	</p>
-	<p>
-		DEMOLAND is a metaphor for a library containing books featuring chapters of demos. Each book is organized via JSON files, and each demo is split up into two HTML files (content and information). A Node.js file generates the homepage as a static document, while the code editor page fetches demos dynamically. The editor is built using <a href='https://codemirror.net/5/' target="_blank">CodeMirror 5</a>.
-	</p>
-	<p>
-		Interested in launching your own DEMOLAND site? Clone the <a href="https://github.com/gabrieldrozdov/demoland-template" target="_blank">GitHub repository</a> and launch your site via GitHub pages!
+	<p class="info-credits">
+		<strong>Credits</strong>
 	</p>
 	<p class="info-credits">
-		<strong>CREDITS</strong><br>
-		DEMOLAND was developed by <a href="https://gdwithgd.com/" target="_blank">GD with GD</a> / <a href="https://gabrieldrozdov.com/" target="_blank">Gabriel Drozdov</a>. The site features <a href="https://toomuchtype.com/" target="_blank">Limkin by Too Much Type</a> and <a href="https://monaspace.githubnext.com/" target="_blank">Monaspace by GitHub</a>. Text editors are built using <a href='https://codemirror.net/5/' target="_blank">CodeMirror 5</a>. The original DEMOLAND site is available at <a href="https://demoland.gdwithgd.com/" target="_blank">demoland.gdwithgd.com</a>.<br>
-		<br>
-		If you launch your own DEMOLAND, I’d appreciate it if you left these credits in. And <a href="mailto:gabriel@noreplica.com">sent me an email</a> just to share your work!
+		DEMOLAND was developed by <a href="https://gdwithgd.com/" target="_blank">GD with GD</a> / <a href="https://gabrieldrozdov.com/" target="_blank">Gabriel Drozdov</a>. The site uses <a href="https://toomuchtype.com/" target="_blank">Limkin by Too Much Type</a> and <a href="https://vercel.com/font" target="_blank">Geist Mono</a>. Code editors are built using <a href='https://codemirror.net/5/' target="_blank">CodeMirror 5</a>.
+	</p>
+	<p class="info-credits">
+		If you launch your own DEMOLAND, I’d appreciate it if you left these credits in! And <a href="mailto:gabriel@noreplica.com">send me an email</a> if you’ve got questions or want to share your own DEMOLAND with me!
 	</p>
 
 				</div>
@@ -46,8 +58,12 @@
 				<div class="intro">
 					<div class="intro-content">
 						<header class="intro-header">
-							<h1 class="intro-title">Welcome to the Parsons DEMOLAND site!</h1>
-							<p class="intro-subtitle">DEMOLAND is an open source website template that allows you to distribute editable code demos (HTML, CSS, JavaScript) entirely within your web browser. By&nbsp;<a href="https://gdwithgd.com/" target="_blank">GD&nbsp;with&nbsp;GD</a>.</p>
+							<h1 class="intro-title">Welcome to the <span>Parsons DEMOLAND</span> site!</h1>
+							<div class="intro-subtitle">
+	<p>
+		DEMOLAND is an open source website template that allows you to distribute editable code demos (HTML, CSS, JavaScript) entirely within your web browser. By <a href="https://gdwithgd.com/" target="_blank">GD with GD</a>!
+	</p>
+</div>
 						</header>
 						<nav class="intro-index">
 							<h2 class="intro-index-title">
@@ -79,23 +95,26 @@
 		
 						</nav>
 					</div>
-					<div class="intro-books-container"><div class="intro-books"></div></div>
 				</div>
 
 				
 			<article class="book" data-active="0" id="tutorial">
-				<header class="book-intro">
-					<button class="book-intro-return" onclick="openIntro();">&nwarr;&nbsp; View all books</button>
-					<h2 class="book-intro-title">Tutorial</h2>
-					<div class="book-intro-desc"><p>Get started with DEMOLAND! Learn how to use this website and what HTML, CSS, and JavaScript are.</p></div>
-				</header>
-				<div class="chapter-grid">
-					
-				<section class="chapter  rainbow" id="tutorial-tutorial" style="--primary: rainbow">
+				<div class="book-content">
+					<header class="book-intro">
+						<button class="book-intro-return" onclick="openIntro();">
+							<svg viewBox="0 0 100 100"><path d="m25,5c-5.52,0-10,4.48-10,10v70c0,5.52,4.48,10,10,10h60V5H25Zm50,80H28c-2.76,0-5-2.24-5-5s2.24-5,5-5h47v10Zm0-20H28V15h47v50Z"></path><rect x="38" y="25" width="27" height="10"></rect></svg>
+							<span>View all books</span>
+						</button>
+						<h2 class="book-intro-title">Tutorial</h2>
+						<div class="book-intro-desc"><p>Get started with DEMOLAND! Learn how to use this website and what HTML, CSS, and JavaScript are.</p></div>
+					</header>
+					<div class="chapter-grid">
+						
+				<section class="chapter" id="tutorial-tutorial">
 					<div class="chapter-header">
 						<a class="chapter-link" href="editor/?book=tutorial&chapter=tutorial&demo=welcome">
 							<div class="chapter-subtitle">
-								Start here
+								Chapter 1
 							</div>
 							<h3 class="chapter-title">
 								How to use DEMOLAND
@@ -104,36 +123,39 @@
 						<p class="chapter-desc">
 							Get started with DEMOLAND and learn how to code websites!
 						</p>
-						<a href="editor/?book=tutorial&chapter=tutorial&demo=welcome" class="chapter-open">Open chapter &nbsp;&nearr;</a>
+						<a href="editor/?book=tutorial&chapter=tutorial&demo=welcome" class="chapter-open">
+							<span>Open chapter</span>
+							<svg viewBox="0 0 100 100"><path d="M25,14.97v70.06l25-21.25,25,21.25V14.97H25ZM66,65.56l-16-13.6-16,13.6V23.97h32v41.59Z"/></svg>
+						</a>
 					</div>
 					<div class="chapter-demos">
 						
-					<a href="editor/?book=tutorial&chapter=tutorial&demo=welcome" class="chapter-demo" style="--primary: var(--pink);">
+					<a href="editor/?book=tutorial&chapter=tutorial&demo=welcome" class="chapter-demo">
 						<div class="chapter-demo-number">1</div>
-						<div class="chapter-demo-name">Welcome to DEMOLAND</div>
+						<div class="chapter-demo-name">Welcome to DEMOLAND!</div>
 					</a>
 				
-					<a href="editor/?book=tutorial&chapter=tutorial&demo=html" class="chapter-demo" style="--primary: var(--green);">
+					<a href="editor/?book=tutorial&chapter=tutorial&demo=html" class="chapter-demo">
 						<div class="chapter-demo-number">2</div>
 						<div class="chapter-demo-name">What is HTML?</div>
 					</a>
 				
-					<a href="editor/?book=tutorial&chapter=tutorial&demo=css" class="chapter-demo" style="--primary: var(--blue);">
+					<a href="editor/?book=tutorial&chapter=tutorial&demo=css" class="chapter-demo">
 						<div class="chapter-demo-number">3</div>
 						<div class="chapter-demo-name">What is CSS?</div>
 					</a>
 				
-					<a href="editor/?book=tutorial&chapter=tutorial&demo=js" class="chapter-demo" style="--primary: var(--yellow);">
+					<a href="editor/?book=tutorial&chapter=tutorial&demo=js" class="chapter-demo">
 						<div class="chapter-demo-number">4</div>
 						<div class="chapter-demo-name">What is JavaScript?</div>
 					</a>
 				
-					<a href="editor/?book=tutorial&chapter=tutorial&demo=js-libraries" class="chapter-demo" style="--primary: var(--purple);">
+					<a href="editor/?book=tutorial&chapter=tutorial&demo=js-libraries" class="chapter-demo">
 						<div class="chapter-demo-number">5</div>
 						<div class="chapter-demo-name">What are JavaScript Libraries?</div>
 					</a>
 				
-					<a href="editor/?book=tutorial&chapter=tutorial&demo=template" class="chapter-demo" style="--primary: var(--red);">
+					<a href="editor/?book=tutorial&chapter=tutorial&demo=template" class="chapter-demo">
 						<div class="chapter-demo-number">6</div>
 						<div class="chapter-demo-name">Starter Template</div>
 					</a>
@@ -141,45 +163,53 @@
 					</div>
 				</section>
 			
+					</div>
 				</div>
 			</article>
 		
 			<article class="book" data-active="0" id="core-2-interaction-s25">
-				<header class="book-intro">
-					<button class="book-intro-return" onclick="openIntro();">&nwarr;&nbsp; View all books</button>
-					<h2 class="book-intro-title">Core 2 Interaction (Spring 2025)</h2>
-					<div class="book-intro-desc"><p>Weekly demos for Parson’s Core 2 Interaction lecture series during the Spring 2025 semester.</p></div>
-				</header>
-				<div class="chapter-grid">
-					
-				<section class="chapter " id="core-2-interaction-s25-week-1" style="--primary: var(--pink)">
+				<div class="book-content">
+					<header class="book-intro">
+						<button class="book-intro-return" onclick="openIntro();">
+							<svg viewBox="0 0 100 100"><path d="m25,5c-5.52,0-10,4.48-10,10v70c0,5.52,4.48,10,10,10h60V5H25Zm50,80H28c-2.76,0-5-2.24-5-5s2.24-5,5-5h47v10Zm0-20H28V15h47v50Z"></path><rect x="38" y="25" width="27" height="10"></rect></svg>
+							<span>View all books</span>
+						</button>
+						<h2 class="book-intro-title">Core 2 Interaction (Spring 2025)</h2>
+						<div class="book-intro-desc"><p>Weekly demos for Parson’s Core 2 Interaction lecture series during the Spring 2025 semester.</p></div>
+					</header>
+					<div class="chapter-grid">
+						
+				<section class="chapter" id="core-2-interaction-s25-week-1">
 					<div class="chapter-header">
 						<a class="chapter-link" href="editor/?book=core-2-interaction-s25&chapter=week-1&demo=example-demo-1">
 							<div class="chapter-subtitle">
-								1/24/25
+								Chapter 1
 							</div>
 							<h3 class="chapter-title">
-								Week 1
+								Week 1 (1/24/25)
 							</h3>
 						</a>
 						<p class="chapter-desc">
 							A brief introduction (or review) of HTML.
 						</p>
-						<a href="editor/?book=core-2-interaction-s25&chapter=week-1&demo=example-demo-1" class="chapter-open">Open chapter &nbsp;&nearr;</a>
+						<a href="editor/?book=core-2-interaction-s25&chapter=week-1&demo=example-demo-1" class="chapter-open">
+							<span>Open chapter</span>
+							<svg viewBox="0 0 100 100"><path d="M25,14.97v70.06l25-21.25,25,21.25V14.97H25ZM66,65.56l-16-13.6-16,13.6V23.97h32v41.59Z"/></svg>
+						</a>
 					</div>
 					<div class="chapter-demos">
 						
-					<a href="editor/?book=core-2-interaction-s25&chapter=week-1&demo=example-demo-1" class="chapter-demo" style="--primary: var(--pink);">
+					<a href="editor/?book=core-2-interaction-s25&chapter=week-1&demo=example-demo-1" class="chapter-demo">
 						<div class="chapter-demo-number">1</div>
 						<div class="chapter-demo-name">A single HTML element</div>
 					</a>
 				
-					<a href="editor/?book=core-2-interaction-s25&chapter=week-1&demo=example-demo-2" class="chapter-demo" style="--primary: var(--pink);">
+					<a href="editor/?book=core-2-interaction-s25&chapter=week-1&demo=example-demo-2" class="chapter-demo">
 						<div class="chapter-demo-number">2</div>
 						<div class="chapter-demo-name">A few common HTML elements</div>
 					</a>
 				
-					<a href="editor/?book=core-2-interaction-s25&chapter=week-1&demo=example-demo-3" class="chapter-demo" style="--primary: var(--pink);">
+					<a href="editor/?book=core-2-interaction-s25&chapter=week-1&demo=example-demo-3" class="chapter-demo">
 						<div class="chapter-demo-number">3</div>
 						<div class="chapter-demo-name">A complete HTML document</div>
 					</a>
@@ -187,24 +217,27 @@
 					</div>
 				</section>
 			
-				<section class="chapter " id="core-2-interaction-s25-week-2" style="--primary: var(--green)">
+				<section class="chapter" id="core-2-interaction-s25-week-2">
 					<div class="chapter-header">
 						<a class="chapter-link" href="editor/?book=core-2-interaction-s25&chapter=week-2&demo=example-demo-1">
 							<div class="chapter-subtitle">
-								1/31/25
+								Chapter 2
 							</div>
 							<h3 class="chapter-title">
-								Week 2
+								Week 2 (1/31/25)
 							</h3>
 						</a>
 						<p class="chapter-desc">
 							A brief introduction (or review) of CSS.
 						</p>
-						<a href="editor/?book=core-2-interaction-s25&chapter=week-2&demo=example-demo-1" class="chapter-open">Open chapter &nbsp;&nearr;</a>
+						<a href="editor/?book=core-2-interaction-s25&chapter=week-2&demo=example-demo-1" class="chapter-open">
+							<span>Open chapter</span>
+							<svg viewBox="0 0 100 100"><path d="M25,14.97v70.06l25-21.25,25,21.25V14.97H25ZM66,65.56l-16-13.6-16,13.6V23.97h32v41.59Z"/></svg>
+						</a>
 					</div>
 					<div class="chapter-demos">
 						
-					<a href="editor/?book=core-2-interaction-s25&chapter=week-2&demo=example-demo-1" class="chapter-demo" style="--primary: var(--green);">
+					<a href="editor/?book=core-2-interaction-s25&chapter=week-2&demo=example-demo-1" class="chapter-demo">
 						<div class="chapter-demo-number">1</div>
 						<div class="chapter-demo-name">Linking an external stylesheet</div>
 					</a>
@@ -212,24 +245,27 @@
 					</div>
 				</section>
 			
-				<section class="chapter " id="core-2-interaction-s25-week-3" style="--primary: var(--red)">
+				<section class="chapter" id="core-2-interaction-s25-week-3">
 					<div class="chapter-header">
 						<a class="chapter-link" href="editor/?book=core-2-interaction-s25&chapter=week-3&demo=example-demo-1">
 							<div class="chapter-subtitle">
-								2/7/25
+								Chapter 3
 							</div>
 							<h3 class="chapter-title">
-								Week 3
+								Week 3 (2/7/25)
 							</h3>
 						</a>
 						<p class="chapter-desc">
 							Exploring how designers consider structure, visual style, motion, and accessibility in the design of a single component in a design system.
 						</p>
-						<a href="editor/?book=core-2-interaction-s25&chapter=week-3&demo=example-demo-1" class="chapter-open">Open chapter &nbsp;&nearr;</a>
+						<a href="editor/?book=core-2-interaction-s25&chapter=week-3&demo=example-demo-1" class="chapter-open">
+							<span>Open chapter</span>
+							<svg viewBox="0 0 100 100"><path d="M25,14.97v70.06l25-21.25,25,21.25V14.97H25ZM66,65.56l-16-13.6-16,13.6V23.97h32v41.59Z"/></svg>
+						</a>
 					</div>
 					<div class="chapter-demos">
 						
-					<a href="editor/?book=core-2-interaction-s25&chapter=week-3&demo=example-demo-1" class="chapter-demo" style="--primary: var(--red);">
+					<a href="editor/?book=core-2-interaction-s25&chapter=week-3&demo=example-demo-1" class="chapter-demo">
 						<div class="chapter-demo-number">1</div>
 						<div class="chapter-demo-name">An article card component</div>
 					</a>
@@ -237,44 +273,47 @@
 					</div>
 				</section>
 			
-				<section class="chapter " id="core-2-interaction-s25-week-6" style="--primary: var(--yellow)">
+				<section class="chapter" id="core-2-interaction-s25-week-6">
 					<div class="chapter-header">
 						<a class="chapter-link" href="editor/?book=core-2-interaction-s25&chapter=week-6&demo=example-demo-1">
 							<div class="chapter-subtitle">
-								2/28/25
+								Chapter 4
 							</div>
 							<h3 class="chapter-title">
-								Week 6
+								Week 6 (2/28/25)
 							</h3>
 						</a>
 						<p class="chapter-desc">
 							We'll dive into the fundamental concept of a box as a container to hold text and other elements.
 						</p>
-						<a href="editor/?book=core-2-interaction-s25&chapter=week-6&demo=example-demo-1" class="chapter-open">Open chapter &nbsp;&nearr;</a>
+						<a href="editor/?book=core-2-interaction-s25&chapter=week-6&demo=example-demo-1" class="chapter-open">
+							<span>Open chapter</span>
+							<svg viewBox="0 0 100 100"><path d="M25,14.97v70.06l25-21.25,25,21.25V14.97H25ZM66,65.56l-16-13.6-16,13.6V23.97h32v41.59Z"/></svg>
+						</a>
 					</div>
 					<div class="chapter-demos">
 						
-					<a href="editor/?book=core-2-interaction-s25&chapter=week-6&demo=example-demo-1" class="chapter-demo" style="--primary: var(--yellow);">
+					<a href="editor/?book=core-2-interaction-s25&chapter=week-6&demo=example-demo-1" class="chapter-demo">
 						<div class="chapter-demo-number">1</div>
 						<div class="chapter-demo-name">The Box Model</div>
 					</a>
 				
-					<a href="editor/?book=core-2-interaction-s25&chapter=week-6&demo=example-demo-2" class="chapter-demo" style="--primary: var(--yellow);">
+					<a href="editor/?book=core-2-interaction-s25&chapter=week-6&demo=example-demo-2" class="chapter-demo">
 						<div class="chapter-demo-number">2</div>
 						<div class="chapter-demo-name">Inline v. Block Display</div>
 					</a>
 				
-					<a href="editor/?book=core-2-interaction-s25&chapter=week-6&demo=example-demo-3" class="chapter-demo" style="--primary: var(--yellow);">
+					<a href="editor/?book=core-2-interaction-s25&chapter=week-6&demo=example-demo-3" class="chapter-demo">
 						<div class="chapter-demo-number">3</div>
 						<div class="chapter-demo-name">Absolute v. Relative Units</div>
 					</a>
 				
-					<a href="editor/?book=core-2-interaction-s25&chapter=week-6&demo=example-demo-4" class="chapter-demo" style="--primary: var(--yellow);">
+					<a href="editor/?book=core-2-interaction-s25&chapter=week-6&demo=example-demo-4" class="chapter-demo">
 						<div class="chapter-demo-number">4</div>
 						<div class="chapter-demo-name">Form Basics</div>
 					</a>
 				
-					<a href="editor/?book=core-2-interaction-s25&chapter=week-6&demo=example-demo-5" class="chapter-demo" style="--primary: var(--yellow);">
+					<a href="editor/?book=core-2-interaction-s25&chapter=week-6&demo=example-demo-5" class="chapter-demo">
 						<div class="chapter-demo-number">5</div>
 						<div class="chapter-demo-name">Sample Form Elements</div>
 					</a>
@@ -282,54 +321,57 @@
 					</div>
 				</section>
 			
-				<section class="chapter " id="core-2-interaction-s25-week-7" style="--primary: var(--blue)">
+				<section class="chapter" id="core-2-interaction-s25-week-7">
 					<div class="chapter-header">
 						<a class="chapter-link" href="editor/?book=core-2-interaction-s25&chapter=week-7&demo=example-demo-1">
 							<div class="chapter-subtitle">
-								3/7/25
+								Chapter 5
 							</div>
 							<h3 class="chapter-title">
-								Week 7
+								Week 7 (3/7/25)
 							</h3>
 						</a>
 						<p class="chapter-desc">
 							We'll dive into some parallel examples showing the same layout using different techniques.
 						</p>
-						<a href="editor/?book=core-2-interaction-s25&chapter=week-7&demo=example-demo-1" class="chapter-open">Open chapter &nbsp;&nearr;</a>
+						<a href="editor/?book=core-2-interaction-s25&chapter=week-7&demo=example-demo-1" class="chapter-open">
+							<span>Open chapter</span>
+							<svg viewBox="0 0 100 100"><path d="M25,14.97v70.06l25-21.25,25,21.25V14.97H25ZM66,65.56l-16-13.6-16,13.6V23.97h32v41.59Z"/></svg>
+						</a>
 					</div>
 					<div class="chapter-demos">
 						
-					<a href="editor/?book=core-2-interaction-s25&chapter=week-7&demo=example-demo-1" class="chapter-demo" style="--primary: var(--blue);">
+					<a href="editor/?book=core-2-interaction-s25&chapter=week-7&demo=example-demo-1" class="chapter-demo">
 						<div class="chapter-demo-number">1</div>
 						<div class="chapter-demo-name">Centering: Using Margins</div>
 					</a>
 				
-					<a href="editor/?book=core-2-interaction-s25&chapter=week-7&demo=example-demo-2" class="chapter-demo" style="--primary: var(--blue);">
+					<a href="editor/?book=core-2-interaction-s25&chapter=week-7&demo=example-demo-2" class="chapter-demo">
 						<div class="chapter-demo-number">2</div>
 						<div class="chapter-demo-name">Centering: Using Flexbox</div>
 					</a>
 				
-					<a href="editor/?book=core-2-interaction-s25&chapter=week-7&demo=example-demo-3" class="chapter-demo" style="--primary: var(--blue);">
+					<a href="editor/?book=core-2-interaction-s25&chapter=week-7&demo=example-demo-3" class="chapter-demo">
 						<div class="chapter-demo-number">3</div>
 						<div class="chapter-demo-name">Centering: Using Grids</div>
 					</a>
 				
-					<a href="editor/?book=core-2-interaction-s25&chapter=week-7&demo=example-demo-4" class="chapter-demo" style="--primary: var(--blue);">
+					<a href="editor/?book=core-2-interaction-s25&chapter=week-7&demo=example-demo-4" class="chapter-demo">
 						<div class="chapter-demo-number">4</div>
 						<div class="chapter-demo-name">Sample Layout: Inline Block</div>
 					</a>
 				
-					<a href="editor/?book=core-2-interaction-s25&chapter=week-7&demo=example-demo-5" class="chapter-demo" style="--primary: var(--blue);">
+					<a href="editor/?book=core-2-interaction-s25&chapter=week-7&demo=example-demo-5" class="chapter-demo">
 						<div class="chapter-demo-number">5</div>
 						<div class="chapter-demo-name">Sample Layout: Flexbox</div>
 					</a>
 				
-					<a href="editor/?book=core-2-interaction-s25&chapter=week-7&demo=example-demo-6" class="chapter-demo" style="--primary: var(--blue);">
+					<a href="editor/?book=core-2-interaction-s25&chapter=week-7&demo=example-demo-6" class="chapter-demo">
 						<div class="chapter-demo-number">6</div>
 						<div class="chapter-demo-name">Sample Layout: Grids</div>
 					</a>
 				
-					<a href="editor/?book=core-2-interaction-s25&chapter=week-7&demo=example-demo-7" class="chapter-demo" style="--primary: var(--blue);">
+					<a href="editor/?book=core-2-interaction-s25&chapter=week-7&demo=example-demo-7" class="chapter-demo">
 						<div class="chapter-demo-number">7</div>
 						<div class="chapter-demo-name">Sample Layout: Grid Template Area</div>
 					</a>
@@ -337,29 +379,32 @@
 					</div>
 				</section>
 			
-				<section class="chapter " id="core-2-interaction-s25-week-8" style="--primary: var(--pink)">
+				<section class="chapter" id="core-2-interaction-s25-week-8">
 					<div class="chapter-header">
 						<a class="chapter-link" href="editor/?book=core-2-interaction-s25&chapter=week-8&demo=example-demo-1">
 							<div class="chapter-subtitle">
-								3/21/25
+								Chapter 6
 							</div>
 							<h3 class="chapter-title">
-								Week 8
+								Week 8 (3/21/25)
 							</h3>
 						</a>
 						<p class="chapter-desc">
 							We'll dive into all of the ways you can position an element.
 						</p>
-						<a href="editor/?book=core-2-interaction-s25&chapter=week-8&demo=example-demo-1" class="chapter-open">Open chapter &nbsp;&nearr;</a>
+						<a href="editor/?book=core-2-interaction-s25&chapter=week-8&demo=example-demo-1" class="chapter-open">
+							<span>Open chapter</span>
+							<svg viewBox="0 0 100 100"><path d="M25,14.97v70.06l25-21.25,25,21.25V14.97H25ZM66,65.56l-16-13.6-16,13.6V23.97h32v41.59Z"/></svg>
+						</a>
 					</div>
 					<div class="chapter-demos">
 						
-					<a href="editor/?book=core-2-interaction-s25&chapter=week-8&demo=example-demo-1" class="chapter-demo" style="--primary: var(--pink);">
+					<a href="editor/?book=core-2-interaction-s25&chapter=week-8&demo=example-demo-1" class="chapter-demo">
 						<div class="chapter-demo-number">1</div>
 						<div class="chapter-demo-name">Normal-Flow versus Out-of-Flow</div>
 					</a>
 				
-					<a href="editor/?book=core-2-interaction-s25&chapter=week-8&demo=example-demo-2" class="chapter-demo" style="--primary: var(--pink);">
+					<a href="editor/?book=core-2-interaction-s25&chapter=week-8&demo=example-demo-2" class="chapter-demo">
 						<div class="chapter-demo-number">2</div>
 						<div class="chapter-demo-name">Positioning 6 Different Ways</div>
 					</a>
@@ -367,29 +412,32 @@
 					</div>
 				</section>
 			
-				<section class="chapter " id="core-2-interaction-s25-week-9" style="--primary: var(--green)">
+				<section class="chapter" id="core-2-interaction-s25-week-9">
 					<div class="chapter-header">
 						<a class="chapter-link" href="editor/?book=core-2-interaction-s25&chapter=week-9&demo=example-demo-1">
 							<div class="chapter-subtitle">
-								3/28/25
+								Chapter 7
 							</div>
 							<h3 class="chapter-title">
-								Week 9
+								Week 9 (3/28/25)
 							</h3>
 						</a>
 						<p class="chapter-desc">
 							We'll be creating microinteractions with the help of CSS transforms, transitions, and animations.
 						</p>
-						<a href="editor/?book=core-2-interaction-s25&chapter=week-9&demo=example-demo-1" class="chapter-open">Open chapter &nbsp;&nearr;</a>
+						<a href="editor/?book=core-2-interaction-s25&chapter=week-9&demo=example-demo-1" class="chapter-open">
+							<span>Open chapter</span>
+							<svg viewBox="0 0 100 100"><path d="M25,14.97v70.06l25-21.25,25,21.25V14.97H25ZM66,65.56l-16-13.6-16,13.6V23.97h32v41.59Z"/></svg>
+						</a>
 					</div>
 					<div class="chapter-demos">
 						
-					<a href="editor/?book=core-2-interaction-s25&chapter=week-9&demo=example-demo-1" class="chapter-demo" style="--primary: var(--green);">
+					<a href="editor/?book=core-2-interaction-s25&chapter=week-9&demo=example-demo-1" class="chapter-demo">
 						<div class="chapter-demo-number">1</div>
 						<div class="chapter-demo-name">Transforms, Transitions, and Animations</div>
 					</a>
 				
-					<a href="editor/?book=core-2-interaction-s25&chapter=week-9&demo=example-demo-2" class="chapter-demo" style="--primary: var(--green);">
+					<a href="editor/?book=core-2-interaction-s25&chapter=week-9&demo=example-demo-2" class="chapter-demo">
 						<div class="chapter-demo-number">2</div>
 						<div class="chapter-demo-name">3D Transforms</div>
 					</a>
@@ -397,24 +445,27 @@
 					</div>
 				</section>
 			
-				<section class="chapter " id="core-2-interaction-s25-week-10" style="--primary: var(--red)">
+				<section class="chapter" id="core-2-interaction-s25-week-10">
 					<div class="chapter-header">
 						<a class="chapter-link" href="editor/?book=core-2-interaction-s25&chapter=week-10&demo=example-demo-1">
 							<div class="chapter-subtitle">
-								4/4/25
+								Chapter 8
 							</div>
 							<h3 class="chapter-title">
-								Week 10
+								Week 10 (4/4/25)
 							</h3>
 						</a>
 						<p class="chapter-desc">
 							We'll continue pushing the boundaries of CSS.
 						</p>
-						<a href="editor/?book=core-2-interaction-s25&chapter=week-10&demo=example-demo-1" class="chapter-open">Open chapter &nbsp;&nearr;</a>
+						<a href="editor/?book=core-2-interaction-s25&chapter=week-10&demo=example-demo-1" class="chapter-open">
+							<span>Open chapter</span>
+							<svg viewBox="0 0 100 100"><path d="M25,14.97v70.06l25-21.25,25,21.25V14.97H25ZM66,65.56l-16-13.6-16,13.6V23.97h32v41.59Z"/></svg>
+						</a>
 					</div>
 					<div class="chapter-demos">
 						
-					<a href="editor/?book=core-2-interaction-s25&chapter=week-10&demo=example-demo-1" class="chapter-demo" style="--primary: var(--red);">
+					<a href="editor/?book=core-2-interaction-s25&chapter=week-10&demo=example-demo-1" class="chapter-demo">
 						<div class="chapter-demo-number">1</div>
 						<div class="chapter-demo-name">Advanced and Experimental CSS</div>
 					</a>
@@ -422,94 +473,97 @@
 					</div>
 				</section>
 			
-				<section class="chapter " id="core-2-interaction-s25-week-11" style="--primary: var(--yellow)">
+				<section class="chapter" id="core-2-interaction-s25-week-11">
 					<div class="chapter-header">
 						<a class="chapter-link" href="editor/?book=core-2-interaction-s25&chapter=week-11&demo=example-demo-1">
 							<div class="chapter-subtitle">
-								4/11/25
+								Chapter 9
 							</div>
 							<h3 class="chapter-title">
-								Week 11
+								Week 11 (4/11/25)
 							</h3>
 						</a>
 						<p class="chapter-desc">
 							Introducing JavaScript, a way of dynamically altering a page’s content and style.
 						</p>
-						<a href="editor/?book=core-2-interaction-s25&chapter=week-11&demo=example-demo-1" class="chapter-open">Open chapter &nbsp;&nearr;</a>
+						<a href="editor/?book=core-2-interaction-s25&chapter=week-11&demo=example-demo-1" class="chapter-open">
+							<span>Open chapter</span>
+							<svg viewBox="0 0 100 100"><path d="M25,14.97v70.06l25-21.25,25,21.25V14.97H25ZM66,65.56l-16-13.6-16,13.6V23.97h32v41.59Z"/></svg>
+						</a>
 					</div>
 					<div class="chapter-demos">
 						
-					<a href="editor/?book=core-2-interaction-s25&chapter=week-11&demo=example-demo-1" class="chapter-demo" style="--primary: var(--yellow);">
+					<a href="editor/?book=core-2-interaction-s25&chapter=week-11&demo=example-demo-1" class="chapter-demo">
 						<div class="chapter-demo-number">1</div>
 						<div class="chapter-demo-name">A Normal Website</div>
 					</a>
 				
-					<a href="editor/?book=core-2-interaction-s25&chapter=week-11&demo=example-demo-2" class="chapter-demo" style="--primary: var(--yellow);">
+					<a href="editor/?book=core-2-interaction-s25&chapter=week-11&demo=example-demo-2" class="chapter-demo">
 						<div class="chapter-demo-number">2</div>
 						<div class="chapter-demo-name">Sneak Peek: Toggling Classes</div>
 					</a>
 				
-					<a href="editor/?book=core-2-interaction-s25&chapter=week-11&demo=example-demo-3" class="chapter-demo" style="--primary: var(--yellow);">
+					<a href="editor/?book=core-2-interaction-s25&chapter=week-11&demo=example-demo-3" class="chapter-demo">
 						<div class="chapter-demo-number">3</div>
 						<div class="chapter-demo-name">Sneak Peek: Randomizing CSS</div>
 					</a>
 				
-					<a href="editor/?book=core-2-interaction-s25&chapter=week-11&demo=example-demo-4" class="chapter-demo" style="--primary: var(--yellow);">
+					<a href="editor/?book=core-2-interaction-s25&chapter=week-11&demo=example-demo-4" class="chapter-demo">
 						<div class="chapter-demo-number">4</div>
 						<div class="chapter-demo-name">Sneak Peek: Adding HTML</div>
 					</a>
 				
-					<a href="editor/?book=core-2-interaction-s25&chapter=week-11&demo=example-demo-5" class="chapter-demo" style="--primary: var(--yellow);">
+					<a href="editor/?book=core-2-interaction-s25&chapter=week-11&demo=example-demo-5" class="chapter-demo">
 						<div class="chapter-demo-number">5</div>
 						<div class="chapter-demo-name">Sneak Peek: Repeating Code</div>
 					</a>
 				
-					<a href="editor/?book=core-2-interaction-s25&chapter=week-11&demo=example-demo-6" class="chapter-demo" style="--primary: var(--yellow);">
+					<a href="editor/?book=core-2-interaction-s25&chapter=week-11&demo=example-demo-6" class="chapter-demo">
 						<div class="chapter-demo-number">6</div>
 						<div class="chapter-demo-name">Sneak Peek: Generative Art</div>
 					</a>
 				
-					<a href="editor/?book=core-2-interaction-s25&chapter=week-11&demo=example-demo-7" class="chapter-demo" style="--primary: var(--yellow);">
+					<a href="editor/?book=core-2-interaction-s25&chapter=week-11&demo=example-demo-7" class="chapter-demo">
 						<div class="chapter-demo-number">7</div>
 						<div class="chapter-demo-name">Variables</div>
 					</a>
 				
-					<a href="editor/?book=core-2-interaction-s25&chapter=week-11&demo=example-demo-8" class="chapter-demo" style="--primary: var(--yellow);">
+					<a href="editor/?book=core-2-interaction-s25&chapter=week-11&demo=example-demo-8" class="chapter-demo">
 						<div class="chapter-demo-number">8</div>
 						<div class="chapter-demo-name">Operators</div>
 					</a>
 				
-					<a href="editor/?book=core-2-interaction-s25&chapter=week-11&demo=example-demo-9" class="chapter-demo" style="--primary: var(--yellow);">
+					<a href="editor/?book=core-2-interaction-s25&chapter=week-11&demo=example-demo-9" class="chapter-demo">
 						<div class="chapter-demo-number">9</div>
 						<div class="chapter-demo-name">Functions</div>
 					</a>
 				
-					<a href="editor/?book=core-2-interaction-s25&chapter=week-11&demo=example-demo-10" class="chapter-demo" style="--primary: var(--yellow);">
+					<a href="editor/?book=core-2-interaction-s25&chapter=week-11&demo=example-demo-10" class="chapter-demo">
 						<div class="chapter-demo-number">10</div>
 						<div class="chapter-demo-name">Conditionals</div>
 					</a>
 				
-					<a href="editor/?book=core-2-interaction-s25&chapter=week-11&demo=example-demo-11" class="chapter-demo" style="--primary: var(--yellow);">
+					<a href="editor/?book=core-2-interaction-s25&chapter=week-11&demo=example-demo-11" class="chapter-demo">
 						<div class="chapter-demo-number">11</div>
 						<div class="chapter-demo-name">Targeting Elements and Adding Event Listeners</div>
 					</a>
 				
-					<a href="editor/?book=core-2-interaction-s25&chapter=week-11&demo=example-demo-12" class="chapter-demo" style="--primary: var(--yellow);">
+					<a href="editor/?book=core-2-interaction-s25&chapter=week-11&demo=example-demo-12" class="chapter-demo">
 						<div class="chapter-demo-number">12</div>
 						<div class="chapter-demo-name">Modifying CSS</div>
 					</a>
 				
-					<a href="editor/?book=core-2-interaction-s25&chapter=week-11&demo=example-demo-13" class="chapter-demo" style="--primary: var(--yellow);">
+					<a href="editor/?book=core-2-interaction-s25&chapter=week-11&demo=example-demo-13" class="chapter-demo">
 						<div class="chapter-demo-number">13</div>
 						<div class="chapter-demo-name">Modifying CSS, Dynamically</div>
 					</a>
 				
-					<a href="editor/?book=core-2-interaction-s25&chapter=week-11&demo=example-demo-14" class="chapter-demo" style="--primary: var(--yellow);">
+					<a href="editor/?book=core-2-interaction-s25&chapter=week-11&demo=example-demo-14" class="chapter-demo">
 						<div class="chapter-demo-number">14</div>
 						<div class="chapter-demo-name">Toggling Classes</div>
 					</a>
 				
-					<a href="editor/?book=core-2-interaction-s25&chapter=week-11&demo=weekly-challenge" class="chapter-demo" style="--primary: var(--yellow);">
+					<a href="editor/?book=core-2-interaction-s25&chapter=week-11&demo=weekly-challenge" class="chapter-demo">
 						<div class="chapter-demo-number">15</div>
 						<div class="chapter-demo-name">Weekly Challenge</div>
 					</a>
@@ -517,109 +571,112 @@
 					</div>
 				</section>
 			
-				<section class="chapter " id="core-2-interaction-s25-week-12" style="--primary: var(--blue)">
+				<section class="chapter" id="core-2-interaction-s25-week-12">
 					<div class="chapter-header">
 						<a class="chapter-link" href="editor/?book=core-2-interaction-s25&chapter=week-12&demo=last-weeks-challenge">
 							<div class="chapter-subtitle">
-								4/11/25
+								Chapter 10
 							</div>
 							<h3 class="chapter-title">
-								Week 12
+								Week 12 (4/11/25)
 							</h3>
 						</a>
 						<p class="chapter-desc">
 							Arrays and randomization.
 						</p>
-						<a href="editor/?book=core-2-interaction-s25&chapter=week-12&demo=last-weeks-challenge" class="chapter-open">Open chapter &nbsp;&nearr;</a>
+						<a href="editor/?book=core-2-interaction-s25&chapter=week-12&demo=last-weeks-challenge" class="chapter-open">
+							<span>Open chapter</span>
+							<svg viewBox="0 0 100 100"><path d="M25,14.97v70.06l25-21.25,25,21.25V14.97H25ZM66,65.56l-16-13.6-16,13.6V23.97h32v41.59Z"/></svg>
+						</a>
 					</div>
 					<div class="chapter-demos">
 						
-					<a href="editor/?book=core-2-interaction-s25&chapter=week-12&demo=last-weeks-challenge" class="chapter-demo" style="--primary: var(--blue);">
+					<a href="editor/?book=core-2-interaction-s25&chapter=week-12&demo=last-weeks-challenge" class="chapter-demo">
 						<div class="chapter-demo-number">1</div>
 						<div class="chapter-demo-name">Last Week’s Challenge</div>
 					</a>
 				
-					<a href="editor/?book=core-2-interaction-s25&chapter=week-12&demo=common-bugs-naming-variables" class="chapter-demo" style="--primary: var(--blue);">
+					<a href="editor/?book=core-2-interaction-s25&chapter=week-12&demo=common-bugs-naming-variables" class="chapter-demo">
 						<div class="chapter-demo-number">2</div>
 						<div class="chapter-demo-name">Common Bugs: Naming Variables</div>
 					</a>
 				
-					<a href="editor/?book=core-2-interaction-s25&chapter=week-12&demo=common-bugs-quotes" class="chapter-demo" style="--primary: var(--blue);">
+					<a href="editor/?book=core-2-interaction-s25&chapter=week-12&demo=common-bugs-quotes" class="chapter-demo">
 						<div class="chapter-demo-number">3</div>
 						<div class="chapter-demo-name">Common Bugs: Quotes</div>
 					</a>
 				
-					<a href="editor/?book=core-2-interaction-s25&chapter=week-12&demo=common-bugs-brackets" class="chapter-demo" style="--primary: var(--blue);">
+					<a href="editor/?book=core-2-interaction-s25&chapter=week-12&demo=common-bugs-brackets" class="chapter-demo">
 						<div class="chapter-demo-number">4</div>
 						<div class="chapter-demo-name">Common Bugs: Brackets</div>
 					</a>
 				
-					<a href="editor/?book=core-2-interaction-s25&chapter=week-12&demo=recap" class="chapter-demo" style="--primary: var(--yellow);">
+					<a href="editor/?book=core-2-interaction-s25&chapter=week-12&demo=recap" class="chapter-demo">
 						<div class="chapter-demo-number">5</div>
 						<div class="chapter-demo-name">Recap: Variables, Operators, Conditionals, and Events</div>
 					</a>
 				
-					<a href="editor/?book=core-2-interaction-s25&chapter=week-12&demo=changing-content" class="chapter-demo" style="--primary: var(--yellow);">
+					<a href="editor/?book=core-2-interaction-s25&chapter=week-12&demo=changing-content" class="chapter-demo">
 						<div class="chapter-demo-number">6</div>
 						<div class="chapter-demo-name">Changing Content</div>
 					</a>
 				
-					<a href="editor/?book=core-2-interaction-s25&chapter=week-12&demo=arrays" class="chapter-demo" style="--primary: var(--green);">
+					<a href="editor/?book=core-2-interaction-s25&chapter=week-12&demo=arrays" class="chapter-demo">
 						<div class="chapter-demo-number">7</div>
 						<div class="chapter-demo-name">Arrays</div>
 					</a>
 				
-					<a href="editor/?book=core-2-interaction-s25&chapter=week-12&demo=using-arrays-1" class="chapter-demo" style="--primary: var(--green);">
+					<a href="editor/?book=core-2-interaction-s25&chapter=week-12&demo=using-arrays-1" class="chapter-demo">
 						<div class="chapter-demo-number">8</div>
 						<div class="chapter-demo-name">Arrays: Navigating Entries</div>
 					</a>
 				
-					<a href="editor/?book=core-2-interaction-s25&chapter=week-12&demo=using-arrays-2" class="chapter-demo" style="--primary: var(--green);">
+					<a href="editor/?book=core-2-interaction-s25&chapter=week-12&demo=using-arrays-2" class="chapter-demo">
 						<div class="chapter-demo-number">9</div>
 						<div class="chapter-demo-name">Arrays: Edge Cases</div>
 					</a>
 				
-					<a href="editor/?book=core-2-interaction-s25&chapter=week-12&demo=common-bugs-scope" class="chapter-demo" style="--primary: var(--green);">
+					<a href="editor/?book=core-2-interaction-s25&chapter=week-12&demo=common-bugs-scope" class="chapter-demo">
 						<div class="chapter-demo-number">10</div>
 						<div class="chapter-demo-name">Common Bugs: Scope</div>
 					</a>
 				
-					<a href="editor/?book=core-2-interaction-s25&chapter=week-12&demo=using-arrays-3" class="chapter-demo" style="--primary: var(--green);">
+					<a href="editor/?book=core-2-interaction-s25&chapter=week-12&demo=using-arrays-3" class="chapter-demo">
 						<div class="chapter-demo-number">11</div>
 						<div class="chapter-demo-name">Arrays: Moving Backwards</div>
 					</a>
 				
-					<a href="editor/?book=core-2-interaction-s25&chapter=week-12&demo=using-arrays-4" class="chapter-demo" style="--primary: var(--green);">
+					<a href="editor/?book=core-2-interaction-s25&chapter=week-12&demo=using-arrays-4" class="chapter-demo">
 						<div class="chapter-demo-number">12</div>
 						<div class="chapter-demo-name">Arrays: Putting It Together</div>
 					</a>
 				
-					<a href="editor/?book=core-2-interaction-s25&chapter=week-12&demo=using-arrays-5" class="chapter-demo" style="--primary: var(--green);">
+					<a href="editor/?book=core-2-interaction-s25&chapter=week-12&demo=using-arrays-5" class="chapter-demo">
 						<div class="chapter-demo-number">13</div>
 						<div class="chapter-demo-name">Arrays: Other Kinds of Data</div>
 					</a>
 				
-					<a href="editor/?book=core-2-interaction-s25&chapter=week-12&demo=randomization" class="chapter-demo" style="--primary: var(--red);">
+					<a href="editor/?book=core-2-interaction-s25&chapter=week-12&demo=randomization" class="chapter-demo">
 						<div class="chapter-demo-number">14</div>
 						<div class="chapter-demo-name">Randomization</div>
 					</a>
 				
-					<a href="editor/?book=core-2-interaction-s25&chapter=week-12&demo=using-randomization-1" class="chapter-demo" style="--primary: var(--red);">
+					<a href="editor/?book=core-2-interaction-s25&chapter=week-12&demo=using-randomization-1" class="chapter-demo">
 						<div class="chapter-demo-number">15</div>
 						<div class="chapter-demo-name">Randomization: Within a Range</div>
 					</a>
 				
-					<a href="editor/?book=core-2-interaction-s25&chapter=week-12&demo=using-randomization-1a" class="chapter-demo" style="--primary: var(--red);">
+					<a href="editor/?book=core-2-interaction-s25&chapter=week-12&demo=using-randomization-1a" class="chapter-demo">
 						<div class="chapter-demo-number">16</div>
 						<div class="chapter-demo-name">Randomization: Applied to CSS</div>
 					</a>
 				
-					<a href="editor/?book=core-2-interaction-s25&chapter=week-12&demo=using-randomization-2" class="chapter-demo" style="--primary: var(--red);">
+					<a href="editor/?book=core-2-interaction-s25&chapter=week-12&demo=using-randomization-2" class="chapter-demo">
 						<div class="chapter-demo-number">17</div>
 						<div class="chapter-demo-name">Randomization: Random Entry in an Array</div>
 					</a>
 				
-					<a href="editor/?book=core-2-interaction-s25&chapter=week-12&demo=weekly-challenge" class="chapter-demo" style="--primary: var(--pink);">
+					<a href="editor/?book=core-2-interaction-s25&chapter=week-12&demo=weekly-challenge" class="chapter-demo">
 						<div class="chapter-demo-number">18</div>
 						<div class="chapter-demo-name">Weekly Challenge</div>
 					</a>
@@ -627,79 +684,82 @@
 					</div>
 				</section>
 			
-				<section class="chapter " id="core-2-interaction-s25-week-13" style="--primary: var(--pink)">
+				<section class="chapter" id="core-2-interaction-s25-week-13">
 					<div class="chapter-header">
 						<a class="chapter-link" href="editor/?book=core-2-interaction-s25&chapter=week-13&demo=last-weeks-challenge">
 							<div class="chapter-subtitle">
-								4/25/25
+								Chapter 11
 							</div>
 							<h3 class="chapter-title">
-								Week 13
+								Week 13 (4/25/25)
 							</h3>
 						</a>
 						<p class="chapter-desc">
 							Repeating code, loops, and libraries.
 						</p>
-						<a href="editor/?book=core-2-interaction-s25&chapter=week-13&demo=last-weeks-challenge" class="chapter-open">Open chapter &nbsp;&nearr;</a>
+						<a href="editor/?book=core-2-interaction-s25&chapter=week-13&demo=last-weeks-challenge" class="chapter-open">
+							<span>Open chapter</span>
+							<svg viewBox="0 0 100 100"><path d="M25,14.97v70.06l25-21.25,25,21.25V14.97H25ZM66,65.56l-16-13.6-16,13.6V23.97h32v41.59Z"/></svg>
+						</a>
 					</div>
 					<div class="chapter-demos">
 						
-					<a href="editor/?book=core-2-interaction-s25&chapter=week-13&demo=last-weeks-challenge" class="chapter-demo" style="--primary: var(--pink);">
+					<a href="editor/?book=core-2-interaction-s25&chapter=week-13&demo=last-weeks-challenge" class="chapter-demo">
 						<div class="chapter-demo-number">1</div>
 						<div class="chapter-demo-name">Last Week’s Challenge</div>
 					</a>
 				
-					<a href="editor/?book=core-2-interaction-s25&chapter=week-13&demo=sneak-peek" class="chapter-demo" style="--primary: var(--pink);">
+					<a href="editor/?book=core-2-interaction-s25&chapter=week-13&demo=sneak-peek" class="chapter-demo">
 						<div class="chapter-demo-number">2</div>
 						<div class="chapter-demo-name">Sneak Peek</div>
 					</a>
 				
-					<a href="editor/?book=core-2-interaction-s25&chapter=week-13&demo=recap" class="chapter-demo" style="--primary: var(--pink);">
+					<a href="editor/?book=core-2-interaction-s25&chapter=week-13&demo=recap" class="chapter-demo">
 						<div class="chapter-demo-number">3</div>
 						<div class="chapter-demo-name">Recap</div>
 					</a>
 				
-					<a href="editor/?book=core-2-interaction-s25&chapter=week-13&demo=creating-new-elements" class="chapter-demo" style="--primary: var(--green);">
+					<a href="editor/?book=core-2-interaction-s25&chapter=week-13&demo=creating-new-elements" class="chapter-demo">
 						<div class="chapter-demo-number">4</div>
 						<div class="chapter-demo-name">Creating New Elements</div>
 					</a>
 				
-					<a href="editor/?book=core-2-interaction-s25&chapter=week-13&demo=template-literals" class="chapter-demo" style="--primary: var(--green);">
+					<a href="editor/?book=core-2-interaction-s25&chapter=week-13&demo=template-literals" class="chapter-demo">
 						<div class="chapter-demo-number">5</div>
 						<div class="chapter-demo-name">Template Literals</div>
 					</a>
 				
-					<a href="editor/?book=core-2-interaction-s25&chapter=week-13&demo=repeating-code" class="chapter-demo" style="--primary: var(--green);">
+					<a href="editor/?book=core-2-interaction-s25&chapter=week-13&demo=repeating-code" class="chapter-demo">
 						<div class="chapter-demo-number">6</div>
 						<div class="chapter-demo-name">Repeating Code</div>
 					</a>
 				
-					<a href="editor/?book=core-2-interaction-s25&chapter=week-13&demo=while-loops" class="chapter-demo" style="--primary: var(--blue);">
+					<a href="editor/?book=core-2-interaction-s25&chapter=week-13&demo=while-loops" class="chapter-demo">
 						<div class="chapter-demo-number">7</div>
 						<div class="chapter-demo-name">"while" Loops</div>
 					</a>
 				
-					<a href="editor/?book=core-2-interaction-s25&chapter=week-13&demo=for-loops" class="chapter-demo" style="--primary: var(--blue);">
+					<a href="editor/?book=core-2-interaction-s25&chapter=week-13&demo=for-loops" class="chapter-demo">
 						<div class="chapter-demo-number">8</div>
 						<div class="chapter-demo-name">"for" Loops</div>
 					</a>
 				
-					<a href="editor/?book=core-2-interaction-s25&chapter=week-13&demo=looping-through-an-array" class="chapter-demo" style="--primary: var(--blue);">
+					<a href="editor/?book=core-2-interaction-s25&chapter=week-13&demo=looping-through-an-array" class="chapter-demo">
 						<div class="chapter-demo-number">9</div>
 						<div class="chapter-demo-name">Looping Through an Array</div>
 					</a>
 				
-					<a href="editor/?book=core-2-interaction-s25&chapter=week-13&demo=targeting-multiple-elements" class="chapter-demo" style="--primary: var(--blue);">
+					<a href="editor/?book=core-2-interaction-s25&chapter=week-13&demo=targeting-multiple-elements" class="chapter-demo">
 						<div class="chapter-demo-number">10</div>
 						<div class="chapter-demo-name">Targeting Multiple Elements</div>
 					</a>
 				
-					<a href="editor/?book=core-2-interaction-s25&chapter=week-13&demo=javascript-libraries" class="chapter-demo" style="--primary: var(--blue);">
+					<a href="editor/?book=core-2-interaction-s25&chapter=week-13&demo=javascript-libraries" class="chapter-demo">
 						<div class="chapter-demo-number">11</div>
 						<div class="chapter-demo-name">JavaScript Libraries</div>
 					</a>
 				
-					<a href="editor/?book=core-2-interaction-s25&chapter=week-13&demo=weekly-challenge" class="chapter-demo" style="--primary: var(--blue);">
+					<a href="editor/?book=core-2-interaction-s25&chapter=week-13&demo=weekly-challenge" class="chapter-demo">
 						<div class="chapter-demo-number">12</div>
 						<div class="chapter-demo-name">Weekly Challenge</div>
 					</a>
@@ -707,89 +767,92 @@
 					</div>
 				</section>
 			
-				<section class="chapter " id="core-2-interaction-s25-week-14" style="--primary: var(--green)">
+				<section class="chapter" id="core-2-interaction-s25-week-14">
 					<div class="chapter-header">
 						<a class="chapter-link" href="editor/?book=core-2-interaction-s25&chapter=week-14&demo=next-week">
 							<div class="chapter-subtitle">
-								5/2/25
+								Chapter 12
 							</div>
 							<h3 class="chapter-title">
-								Week 14
+								Week 14 (5/2/25)
 							</h3>
 						</a>
 						<p class="chapter-desc">
 							Objects, APIs, and input elements.
 						</p>
-						<a href="editor/?book=core-2-interaction-s25&chapter=week-14&demo=next-week" class="chapter-open">Open chapter &nbsp;&nearr;</a>
+						<a href="editor/?book=core-2-interaction-s25&chapter=week-14&demo=next-week" class="chapter-open">
+							<span>Open chapter</span>
+							<svg viewBox="0 0 100 100"><path d="M25,14.97v70.06l25-21.25,25,21.25V14.97H25ZM66,65.56l-16-13.6-16,13.6V23.97h32v41.59Z"/></svg>
+						</a>
 					</div>
 					<div class="chapter-demos">
 						
-					<a href="editor/?book=core-2-interaction-s25&chapter=week-14&demo=next-week" class="chapter-demo" style="--primary: var(--green);">
+					<a href="editor/?book=core-2-interaction-s25&chapter=week-14&demo=next-week" class="chapter-demo">
 						<div class="chapter-demo-number">1</div>
 						<div class="chapter-demo-name">Next Week</div>
 					</a>
 				
-					<a href="editor/?book=core-2-interaction-s25&chapter=week-14&demo=sneak-peek" class="chapter-demo" style="--primary: var(--green);">
+					<a href="editor/?book=core-2-interaction-s25&chapter=week-14&demo=sneak-peek" class="chapter-demo">
 						<div class="chapter-demo-number">2</div>
 						<div class="chapter-demo-name">Sneak Peek</div>
 					</a>
 				
-					<a href="editor/?book=core-2-interaction-s25&chapter=week-14&demo=last-weeks-challenge" class="chapter-demo" style="--primary: var(--green);">
+					<a href="editor/?book=core-2-interaction-s25&chapter=week-14&demo=last-weeks-challenge" class="chapter-demo">
 						<div class="chapter-demo-number">3</div>
 						<div class="chapter-demo-name">Last Week’s Challenge</div>
 					</a>
 				
-					<a href="editor/?book=core-2-interaction-s25&chapter=week-14&demo=featured-submission-1" class="chapter-demo" style="--primary: var(--green);">
+					<a href="editor/?book=core-2-interaction-s25&chapter=week-14&demo=featured-submission-1" class="chapter-demo">
 						<div class="chapter-demo-number">4</div>
 						<div class="chapter-demo-name">Featured Submission 1</div>
 					</a>
 				
-					<a href="editor/?book=core-2-interaction-s25&chapter=week-14&demo=featured-submission-2" class="chapter-demo" style="--primary: var(--green);">
+					<a href="editor/?book=core-2-interaction-s25&chapter=week-14&demo=featured-submission-2" class="chapter-demo">
 						<div class="chapter-demo-number">5</div>
 						<div class="chapter-demo-name">Featured Submission 2</div>
 					</a>
 				
-					<a href="editor/?book=core-2-interaction-s25&chapter=week-14&demo=featured-submission-3" class="chapter-demo" style="--primary: var(--green);">
+					<a href="editor/?book=core-2-interaction-s25&chapter=week-14&demo=featured-submission-3" class="chapter-demo">
 						<div class="chapter-demo-number">6</div>
 						<div class="chapter-demo-name">Featured Submission 3</div>
 					</a>
 				
-					<a href="editor/?book=core-2-interaction-s25&chapter=week-14&demo=recap" class="chapter-demo" style="--primary: var(--green);">
+					<a href="editor/?book=core-2-interaction-s25&chapter=week-14&demo=recap" class="chapter-demo">
 						<div class="chapter-demo-number">7</div>
 						<div class="chapter-demo-name">Recap</div>
 					</a>
 				
-					<a href="editor/?book=core-2-interaction-s25&chapter=week-14&demo=inputs" class="chapter-demo" style="--primary: var(--pink);">
+					<a href="editor/?book=core-2-interaction-s25&chapter=week-14&demo=inputs" class="chapter-demo">
 						<div class="chapter-demo-number">8</div>
 						<div class="chapter-demo-name">Inputs</div>
 					</a>
 				
-					<a href="editor/?book=core-2-interaction-s25&chapter=week-14&demo=building-an-interface" class="chapter-demo" style="--primary: var(--pink);">
+					<a href="editor/?book=core-2-interaction-s25&chapter=week-14&demo=building-an-interface" class="chapter-demo">
 						<div class="chapter-demo-number">9</div>
 						<div class="chapter-demo-name">Building an Interface</div>
 					</a>
 				
-					<a href="editor/?book=core-2-interaction-s25&chapter=week-14&demo=objects" class="chapter-demo" style="--primary: var(--pink);">
+					<a href="editor/?book=core-2-interaction-s25&chapter=week-14&demo=objects" class="chapter-demo">
 						<div class="chapter-demo-number">10</div>
 						<div class="chapter-demo-name">Objects</div>
 					</a>
 				
-					<a href="editor/?book=core-2-interaction-s25&chapter=week-14&demo=tracking-settings" class="chapter-demo" style="--primary: var(--pink);">
+					<a href="editor/?book=core-2-interaction-s25&chapter=week-14&demo=tracking-settings" class="chapter-demo">
 						<div class="chapter-demo-number">11</div>
 						<div class="chapter-demo-name">Tracking Settings with Objects</div>
 					</a>
 				
-					<a href="editor/?book=core-2-interaction-s25&chapter=week-14&demo=document-object-model" class="chapter-demo" style="--primary: var(--pink);">
+					<a href="editor/?book=core-2-interaction-s25&chapter=week-14&demo=document-object-model" class="chapter-demo">
 						<div class="chapter-demo-number">12</div>
 						<div class="chapter-demo-name">The Document Object Model (DOM)</div>
 					</a>
 				
-					<a href="editor/?book=core-2-interaction-s25&chapter=week-14&demo=apis" class="chapter-demo" style="--primary: var(--pink);">
+					<a href="editor/?book=core-2-interaction-s25&chapter=week-14&demo=apis" class="chapter-demo">
 						<div class="chapter-demo-number">13</div>
 						<div class="chapter-demo-name">APIs</div>
 					</a>
 				
-					<a href="editor/?book=core-2-interaction-s25&chapter=week-14&demo=weekly-challenge" class="chapter-demo" style="--primary: var(--blue);">
+					<a href="editor/?book=core-2-interaction-s25&chapter=week-14&demo=weekly-challenge" class="chapter-demo">
 						<div class="chapter-demo-number">14</div>
 						<div class="chapter-demo-name">Weekly Challenge</div>
 					</a>
@@ -797,49 +860,52 @@
 					</div>
 				</section>
 			
-				<section class="chapter " id="core-2-interaction-s25-week-15" style="--primary: var(--red)">
+				<section class="chapter" id="core-2-interaction-s25-week-15">
 					<div class="chapter-header">
 						<a class="chapter-link" href="editor/?book=core-2-interaction-s25&chapter=week-15&demo=last-weeks-challenge">
 							<div class="chapter-subtitle">
-								5/9/25
+								Chapter 13
 							</div>
 							<h3 class="chapter-title">
-								Week 15
+								Week 15 (5/9/25)
 							</h3>
 						</a>
 						<p class="chapter-desc">
 							
 						</p>
-						<a href="editor/?book=core-2-interaction-s25&chapter=week-15&demo=last-weeks-challenge" class="chapter-open">Open chapter &nbsp;&nearr;</a>
+						<a href="editor/?book=core-2-interaction-s25&chapter=week-15&demo=last-weeks-challenge" class="chapter-open">
+							<span>Open chapter</span>
+							<svg viewBox="0 0 100 100"><path d="M25,14.97v70.06l25-21.25,25,21.25V14.97H25ZM66,65.56l-16-13.6-16,13.6V23.97h32v41.59Z"/></svg>
+						</a>
 					</div>
 					<div class="chapter-demos">
 						
-					<a href="editor/?book=core-2-interaction-s25&chapter=week-15&demo=last-weeks-challenge" class="chapter-demo" style="--primary: var(--green);">
+					<a href="editor/?book=core-2-interaction-s25&chapter=week-15&demo=last-weeks-challenge" class="chapter-demo">
 						<div class="chapter-demo-number">1</div>
 						<div class="chapter-demo-name">Last Week’s Challenge</div>
 					</a>
 				
-					<a href="editor/?book=core-2-interaction-s25&chapter=week-15&demo=featured-submission-1" class="chapter-demo" style="--primary: var(--pink);">
+					<a href="editor/?book=core-2-interaction-s25&chapter=week-15&demo=featured-submission-1" class="chapter-demo">
 						<div class="chapter-demo-number">2</div>
 						<div class="chapter-demo-name">Featured Submission 1</div>
 					</a>
 				
-					<a href="editor/?book=core-2-interaction-s25&chapter=week-15&demo=featured-submission-2" class="chapter-demo" style="--primary: var(--pink);">
+					<a href="editor/?book=core-2-interaction-s25&chapter=week-15&demo=featured-submission-2" class="chapter-demo">
 						<div class="chapter-demo-number">3</div>
 						<div class="chapter-demo-name">Featured Submission 2</div>
 					</a>
 				
-					<a href="editor/?book=core-2-interaction-s25&chapter=week-15&demo=featured-submission-3" class="chapter-demo" style="--primary: var(--pink);">
+					<a href="editor/?book=core-2-interaction-s25&chapter=week-15&demo=featured-submission-3" class="chapter-demo">
 						<div class="chapter-demo-number">4</div>
 						<div class="chapter-demo-name">Featured Submission 3</div>
 					</a>
 				
-					<a href="editor/?book=core-2-interaction-s25&chapter=week-15&demo=featured-submission-4" class="chapter-demo" style="--primary: var(--pink);">
+					<a href="editor/?book=core-2-interaction-s25&chapter=week-15&demo=featured-submission-4" class="chapter-demo">
 						<div class="chapter-demo-number">5</div>
 						<div class="chapter-demo-name">Featured Submission 4</div>
 					</a>
 				
-					<a href="editor/?book=core-2-interaction-s25&chapter=week-15&demo=recap" class="chapter-demo" style="--primary: var(--blue);">
+					<a href="editor/?book=core-2-interaction-s25&chapter=week-15&demo=recap" class="chapter-demo">
 						<div class="chapter-demo-number">6</div>
 						<div class="chapter-demo-name">So, What Did We Learn?</div>
 					</a>
@@ -847,9 +913,21 @@
 					</div>
 				</section>
 			
+					</div>
 				</div>
 			</article>
 		
+
+				<div class="home-vignette"></div>
+				<div class="home-books-container">
+					<div class="home-books"></div>
+				</div>
+				<div class="home-books-background-container">
+					<div class="home-books-background"></div>
+				</div>
+				<div class="home-books-background2-container">
+					<div class="home-books-background2"></div>
+				</div>
 			</main>
 
 			<script src="assets/scripts/all-demos.js"></script>

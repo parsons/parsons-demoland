@@ -1,466 +1,353 @@
 {
 	"week-1": {
-		"title": "Week 1",
-		"subtitle": "1/24/25",
+		"title": "Week 1 (1/24/25)",
 		"desc": "A brief introduction (or review) of HTML.",
-		"color": "var(--pink)",
 		"active": true,
 		"demos": {
 			"example-demo-1": {
-				"name": "A single HTML element",
-				"color": "var(--pink)"
+				"name": "A single HTML element"
 			},
 			"example-demo-2": {
-				"name": "A few common HTML elements",
-				"color": "var(--pink)"
+				"name": "A few common HTML elements"
 			},
 			"example-demo-3": {
-				"name": "A complete HTML document",
-				"color": "var(--pink)"
+				"name": "A complete HTML document"
 			}
 		}
 	},
 	"week-2": {
-		"title": "Week 2",
-		"subtitle": "1/31/25",
+		"title": "Week 2 (1/31/25)",
 		"desc": "A brief introduction (or review) of CSS.",
-		"color": "var(--green)",
 		"active": true,
 		"demos": {
 			"example-demo-1": {
-				"name": "Linking an external stylesheet",
-				"color": "var(--green)"
+				"name": "Linking an external stylesheet"
 			}
 		}
 	},
 	"week-3": {
-		"title": "Week 3",
-		"subtitle": "2/7/25",
+		"title": "Week 3 (2/7/25)",
 		"desc": "Exploring how designers consider structure, visual style, motion, and accessibility in the design of a single component in a design system.",
-		"color": "var(--red)",
 		"active": true,
 		"demos": {
 			"example-demo-1": {
-				"name": "An article card component",
-				"color": "var(--red)"
+				"name": "An article card component"
 			}
 		}
 	},
 	"week-6": {
-		"title": "Week 6",
-		"subtitle": "2/28/25",
+		"title": "Week 6 (2/28/25)",
 		"desc": "We'll dive into the fundamental concept of a box as a container to hold text and other elements.",
-		"color": "var(--yellow)",
 		"active": true,
 		"demos": {
 			"example-demo-1": {
-				"name": "The Box Model",
-				"color": "var(--yellow)"
+				"name": "The Box Model"
 			},
 			"example-demo-2": {
-				"name": "Inline v. Block Display",
-				"color": "var(--yellow)"
+				"name": "Inline v. Block Display"
 			},
 			"example-demo-3": {
-				"name": "Absolute v. Relative Units",
-				"color": "var(--yellow)"
+				"name": "Absolute v. Relative Units"
 			},
 			"example-demo-4": {
-				"name": "Form Basics",
-				"color": "var(--yellow)"
+				"name": "Form Basics"
 			},
 			"example-demo-5": {
-				"name": "Sample Form Elements",
-				"color": "var(--yellow)"
+				"name": "Sample Form Elements"
 			}
 		}
 	},
 	"week-7": {
-		"title": "Week 7",
-		"subtitle": "3/7/25",
+		"title": "Week 7 (3/7/25)",
 		"desc": "We'll dive into some parallel examples showing the same layout using different techniques.",
-		"color": "var(--blue)",
 		"active": true,
 		"demos": {
 			"example-demo-1": {
-				"name": "Centering: Using Margins",
-				"color": "var(--blue)"
+				"name": "Centering: Using Margins"
 			},
 			"example-demo-2": {
-				"name": "Centering: Using Flexbox",
-				"color": "var(--blue)"
+				"name": "Centering: Using Flexbox"
 			},
 			"example-demo-3": {
-				"name": "Centering: Using Grids",
-				"color": "var(--blue)"
+				"name": "Centering: Using Grids"
 			},
 			"example-demo-4": {
-				"name": "Sample Layout: Inline Block",
-				"color": "var(--blue)"
+				"name": "Sample Layout: Inline Block"
 			},
 			"example-demo-5": {
-				"name": "Sample Layout: Flexbox",
-				"color": "var(--blue)"
+				"name": "Sample Layout: Flexbox"
 			},
 			"example-demo-6": {
-				"name": "Sample Layout: Grids",
-				"color": "var(--blue)"
+				"name": "Sample Layout: Grids"
 			},
 			"example-demo-7": {
-				"name": "Sample Layout: Grid Template Area",
-				"color": "var(--blue)"
+				"name": "Sample Layout: Grid Template Area"
 			}
 		}
 	},
 	"week-8": {
-		"title": "Week 8",
-		"subtitle": "3/21/25",
+		"title": "Week 8 (3/21/25)",
 		"desc": "We'll dive into all of the ways you can position an element.",
-		"color": "var(--pink)",
 		"active": true,
 		"demos": {
 			"example-demo-1": {
-				"name": "Normal-Flow versus Out-of-Flow",
-				"color": "var(--pink)"
+				"name": "Normal-Flow versus Out-of-Flow"
 			},
 			"example-demo-2": {
-				"name": "Positioning 6 Different Ways",
-				"color": "var(--pink)"
+				"name": "Positioning 6 Different Ways"
 			}
 		}
 	},
 	"week-9": {
-		"title": "Week 9",
-		"subtitle": "3/28/25",
+		"title": "Week 9 (3/28/25)",
 		"desc": "We'll be creating microinteractions with the help of CSS transforms, transitions, and animations.",
-		"color": "var(--green)",
 		"active": true,
 		"demos": {
 			"example-demo-1": {
-				"name": "Transforms, Transitions, and Animations",
-				"color": "var(--green)"
+				"name": "Transforms, Transitions, and Animations"
 			},
 			"example-demo-2": {
-				"name": "3D Transforms",
-				"color": "var(--green)"
+				"name": "3D Transforms"
 			}
 		}
 	},
 	"week-10": {
-		"title": "Week 10",
-		"subtitle": "4/4/25",
+		"title": "Week 10 (4/4/25)",
 		"desc": "We'll continue pushing the boundaries of CSS.",
-		"color": "var(--red)",
 		"active": true,
 		"demos": {
 			"example-demo-1": {
-				"name": "Advanced and Experimental CSS",
-				"color": "var(--red)"
+				"name": "Advanced and Experimental CSS"
 			}
 		}
 	},
 	"week-11": {
-		"title": "Week 11",
-		"subtitle": "4/11/25",
+		"title": "Week 11 (4/11/25)",
 		"desc": "Introducing JavaScript, a way of dynamically altering a page’s content and style.",
-		"color": "var(--yellow)",
 		"active": true,
 		"demos": {
 			"example-demo-1": {
-				"name": "A Normal Website",
-				"color": "var(--yellow)"
+				"name": "A Normal Website"
 			},
 			"example-demo-2": {
-				"name": "Sneak Peek: Toggling Classes",
-				"color": "var(--yellow)"
+				"name": "Sneak Peek: Toggling Classes"
 			},
 			"example-demo-3": {
-				"name": "Sneak Peek: Randomizing CSS",
-				"color": "var(--yellow)"
+				"name": "Sneak Peek: Randomizing CSS"
 			},
 			"example-demo-4": {
-				"name": "Sneak Peek: Adding HTML",
-				"color": "var(--yellow)"
+				"name": "Sneak Peek: Adding HTML"
 			},
 			"example-demo-5": {
-				"name": "Sneak Peek: Repeating Code",
-				"color": "var(--yellow)"
+				"name": "Sneak Peek: Repeating Code"
 			},
 			"example-demo-6": {
-				"name": "Sneak Peek: Generative Art",
-				"color": "var(--yellow)"
+				"name": "Sneak Peek: Generative Art"
 			},
 			"example-demo-7": {
-				"name": "Variables",
-				"color": "var(--yellow)"
+				"name": "Variables"
 			},
 			"example-demo-8": {
-				"name": "Operators",
-				"color": "var(--yellow)"
+				"name": "Operators"
 			},
 			"example-demo-9": {
-				"name": "Functions",
-				"color": "var(--yellow)"
+				"name": "Functions"
 			},
 			"example-demo-10": {
-				"name": "Conditionals",
-				"color": "var(--yellow)"
+				"name": "Conditionals"
 			},
 			"example-demo-11": {
-				"name": "Targeting Elements and Adding Event Listeners",
-				"color": "var(--yellow)"
+				"name": "Targeting Elements and Adding Event Listeners"
 			},
 			"example-demo-12": {
-				"name": "Modifying CSS",
-				"color": "var(--yellow)"
+				"name": "Modifying CSS"
 			},
 			"example-demo-13": {
-				"name": "Modifying CSS, Dynamically",
-				"color": "var(--yellow)"
+				"name": "Modifying CSS, Dynamically"
 			},
 			"example-demo-14": {
-				"name": "Toggling Classes",
-				"color": "var(--yellow)"
+				"name": "Toggling Classes"
 			},
 			"weekly-challenge": {
-				"name": "Weekly Challenge",
-				"color": "var(--yellow)"
+				"name": "Weekly Challenge"
 			}
 		}
 	},
 	"week-12": {
-		"title": "Week 12",
-		"subtitle": "4/11/25",
+		"title": "Week 12 (4/11/25)",
 		"desc": "Arrays and randomization.",
-		"color": "var(--blue)",
 		"active": true,
 		"demos": {
 			"last-weeks-challenge": {
-				"name": "Last Week’s Challenge",
-				"color": "var(--blue)"
+				"name": "Last Week’s Challenge"
 			},
 			"common-bugs-naming-variables": {
-				"name": "Common Bugs: Naming Variables",
-				"color": "var(--blue)"
+				"name": "Common Bugs: Naming Variables"
 			},
 			"common-bugs-quotes": {
-				"name": "Common Bugs: Quotes",
-				"color": "var(--blue)"
+				"name": "Common Bugs: Quotes"
 			},
 			"common-bugs-brackets": {
-				"name": "Common Bugs: Brackets",
-				"color": "var(--blue)"
+				"name": "Common Bugs: Brackets"
 			},
 			"recap": {
-				"name": "Recap: Variables, Operators, Conditionals, and Events",
-				"color": "var(--yellow)"
+				"name": "Recap: Variables, Operators, Conditionals, and Events"
 			},
 			"changing-content": {
-				"name": "Changing Content",
-				"color": "var(--yellow)"
+				"name": "Changing Content"
 			},
 			"arrays": {
-				"name": "Arrays",
-				"color": "var(--green)"
+				"name": "Arrays"
 			},
 			"using-arrays-1": {
-				"name": "Arrays: Navigating Entries",
-				"color": "var(--green)"
+				"name": "Arrays: Navigating Entries"
 			},
 			"using-arrays-2": {
-				"name": "Arrays: Edge Cases",
-				"color": "var(--green)"
+				"name": "Arrays: Edge Cases"
 			},
 			"common-bugs-scope": {
-				"name": "Common Bugs: Scope",
-				"color": "var(--green)"
+				"name": "Common Bugs: Scope"
 			},
 			"using-arrays-3": {
-				"name": "Arrays: Moving Backwards",
-				"color": "var(--green)"
+				"name": "Arrays: Moving Backwards"
 			},
 			"using-arrays-4": {
-				"name": "Arrays: Putting It Together",
-				"color": "var(--green)"
+				"name": "Arrays: Putting It Together"
 			},
 			"using-arrays-5": {
-				"name": "Arrays: Other Kinds of Data",
-				"color": "var(--green)"
+				"name": "Arrays: Other Kinds of Data"
 			},
 			"randomization": {
-				"name": "Randomization",
-				"color": "var(--red)"
+				"name": "Randomization"
 			},
 			"using-randomization-1": {
-				"name": "Randomization: Within a Range",
-				"color": "var(--red)"
+				"name": "Randomization: Within a Range"
 			},
 			"using-randomization-1a": {
-				"name": "Randomization: Applied to CSS",
-				"color": "var(--red)"
+				"name": "Randomization: Applied to CSS"
 			},
 			"using-randomization-2": {
-				"name": "Randomization: Random Entry in an Array",
-				"color": "var(--red)"
+				"name": "Randomization: Random Entry in an Array"
 			},
 			"weekly-challenge": {
-				"name": "Weekly Challenge",
-				"color": "var(--pink)"
+				"name": "Weekly Challenge"
 			}
 		}
 	},
 	"week-13": {
-		"title": "Week 13",
-		"subtitle": "4/25/25",
+		"title": "Week 13 (4/25/25)",
 		"desc": "Repeating code, loops, and libraries.",
-		"color": "var(--pink)",
 		"active": true,
 		"demos": {
 			"last-weeks-challenge": {
-				"name": "Last Week’s Challenge",
-				"color": "var(--pink)"
+				"name": "Last Week’s Challenge"
 			},
 			"sneak-peek": {
-				"name": "Sneak Peek",
-				"color": "var(--pink)"
+				"name": "Sneak Peek"
 			},
 			"recap": {
-				"name": "Recap",
-				"color": "var(--pink)"
+				"name": "Recap"
 			},
 			"creating-new-elements": {
-				"name": "Creating New Elements",
-				"color": "var(--green)"
+				"name": "Creating New Elements"
 			},
 			"template-literals": {
-				"name": "Template Literals",
-				"color": "var(--green)"
+				"name": "Template Literals"
 			},
 			"repeating-code": {
-				"name": "Repeating Code",
-				"color": "var(--green)"
+				"name": "Repeating Code"
 			},
 			"while-loops": {
-				"name": "\"while\" Loops",
-				"color": "var(--blue)"
+				"name": "\"while\" Loops"
 			},
 			"for-loops": {
-				"name": "\"for\" Loops",
-				"color": "var(--blue)"
+				"name": "\"for\" Loops"
 			},
 			"looping-through-an-array": {
-				"name": "Looping Through an Array",
-				"color": "var(--blue)"
+				"name": "Looping Through an Array"
 			},
 			"targeting-multiple-elements": {
-				"name": "Targeting Multiple Elements",
-				"color": "var(--blue)"
+				"name": "Targeting Multiple Elements"
 			},
 			"javascript-libraries": {
-				"name": "JavaScript Libraries",
-				"color": "var(--blue)"
+				"name": "JavaScript Libraries"
 			},
 			"weekly-challenge": {
-				"name": "Weekly Challenge",
-				"color": "var(--blue)"
+				"name": "Weekly Challenge"
 			}
 		}
 	},
 	"week-14": {
-		"title": "Week 14",
-		"subtitle": "5/2/25",
+		"title": "Week 14 (5/2/25)",
 		"desc": "Objects, APIs, and input elements.",
-		"color": "var(--green)",
 		"active": true,
 		"demos": {
 			"next-week": {
-				"name": "Next Week",
-				"color": "var(--green)"
+				"name": "Next Week"
 			},
 			"sneak-peek": {
-				"name": "Sneak Peek",
-				"color": "var(--green)"
+				"name": "Sneak Peek"
 			},
 			"last-weeks-challenge": {
-				"name": "Last Week’s Challenge",
-				"color": "var(--green)"
+				"name": "Last Week’s Challenge"
 			},
 			"featured-submission-1": {
-				"name": "Featured Submission 1",
-				"color": "var(--green)"
+				"name": "Featured Submission 1"
 			},
 			"featured-submission-2": {
-				"name": "Featured Submission 2",
-				"color": "var(--green)"
+				"name": "Featured Submission 2"
 			},
 			"featured-submission-3": {
-				"name": "Featured Submission 3",
-				"color": "var(--green)"
+				"name": "Featured Submission 3"
 			},
 			"recap": {
-				"name": "Recap",
-				"color": "var(--green)"
+				"name": "Recap"
 			},
 			"inputs": {
-				"name": "Inputs",
-				"color": "var(--pink)"
+				"name": "Inputs"
 			},
 			"building-an-interface": {
-				"name": "Building an Interface",
-				"color": "var(--pink)"
+				"name": "Building an Interface"
 			},
 			"objects": {
-				"name": "Objects",
-				"color": "var(--pink)"
+				"name": "Objects"
 			},
 			"tracking-settings": {
-				"name": "Tracking Settings with Objects",
-				"color": "var(--pink)"
+				"name": "Tracking Settings with Objects"
 			},
 			"document-object-model": {
-				"name": "The Document Object Model (DOM)",
-				"color": "var(--pink)"
+				"name": "The Document Object Model (DOM)"
 			},
 			"apis": {
-				"name": "APIs",
-				"color": "var(--pink)"
+				"name": "APIs"
 			},
 			"weekly-challenge": {
-				"name": "Weekly Challenge",
-				"color": "var(--blue)"
+				"name": "Weekly Challenge"
 			}
 		}
 	},
 	"week-15": {
-		"title": "Week 15",
-		"subtitle": "5/9/25",
+		"title": "Week 15 (5/9/25)",
 		"desc": "",
-		"color": "var(--red)",
 		"active": true,
 		"demos": {
 			"last-weeks-challenge": {
-				"name": "Last Week’s Challenge",
-				"color": "var(--green)"
+				"name": "Last Week’s Challenge"
 			},
 			"featured-submission-1": {
-				"name": "Featured Submission 1",
-				"color": "var(--pink)"
+				"name": "Featured Submission 1"
 			},
 			"featured-submission-2": {
-				"name": "Featured Submission 2",
-				"color": "var(--pink)"
+				"name": "Featured Submission 2"
 			},
 			"featured-submission-3": {
-				"name": "Featured Submission 3",
-				"color": "var(--pink)"
+				"name": "Featured Submission 3"
 			},
 			"featured-submission-4": {
-				"name": "Featured Submission 4",
-				"color": "var(--pink)"
+				"name": "Featured Submission 4"
 			},
 			"recap": {
-				"name": "So, What Did We Learn?",
-				"color": "var(--blue)"
+				"name": "So, What Did We Learn?"
 			}
 		}
 	}

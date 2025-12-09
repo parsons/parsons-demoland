@@ -1,12 +1,16 @@
 {
 	"tutorial": {
 		"title": "Tutorial",
+		"title-plaintext": "Tutorial",
 		"shortdesc": "Learn how to use this website",
-		"desc": "<p>Get started with DEMOLAND! Learn how to use this website and what HTML, CSS, and JavaScript are.</p>"
+		"desc": "<p>Get started with DEMOLAND! Learn how to use this website and what HTML, CSS, and JavaScript are.</p>",
+		"unlisted": false
 	},
 	"core-2-interaction-s25": {
 		"title": "Core 2 Interaction (Spring 2025)",
+		"title-plaintext": "Core 2 Interaction (Spring 2025)",
 		"shortdesc": "Lecture series",
-		"desc": "<p>Weekly demos for Parson’s Core 2 Interaction lecture series during the Spring 2025 semester.</p>"
+		"desc": "<p>Weekly demos for Parson’s Core 2 Interaction lecture series during the Spring 2025 semester.</p>",
+		"unlisted": false
 	}
 }
