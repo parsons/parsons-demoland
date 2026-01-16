@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Form Basics</title>
+</head>
+<body>
+
+
+<!-- This is a basic form. For it to actually work, we need a few other form attributes, a server to receive the responses, and some server-side code. -->
+<form> 
+	<div> <!-- You can nest elements within a form -->
+	  <label for="inputid">My name is:</label> 
+	  <!-- A label is an inline element like a span and is tied to the id attribute of the input element it is labelling. Strictly speaking, labels are not necessary but are good practice for accessibility. -->
+	  <input type="text" id="inputid" name="inputid" />
+	  <!-- This is an example of an input element. The type of input is indicated by the "type" attribute. The "id" is a unique identifier is used by the label and for targeting by JS or CSS. The "name" is sent to the server along with the value as a key-value pair. -->
+	</div>
+	<button type="submit">Submit This!</button>
+	<!-- There are different button types. This one submits the form to the server. (However, in our demo, there is no server to receive this information.)-->
+</form>
+	
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>A normal website, with a twist</title>
+
+	<style>
+		* {
+			box-sizing: border-box;
+		}
+		#container {
+			max-width: 400px;
+			margin: 0 auto;
+			background-color: #ddd;
+			padding: 20px;
+			transition: font-size .2s;
+		}
+		#myButton {
+			display: block;
+			margin: 20px auto;
+		}
+	</style>
+</head>
+<body>
+
+	<nav>
+		<button onclick="somethingCool()" id="myButton">Do something cool.</button>
+	</nav>
+	
+	<main id="container">
+		<h1>Welcome to my super nifty website</h1>
+		<p>Only cool people are allowed.</p>
+
+		<section>
+			<h2>Are you cool enough to browse my site?</h2>
+			<p>I’m not sure you’re cool enough.</p>
+		</section>
+
+		<section>
+			<h2>What makes you so cool?</h2>
+			<p>Nah, you’re just not it.</p>
+		</section>
+
+		<section>
+			<h2>You could probably prove yourself somehow.</h2>
+			<p>Maybe by writing some code? Code is pretty cool, NOT.</p>
+			<p>(OK, it can be pretty cool.)</p>
+		</section>
+	</main>
+
+	<script>
+		function somethingCool() {
+			let container = document.querySelector('#container');
+			container.style.fontSize = Math.random()*50 + "px";
+		}
+	</script>
+
+</body>
+</html>

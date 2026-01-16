@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sample Layout: Inline Block</title>
+    <style>
+        /* CSS Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .envelope {
+            width: 100%;
+            background-color: yellow;
+        }
+
+        header {
+            width: 100%;
+            
+            /* Styling */
+            background-color: red;
+            padding: 2em;
+        }
+
+        section {
+            width: 100%;
+            display: block; /* which is default */
+        }
+
+        .sidecol {
+            width: 25%;
+            display: inline-block;
+            vertical-align: top; /* If we don't have this, the vertical alignment starts to get funky; controls how the element appears in relation to its surroundings */
+
+            /* Styling */
+            background-color: green;
+            padding: 2em;
+            height: 20rem;
+        }
+
+        .maincol {
+            width: 50%;
+            display: inline-block;
+            vertical-align: top; /* If we don't have this, the vertical alignment starts to get funky; controls how the element appears in relation to its surroundings */
+
+            /* Styling */
+            background-color: blue;
+            padding: 2em;
+            height: 20rem;
+        }
+
+        .sidecol2 {
+            width: 25%;
+            display: inline-block;
+            vertical-align: top; /* If we don't have this, the vertical alignment starts to get funky; controls how the element appears in relation to its surroundings */
+            
+            /* Styling */
+            background-color: pink;
+            padding: 2em;
+            height: 20rem;
+        }
+
+        footer {
+            width: 25%;
+            margin-left: auto;
+            margin-right: 0;
+
+            /* Styling */
+            background-color: purple;
+            padding: 2em;
+        }
+
+        @media screen and (max-width: 500px) {
+            .sidecol {
+                display: block;
+                width: 100%;
+                height: auto;
+            }
+            .maincol {
+                display: block;
+                width: 100%;
+            }
+            .sidecol2 {
+                display: block;
+                width: 100%;
+                height: auto;
+            }
+            footer {
+                margin: 0;
+                width: 100%;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="envelope">
+        <header>
+            Some header
+        </header>
+        <section>
+            <div class="sidecol">
+                This is side column 1.
+            </div><!-- Hack to remove the white space after the element
+         --><div class="maincol">
+                This is the main column.
+            </div><!-- Hack
+         --><div class="sidecol2">
+                This is side column 2.
+            </div>
+        </section>
+        <footer>
+            Some ending.
+        </footer>
+    </div>
+</body>
+</html>

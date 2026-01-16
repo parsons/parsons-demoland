@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced and Experimental CSS</title>
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            /* scroll-timeline converts the scroll progress of the page from 0% to 100% */
+            /* This only works on some browsers like Chrome: https://caniuse.com/?search=scroll-timeline */
+            scroll-timeline: --mypagescroll y; /* name (must start with -- in order to prevent naming conflicts) and axis */
+        }
+
+
+        .envelope {
+            width: 100%;
+            font-family: sans-serif;
+        }
+
+
+        /* Progress Bar Track */
+        .progress-track {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 50px;
+            background: lightgrey;
+            z-index: 1000;
+        }
+
+        /* Animated Progress Bar */
+        .progress-bar {
+            height: 50px;
+            background: linear-gradient(90deg, blue 0%, limegreen 100%); /* Gradient going from left to right */
+            width: 0%; /* Starting position is 0 */
+
+            animation-name: animateprogress;
+            animation-duration: auto; /* Auto is the default duration and is equal to 0 */
+            animation-timing-function: linear;
+
+            /* Controls the progress of the animation */
+            /* Experimental: https://caniuse.com/?search=animation-timeline */
+            animation-timeline: --mypagescroll; 
+        }
+
+
+        /* When scrolling, this animation is triggered by the scroll-linked animation */
+        @keyframes animateprogress {
+            0% { 
+                    width: 0; 
+                }
+            100% { 
+                    width: 100%; 
+                }
+        }
+
+
+        ol {
+            margin: 4em;
+            list-style: none;
+            text-align: center;
+        }
+
+        li {
+            font-size: 4em;
+            filter: blur(0.1em); /* There are many filter functions: https://developer.mozilla.org/en-US/docs/Web/CSS/filter-function */
+            transition: all 0.5s ease;
+        }
+
+		/* More on advanced selectors: https://css-tricks.com/almanac/pseudo-selectors/n/nth-child/ */
+		li:nth-child(4n - 3) { /* Every 4th item starting with the first */
+			background-color: aquamarine;
+		}
+
+
+        li:hover {
+            font-size: 4.5em;
+            filter: blur(0);
+        }
+
+
+        /* Here is a bonus, if you thought that CSS couldn't get weirder... */
+        /* This works for all browsers */
+
+        li:hover::before { /* Creates a pseudoelement before the element selected */
+            content: "This is the number "; /* https://developer.mozilla.org/en-US/docs/Web/CSS/content */
+        }
+
+        li:hover::after {
+            content: " ⭐";
+        }
+
+
+    </style>
+</head>
+<body>
+
+    <!-- Progress Bar -->
+    <!-- Remember this won't work on all browsers! -->
+    <div class="progress-track">
+        <div class="progress-bar"></div>
+    </div>
+    
+    <div class="envelope">
+        <ol>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+            <li>6</li>
+            <li>7</li>
+            <li>8</li>
+            <li>9</li>
+            <li>10</li>
+            <li>11</li>
+            <li>12</li>
+            <li>13</li>
+            <li>14</li>
+            <li>15</li>
+            <li>16</li>
+            <li>17</li>
+            <li>18</li>
+            <li>19</li>
+            <li>20</li>
+            <li>21</li>
+            <li>22</li>
+            <li>23</li>
+            <li>24</li>
+            <li>25</li>
+            <li>26</li>
+            <li>27</li>
+            <li>28</li>
+            <li>29</li>
+            <li>30</li>
+            <li>31</li>
+            <li>32</li>
+            <li>33</li>
+            <li>34</li>
+            <li>35</li>
+            <li>36</li>
+            <li>37</li>
+            <li>38</li>
+            <li>39</li>
+            <li>40</li>
+            <li>41</li>
+            <li>42</li>
+            <li>43</li>
+            <li>44</li>
+            <li>45</li>
+            <li>46</li>
+            <li>47</li>
+            <li>48</li>
+            <li>49</li>
+            <li>50</li>
+            <li>51</li>
+            <li>52</li>
+            <li>53</li>
+            <li>54</li>
+            <li>55</li>
+            <li>56</li>
+            <li>57</li>
+            <li>58</li>
+            <li>59</li>
+            <li>60</li>
+            <li>61</li>
+            <li>62</li>
+            <li>63</li>
+            <li>64</li>
+            <li>65</li>
+            <li>66</li>
+            <li>67</li>
+            <li>68</li>
+            <li>69</li>
+            <li>70</li>
+            <li>71</li>
+            <li>72</li>
+            <li>73</li>
+            <li>74</li>
+            <li>75</li>
+            <li>76</li>
+            <li>77</li>
+            <li>78</li>
+            <li>79</li>
+            <li>80</li>
+            <li>81</li>
+            <li>82</li>
+            <li>83</li>
+            <li>84</li>
+            <li>85</li>
+            <li>86</li>
+            <li>87</li>
+            <li>88</li>
+            <li>89</li>
+            <li>90</li>
+            <li>91</li>
+            <li>92</li>
+            <li>93</li>
+            <li>94</li>
+            <li>95</li>
+            <li>96</li>
+            <li>97</li>
+            <li>98</li>
+            <li>99</li>
+            <li>100</li>
+        </ol>
+    </div>
+</body>
+</html>

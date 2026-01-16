@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Randomization</title>
+</head>
+<body>
+
+	<button id="myButton">Rock, paper, scissors?</button>
+
+	<script>
+
+		let myArray = [
+			"Rock!",
+			"Paper!",
+			"Scissors!"
+		]
+
+		// A longer version that breaks down what we’re doing
+		function randomEntryExplained() {
+			let rando1 = Math.random();
+			let rando2 = Math.random()*myArray.length;
+			let rando3 = Math.floor(rando2); // round down to prevent edge case error
+			alert(myArray[rando3]);
+		}
+
+		// A shorter version
+		function randomEntry() {
+			alert(myArray[Math.floor(Math.random()*myArray.length)]);
+
+		}
+
+		// Add event listeners
+		let myButton = document.querySelector('#myButton');
+		myButton.addEventListener('click', randomEntry);
+
+	</script>
+</body>
+</html>

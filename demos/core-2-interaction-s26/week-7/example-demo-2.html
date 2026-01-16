@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centering: Flexbox</title>
+    <style>
+
+        /* CSS Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .envelope {
+            width: 100%;
+
+            /* This is where the magic happens */
+            display: flex;
+            justify-content: center; /* Controls the position of the item along the main-axis, in this case, the main axis is the row */
+
+            /* align-items: center; Controls placement on the cross-axis e.g. if the main axis is a row, then the cross-axis is vertical */
+            /* align-content only works when there are multiple flexbox rows */
+
+            /* Just for styling purposes */
+            background-color: yellow;
+        }
+
+        .box {
+            width: 50vw;
+            height: 50vw;
+
+            /* Just for styling purposes */
+            background-color: blue;
+            color: white;
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="envelope">
+        <div class="box">Centered via flexbox</div>
+    </div>
+</body>
+</html>

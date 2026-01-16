@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centering 02: Grids</title>
+    <style>
+
+        /* CSS Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .envelope {
+            width: 100%;
+
+            /* This is where the magic happens */
+            display: grid;
+            justify-content: center; /* Controls the position of a column horizontally. */
+            /* align-content: center; Controls the position of a row vertically */
+
+            /* place-items: center; Does double-duty: replaces both justify-content and align-content */
+
+
+            /* Just for styling purposes */
+            background-color: yellow;
+        }
+
+        .box {
+            width: 50vw;
+            height: 50vw;
+
+            /* Just for styling purposes */
+            background-color: blue;
+            color: white;
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="envelope">
+        <div class="box">Centered via a grid</div>
+    </div>
+</body>
+</html>

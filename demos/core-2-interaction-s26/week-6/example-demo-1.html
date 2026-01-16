@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>The Box Model</title>
+
+	<style>
+		.mytext {
+			background-color: pink;
+  			width: 30%; /* If we don't specify the height, it will default to the height of things within the element */
+  			padding: 1em 2em 2em 1em; /* Top Right Bottom Left */
+  			border-right: 5px dotted blue; /* Applies to the right only */
+  			border-bottom: 5px dotted blue; /* Applies to the bottom only */
+  			border-left: 5px dotted blue; /* Applies to the left only */
+  			margin: 2em; /* Applies to all 4 sides */
+		}
+
+		
+		.mybox {
+			width: 200px;
+			height: 200px;
+			padding: 25px 50px; /* top-bottom right-left */
+			margin: 25px auto; /* One of the oldest tricks to center an element */
+			background-color: brown;
+		}
+		
+		.mycircle {
+			width: 100%;
+			height: 100%;
+			border: 5px dashed blue;
+			border-radius: 50%;
+			background-color: yellow;
+			box-sizing: border-box; /* This includes the border and padding in the calculation of width */
+		}
+	</style>
+
+</head>
+<body>
+	<p class="mytext">Putting all my eggs in one basket.</p>
+	<div class="mybox">
+		<div class="mycircle"></div>
+	</div>
+</body>
+</html>

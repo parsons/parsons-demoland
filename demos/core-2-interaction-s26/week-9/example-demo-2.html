@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS 3D Transforms</title>
+    <style>
+        /* Reset Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        
+        .envelope {
+            width: 100%;
+            height: 100vh;
+            background-color: black;
+
+            display: grid; /* Shortcut to center things vertically and horizontally */
+            place-items: center;
+
+        }
+        
+        /* 3D is a complicated topic. Here is a (older) tutorial: https://3dtransforms.desandro.com/ */
+
+        /* Container that gives a 3D perspective to its children and allows for hover */
+        .card {
+            width: 75%;
+            height: 10%;
+
+            perspective: 1000px; /* Higher the value, the smaller the effect  */
+            /* https://dev.to/softheartengineer/mastering-perspective-in-css-a-comprehensive-guide-for-web-developers-4dh */
+        }
+
+        /* Inner container that will be flipped */
+        .card-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+
+            transition: transform 1s ease;
+            transform-style: preserve-3d; /* Allows children to be positioned in 3D space */
+        }
+
+        /* Flip the card on hover */
+        .card:hover > .card-inner {
+            transform: rotateY(180deg); /* Rotate 180 degrees along the Y-axis */
+        }
+
+        /* Front Card */
+        /* We have two cards, both positioned absolutely on top of each other */
+        .card-front {
+            position: absolute;
+            top: 0;
+            left: 0;        
+            width: 100%;
+            height: 100%;
+            border-radius: 0.25em;
+            font-family: sans-serif;
+            font-size: 1.75em;
+            text-align: center;
+
+            display: grid;
+            place-items: center;
+            background-color: white;
+            color: blue;
+
+            backface-visibility: hidden; /* Hide the back side when facing away */
+            
+        }
+
+        /* Back Card: Rotated so that it will appear correctly when flipped */
+        .card-back {
+            position: absolute;
+            top: 0;
+            left: 0;        
+            width: 100%;
+            height: 100%;
+            border-radius: 0.25em;
+            font-family: sans-serif;
+            font-size: 1.75em;
+            text-align: center;
+
+            background-color: white;
+            border: none;
+
+            backface-visibility: hidden;
+            transform: rotateY(180deg); /* Rotated since it is in the back */
+            transition: all 0.5s ease;
+        }
+
+        .card-back::placeholder { /* Aligns the placeholder text to the center */
+            text-align: center; 
+        } 
+
+        .card-back:focus {
+            font-size: 2em;
+            background-color: yellow;
+            color: red;
+        }
+
+
+    </style>
+</head>
+<body>
+
+    <div class="envelope">
+
+        <!-- Container that allows for hover -->
+        <div class="card">
+            <!-- Inner container that flips -->
+            <div class="card-inner">
+                <div class="card-front">Double, double...</div>
+                <input type="text" placeholder="toil and..." class="card-back" />
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>

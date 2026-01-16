@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centering: Margins</title>
+    <style>
+
+        /* CSS Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box; /* Remember this allows the width of the element to auto-include the padding and border */
+        }
+
+        .envelope {
+            width: 100%; /* Ensures the envlope is the same width as the viewport */
+
+            /* Just for styling purposes */
+            background-color: yellow;
+        }
+
+        .box {
+            width: 50vw;
+            height: 50vw;
+
+            /* This is where the magic happens */
+            /* Basically, the computer tries to "take" all of the space on the left and the right, forcing the div into the middle */
+            margin-left: auto;
+            margin-right: auto;
+
+            /* Just for styling purposes */
+            background-color: blue;
+            color: white;
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Tip: Using a massive div that mimics the body gives your code more flexibility as it grows in complexity -->
+    <div class="envelope">
+        <div class="box">Centered via the margins</div>
+    </div>
+</body>
+</html>

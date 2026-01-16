@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Wikipedia Movie Visualizer</title>
+	<style>
+		* {
+			box-sizing: border-box;
+			margin: 0;
+			padding: 0;
+		}
+
+		body {
+			background-color: var(--bg-color);
+			color: var(--text-color);
+			transition: background-color 0.5s, color 0.5s;
+		}
+
+		h1 {
+			text-align: center;
+			font-family: 'Helvetica Neue', sans-serif;
+			padding: 20px;
+			background-color: var(--header-bg);
+			color: var(--accent-color);
+		}
+
+		.controls {
+			background-color: var(--panel-bg);
+			display: flex;
+			flex-wrap: wrap;
+			gap: 20px;
+			padding: 20px;
+			justify-content: center;
+		}
+
+		.controls h2,
+		.controls label {
+			color: var(--accent-color);
+			font-family: serif;
+		}
+
+		.controls input[type="range"]::-webkit-slider-thumb {
+			background: #888;
+		}
+
+		.controls input[type="range"]::-moz-range-thumb {
+			background: #888;
+		}
+
+		.controls button {
+			padding: 10px;
+			background-color: var(--accent-color);
+			border: none;
+			color: black;
+			font-weight: bold;
+			border-radius: 6px;
+			cursor: pointer;
+		}
+
+		.container {
+			display: flex;
+			flex-wrap: wrap;
+			padding: 10px;
+			gap: 10px;
+			justify-content: center;
+		}
+
+		.container a {
+			flex-grow: 1;
+			text-decoration: none;
+			font-family: sans-serif;
+			text-align: center;
+			padding: 10px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			border-radius: 8px;
+			transition: all 0.6s ease-in-out;
+			opacity: 0;
+			animation: fadeIn 1s ease forwards;
+		}
+
+		.container a:hover {
+			transform: scale(1.05);
+			opacity: 0.7;
+		}
+
+		@keyframes fadeIn {
+			from {
+				opacity: 0;
+				transform: translateY(10px);
+			}
+
+			to {
+				opacity: 1;
+				transform: translateY(0);
+			}
+		}
+
+		.theme-toggle {
+			position: fixed;
+			top: 10px;
+			right: 10px;
+			background-color: var(--accent-color);
+			color: black;
+			border: none;
+			padding: 8px 12px;
+			border-radius: 6px;
+			cursor: pointer;
+			font-weight: bold;
+		}
+
+		:root {
+			--bg-color: #000;
+			--text-color: #fff;
+			--accent-color: #b899a4;
+			--header-bg: #222;
+			--panel-bg: #111;
+		}
+
+		.light-theme {
+			--bg-color: #ffffff;
+			--text-color: #000000;
+			--accent-color: #b899a4;
+			--header-bg: #f0f0f0;
+			--panel-bg: #e0e0e0;
+		}
+	</style>
+	<script src="https://cdn.jsdelivr.net/npm/tone@latest/build/Tone.js"></script>
+</head>
+
+<body>
+	<h1>🎬 Wikipedia Movie Visualizer 🎬</h1>
+	<button class="theme-toggle" onclick="toggleTheme()">Toggle Theme</button>
+
+	<div class="controls">
+		<div>
+			<h2>Number of articles</h2>
+			<input id="controlsNumberOfArticles" type="range" value="20" min="1" max="200">
+			<label id="controlsNumberOfArticlesLabel">20</label>
+		</div>
+		<div>
+			<h2>Font size</h2>
+			<input id="controlsFontSize" type="range" value="18" min="4" max="32">
+			<label id="controlsFontSizeLabel">18</label>
+		</div>
+		<div>
+			<h2>Background color</h2>
+			<input id="controlsBackgroundColor" type="color" value="#0000ff">
+			<label id="controlsBackgroundColorLabel">#0000ff</label>
+		</div>
+		<div>
+			<h2>Text color</h2>
+			<input id="controlsTextColor" type="color" value="#ffffff">
+			<label id="controlsTextColorLabel">#ffffff</label>
+		</div>
+		<button id="generateButton">Fetch Movie Articles</button>
+	</div>
+
+	<div class="container"></div>
+
+	<script>
+		let settings = {
+			numberOfArticles: 20,
+			fontSize: 18,
+			backgroundColor: "#0000ff",
+			textColor: "#ffffff"
+		};
+
+		const controlsNumberOfArticles = document.querySelector("#controlsNumberOfArticles");
+		const controlsNumberOfArticlesLabel = document.querySelector("#controlsNumberOfArticlesLabel");
+		const controlsFontSize = document.querySelector("#controlsFontSize");
+		const controlsFontSizeLabel = document.querySelector("#controlsFontSizeLabel");
+		const controlsBackgroundColor = document.querySelector("#controlsBackgroundColor");
+		const controlsBackgroundColorLabel = document.querySelector("#controlsBackgroundColorLabel");
+		const controlsTextColor = document.querySelector("#controlsTextColor");
+		const controlsTextColorLabel = document.querySelector("#controlsTextColorLabel");
+
+		controlsNumberOfArticles.addEventListener("input", () => {
+			settings.numberOfArticles = parseInt(controlsNumberOfArticles.value);
+			controlsNumberOfArticlesLabel.textContent = settings.numberOfArticles;
+		});
+
+		controlsFontSize.addEventListener("input", () => {
+			settings.fontSize = parseInt(controlsFontSize.value);
+			controlsFontSizeLabel.textContent = settings.fontSize;
+		});
+
+		controlsBackgroundColor.addEventListener("input", () => {
+			settings.backgroundColor = controlsBackgroundColor.value;
+			controlsBackgroundColorLabel.textContent = settings.backgroundColor;
+		});
+
+		controlsTextColor.addEventListener("input", () => {
+			settings.textColor = controlsTextColor.value;
+			controlsTextColorLabel.textContent = settings.textColor;
+		});
+
+		const synth = new Tone.Synth().toDestination();
+
+		function getRandomArticles() {
+			const container = document.querySelector(".container");
+			container.innerHTML = "";
+
+			const url = `https://en.wikipedia.org/w/api.php?origin=*&action=query&format=json&list=random&rnnamespace=0&rnlimit=200`;
+
+			fetch(url)
+				.then(res => res.json())
+				.then(res => {
+					const wikipediaData = res.query.random;
+					let count = 0;
+					for (let entry of wikipediaData) {
+						const title = entry.title;
+						if (!title.toLowerCase().includes("film")) continue;
+						if (count >= settings.numberOfArticles) break;
+						count++;
+
+						const link = document.createElement("a");
+						link.href = `https://en.wikipedia.org/wiki/${title}`;
+						link.target = "_blank";
+						link.textContent = title;
+						link.style.fontSize = `${settings.fontSize}px`;
+						link.style.backgroundColor = settings.backgroundColor;
+						link.style.color = settings.textColor;
+
+						link.addEventListener("mouseover", () => {
+							synth.triggerAttackRelease("C4", "8n");
+						});
+
+						container.appendChild(link);
+					}
+				});
+		}
+
+		document.querySelector("#generateButton").addEventListener("click", getRandomArticles);
+
+		function toggleTheme() {
+			document.body.classList.toggle("light-theme");
+		}
+	</script>
+</body>
+
+</html>

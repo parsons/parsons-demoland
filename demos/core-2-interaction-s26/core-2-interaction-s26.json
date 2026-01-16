@@ -1,0 +1,354 @@
+{
+	"week-1": {
+		"title": "Week 1 (1/24/25)",
+		"desc": "A brief introduction (or review) of HTML.",
+		"active": true,
+		"demos": {
+			"example-demo-1": {
+				"name": "A single HTML element"
+			},
+			"example-demo-2": {
+				"name": "A few common HTML elements"
+			},
+			"example-demo-3": {
+				"name": "A complete HTML document"
+			}
+		}
+	},
+	"week-2": {
+		"title": "Week 2 (1/31/25)",
+		"desc": "A brief introduction (or review) of CSS.",
+		"active": true,
+		"demos": {
+			"example-demo-1": {
+				"name": "Linking an external stylesheet"
+			}
+		}
+	},
+	"week-3": {
+		"title": "Week 3 (2/7/25)",
+		"desc": "Exploring how designers consider structure, visual style, motion, and accessibility in the design of a single component in a design system.",
+		"active": true,
+		"demos": {
+			"example-demo-1": {
+				"name": "An article card component"
+			}
+		}
+	},
+	"week-6": {
+		"title": "Week 6 (2/28/25)",
+		"desc": "We'll dive into the fundamental concept of a box as a container to hold text and other elements.",
+		"active": true,
+		"demos": {
+			"example-demo-1": {
+				"name": "The Box Model"
+			},
+			"example-demo-2": {
+				"name": "Inline v. Block Display"
+			},
+			"example-demo-3": {
+				"name": "Absolute v. Relative Units"
+			},
+			"example-demo-4": {
+				"name": "Form Basics"
+			},
+			"example-demo-5": {
+				"name": "Sample Form Elements"
+			}
+		}
+	},
+	"week-7": {
+		"title": "Week 7 (3/7/25)",
+		"desc": "We'll dive into some parallel examples showing the same layout using different techniques.",
+		"active": true,
+		"demos": {
+			"example-demo-1": {
+				"name": "Centering: Using Margins"
+			},
+			"example-demo-2": {
+				"name": "Centering: Using Flexbox"
+			},
+			"example-demo-3": {
+				"name": "Centering: Using Grids"
+			},
+			"example-demo-4": {
+				"name": "Sample Layout: Inline Block"
+			},
+			"example-demo-5": {
+				"name": "Sample Layout: Flexbox"
+			},
+			"example-demo-6": {
+				"name": "Sample Layout: Grids"
+			},
+			"example-demo-7": {
+				"name": "Sample Layout: Grid Template Area"
+			}
+		}
+	},
+	"week-8": {
+		"title": "Week 8 (3/21/25)",
+		"desc": "We'll dive into all of the ways you can position an element.",
+		"active": true,
+		"demos": {
+			"example-demo-1": {
+				"name": "Normal-Flow versus Out-of-Flow"
+			},
+			"example-demo-2": {
+				"name": "Positioning 6 Different Ways"
+			}
+		}
+	},
+	"week-9": {
+		"title": "Week 9 (3/28/25)",
+		"desc": "We'll be creating microinteractions with the help of CSS transforms, transitions, and animations.",
+		"active": true,
+		"demos": {
+			"example-demo-1": {
+				"name": "Transforms, Transitions, and Animations"
+			},
+			"example-demo-2": {
+				"name": "3D Transforms"
+			}
+		}
+	},
+	"week-10": {
+		"title": "Week 10 (4/4/25)",
+		"desc": "We'll continue pushing the boundaries of CSS.",
+		"active": true,
+		"demos": {
+			"example-demo-1": {
+				"name": "Advanced and Experimental CSS"
+			}
+		}
+	},
+	"week-11": {
+		"title": "Week 11 (4/11/25)",
+		"desc": "Introducing JavaScript, a way of dynamically altering a page’s content and style.",
+		"active": true,
+		"demos": {
+			"example-demo-1": {
+				"name": "A Normal Website"
+			},
+			"example-demo-2": {
+				"name": "Sneak Peek: Toggling Classes"
+			},
+			"example-demo-3": {
+				"name": "Sneak Peek: Randomizing CSS"
+			},
+			"example-demo-4": {
+				"name": "Sneak Peek: Adding HTML"
+			},
+			"example-demo-5": {
+				"name": "Sneak Peek: Repeating Code"
+			},
+			"example-demo-6": {
+				"name": "Sneak Peek: Generative Art"
+			},
+			"example-demo-7": {
+				"name": "Variables"
+			},
+			"example-demo-8": {
+				"name": "Operators"
+			},
+			"example-demo-9": {
+				"name": "Functions"
+			},
+			"example-demo-10": {
+				"name": "Conditionals"
+			},
+			"example-demo-11": {
+				"name": "Targeting Elements and Adding Event Listeners"
+			},
+			"example-demo-12": {
+				"name": "Modifying CSS"
+			},
+			"example-demo-13": {
+				"name": "Modifying CSS, Dynamically"
+			},
+			"example-demo-14": {
+				"name": "Toggling Classes"
+			},
+			"weekly-challenge": {
+				"name": "Weekly Challenge"
+			}
+		}
+	},
+	"week-12": {
+		"title": "Week 12 (4/11/25)",
+		"desc": "Arrays and randomization.",
+		"active": true,
+		"demos": {
+			"last-weeks-challenge": {
+				"name": "Last Week’s Challenge"
+			},
+			"common-bugs-naming-variables": {
+				"name": "Common Bugs: Naming Variables"
+			},
+			"common-bugs-quotes": {
+				"name": "Common Bugs: Quotes"
+			},
+			"common-bugs-brackets": {
+				"name": "Common Bugs: Brackets"
+			},
+			"recap": {
+				"name": "Recap: Variables, Operators, Conditionals, and Events"
+			},
+			"changing-content": {
+				"name": "Changing Content"
+			},
+			"arrays": {
+				"name": "Arrays"
+			},
+			"using-arrays-1": {
+				"name": "Arrays: Navigating Entries"
+			},
+			"using-arrays-2": {
+				"name": "Arrays: Edge Cases"
+			},
+			"common-bugs-scope": {
+				"name": "Common Bugs: Scope"
+			},
+			"using-arrays-3": {
+				"name": "Arrays: Moving Backwards"
+			},
+			"using-arrays-4": {
+				"name": "Arrays: Putting It Together"
+			},
+			"using-arrays-5": {
+				"name": "Arrays: Other Kinds of Data"
+			},
+			"randomization": {
+				"name": "Randomization"
+			},
+			"using-randomization-1": {
+				"name": "Randomization: Within a Range"
+			},
+			"using-randomization-1a": {
+				"name": "Randomization: Applied to CSS"
+			},
+			"using-randomization-2": {
+				"name": "Randomization: Random Entry in an Array"
+			},
+			"weekly-challenge": {
+				"name": "Weekly Challenge"
+			}
+		}
+	},
+	"week-13": {
+		"title": "Week 13 (4/25/25)",
+		"desc": "Repeating code, loops, and libraries.",
+		"active": true,
+		"demos": {
+			"last-weeks-challenge": {
+				"name": "Last Week’s Challenge"
+			},
+			"sneak-peek": {
+				"name": "Sneak Peek"
+			},
+			"recap": {
+				"name": "Recap"
+			},
+			"creating-new-elements": {
+				"name": "Creating New Elements"
+			},
+			"template-literals": {
+				"name": "Template Literals"
+			},
+			"repeating-code": {
+				"name": "Repeating Code"
+			},
+			"while-loops": {
+				"name": "\"while\" Loops"
+			},
+			"for-loops": {
+				"name": "\"for\" Loops"
+			},
+			"looping-through-an-array": {
+				"name": "Looping Through an Array"
+			},
+			"targeting-multiple-elements": {
+				"name": "Targeting Multiple Elements"
+			},
+			"javascript-libraries": {
+				"name": "JavaScript Libraries"
+			},
+			"weekly-challenge": {
+				"name": "Weekly Challenge"
+			}
+		}
+	},
+	"week-14": {
+		"title": "Week 14 (5/2/25)",
+		"desc": "Objects, APIs, and input elements.",
+		"active": true,
+		"demos": {
+			"next-week": {
+				"name": "Next Week"
+			},
+			"sneak-peek": {
+				"name": "Sneak Peek"
+			},
+			"last-weeks-challenge": {
+				"name": "Last Week’s Challenge"
+			},
+			"featured-submission-1": {
+				"name": "Featured Submission 1"
+			},
+			"featured-submission-2": {
+				"name": "Featured Submission 2"
+			},
+			"featured-submission-3": {
+				"name": "Featured Submission 3"
+			},
+			"recap": {
+				"name": "Recap"
+			},
+			"inputs": {
+				"name": "Inputs"
+			},
+			"building-an-interface": {
+				"name": "Building an Interface"
+			},
+			"objects": {
+				"name": "Objects"
+			},
+			"tracking-settings": {
+				"name": "Tracking Settings with Objects"
+			},
+			"document-object-model": {
+				"name": "The Document Object Model (DOM)"
+			},
+			"apis": {
+				"name": "APIs"
+			},
+			"weekly-challenge": {
+				"name": "Weekly Challenge"
+			}
+		}
+	},
+	"week-15": {
+		"title": "Week 15 (5/9/25)",
+		"desc": "",
+		"active": true,
+		"demos": {
+			"last-weeks-challenge": {
+				"name": "Last Week’s Challenge"
+			},
+			"featured-submission-1": {
+				"name": "Featured Submission 1"
+			},
+			"featured-submission-2": {
+				"name": "Featured Submission 2"
+			},
+			"featured-submission-3": {
+				"name": "Featured Submission 3"
+			},
+			"featured-submission-4": {
+				"name": "Featured Submission 4"
+			},
+			"recap": {
+				"name": "So, What Did We Learn?"
+			}
+		}
+	}
+}

@@ -11,6 +11,13 @@
 		"title-plaintext": "Core 2 Interaction (Spring 2025)",
 		"shortdesc": "Lecture series",
 		"desc": "<p>Weekly demos for Parson’s Core 2 Interaction lecture series during the Spring 2025 semester.</p>",
+		"unlisted": true
+	},
+	"core-2-interaction-s26": {
+		"title": "Core 2 Interaction (Spring 2026)",
+		"title-plaintext": "Core 2 Interaction (Spring 2026)",
+		"shortdesc": "Lecture series",
+		"desc": "<p>Weekly demos for Parson’s Core 2 Interaction lecture series during the Spring 2026 semester.</p>",
 		"unlisted": false
 	}
 }
