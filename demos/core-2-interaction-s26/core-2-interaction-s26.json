@@ -27,11 +27,11 @@
 	},
 	"week-3": {
 		"title": "Week 3 (2/6/26)",
-		"desc": "Exploring how designers consider structure, visual style, motion, and accessibility in the design of a single component in a design system.",
-		"active": false,
+		"desc": "An introduction in applying CSS to define interaction, accessibility, and responsiveness for a single component in a design system.",
+		"active": true,
 		"demos": {
 			"example-demo-1": {
-				"name": "An article card component"
+				"name": "A card component"
 			}
 		}
 	},
