@@ -37,51 +37,36 @@
 	},
 	"week-6": {
 		"title": "Week 6 (2/27/26)",
-		"desc": "We'll dive into the fundamental concept of a box as a container to hold text and other elements.",
-		"active": false,
+		"desc": "An introduction to element placement on the webpage through document flow (or CSS flow layout), the display property, and the position property.",
+		"active": true,
 		"demos": {
 			"example-demo-1": {
-				"name": "The Box Model"
+				"name": "Inline display"
 			},
 			"example-demo-2": {
-				"name": "Inline v. Block Display"
+				"name": "Block display"
 			},
 			"example-demo-3": {
-				"name": "Absolute v. Relative Units"
+				"name": "Box model"
 			},
 			"example-demo-4": {
-				"name": "Form Basics"
-			},
-			"example-demo-5": {
-				"name": "Sample Form Elements"
+				"name": "The position property"
 			}
 		}
 	},
 	"week-7": {
 		"title": "Week 7 (3/6/26)",
-		"desc": "We'll dive into some parallel examples showing the same layout using different techniques.",
-		"active": false,
+		"desc": "An introdocution to CSS grid display",
+		"active": true,
 		"demos": {
 			"example-demo-1": {
-				"name": "Centering: Using Margins"
+				"name": "HTML table basics"
 			},
 			"example-demo-2": {
-				"name": "Centering: Using Flexbox"
+				"name": "CSS grid display"
 			},
 			"example-demo-3": {
-				"name": "Centering: Using Grids"
-			},
-			"example-demo-4": {
-				"name": "Sample Layout: Inline Block"
-			},
-			"example-demo-5": {
-				"name": "Sample Layout: Flexbox"
-			},
-			"example-demo-6": {
-				"name": "Sample Layout: Grids"
-			},
-			"example-demo-7": {
-				"name": "Sample Layout: Grid Template Area"
+				"name": "Align and justify"
 			}
 		}
 	},

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Centering: Flexbox</title>
+    <title>CSS grid display</title>
     <style>
 
         /* CSS Reset */
@@ -11,37 +11,63 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-        }
-
-        .envelope {
-            width: 100%;
-
-            /* This is where the magic happens */
-            display: flex;
-            justify-content: center; /* Controls the position of the item along the main-axis, in this case, the main axis is the row */
-
-            /* align-items: center; Controls placement on the cross-axis e.g. if the main axis is a row, then the cross-axis is vertical */
-            /* align-content only works when there are multiple flexbox rows */
-
-            /* Just for styling purposes */
-            background-color: yellow;
-        }
-
-        .box {
-            width: 50vw;
-            height: 50vw;
-
-            /* Just for styling purposes */
-            background-color: blue;
-            color: white;
-            text-align: center;
-        }
+        } 
+		
+		.untitled-7 {
+			width: 50vw;
+			height: 50vw;
+			background-color: whitesmoke;
+			display: grid;
+			margin: 40px;
+/* 			grid-template-rows: repeat(4, 1fr);
+			gap: 3vw;
+			padding: 3vw 0; */
+		}
+		.stripe {
+			background-color: cornsilk;
+		}
+		
+		.wheat {
+			margin: 40px;
+			width: 50vw;
+			height: 50vw;
+			background-color: lightgray;
+			padding: 4vw;
+			display: grid;
+			grid-template-columns: 1.5fr 1fr 1.5fr;
+			grid-template-rows: 1fr 1fr;
+		}
+		.one {
+			grid-column: 1 / 4;
+			grid-row: 1 / 2;
+			background-color: navajowhite;
+		}
+		.two {
+			grid-column: 1 / 4;
+			grid-row: 2 / 3;
+			background-color: lemonchiffon;
+		}
+		.three {
+			grid-column: 2 / 3;
+			grid-row: 1 / 3;
+			background-color: cornsilk;
+		}
 
     </style>
 </head>
 <body>
-    <div class="envelope">
-        <div class="box">Centered via flexbox</div>
+    <div class="untitled-7">
+        <div class="stripe"></div>
+		<div class="stripe"></div>
+		<div class="stripe"></div>
+		<div class="stripe"></div>
     </div>
+	<div class="wheat">
+		<div class="grid-item one"></div>
+		<div class="grid-item two"></div>		
+		<div class="grid-item three"></div>		
+		<div class="grid-item four"></div>
+		<div class="grid-item five"></div>
+	</div>
 </body>
 </html>

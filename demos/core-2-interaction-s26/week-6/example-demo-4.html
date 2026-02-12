@@ -3,22 +3,35 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Form Basics</title>
+	<title>Position property</title>
+	<style>
+        body {
+            height: 200vh;
+        }
+		#large {
+			background-color: pink;
+			width: 300px;
+			height: 400px;
+			/* position: fixed; */
+		}
+		#medium {
+			width: 200px;
+			height: 300px;
+			background-color: plum;
+		/* 	position: absolute;
+			top: 0;
+			right: 0; */
+		}
+		#small {
+			width: 100px;
+			height: 200px;
+			background-color: green;
+		}
+	</style>
 </head>
 <body>
-
-
-<!-- This is a basic form. For it to actually work, we need a few other form attributes, a server to receive the responses, and some server-side code. -->
-<form> 
-	<div> <!-- You can nest elements within a form -->
-	  <label for="inputid">My name is:</label> 
-	  <!-- A label is an inline element like a span and is tied to the id attribute of the input element it is labelling. Strictly speaking, labels are not necessary but are good practice for accessibility. -->
-	  <input type="text" id="inputid" name="inputid" />
-	  <!-- This is an example of an input element. The type of input is indicated by the "type" attribute. The "id" is a unique identifier is used by the label and for targeting by JS or CSS. The "name" is sent to the server along with the value as a key-value pair. -->
-	</div>
-	<button type="submit">Submit This!</button>
-	<!-- There are different button types. This one submits the form to the server. (However, in our demo, there is no server to receive this information.)-->
-</form>
-	
+	<div id="large"></div>
+	<div id="medium"></div>
+	<div id="small"></div>
 </body>
 </html>

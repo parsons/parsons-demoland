@@ -3,35 +3,16 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Absolute v. Relative Units</title>
-
+	<title>Position property</title>
 	<style>
-		p {
-			padding: 10px;
-			border: 2px dotted blue;
-		}
-
-		.bypixels {
+		#box {
 			width: 200px;
-		}
-
-		.bypercent {
-			width: 25%; /* 25% of the width of the parent element */
-		}
-
-		.byviewportwidth {
-			width: 25vw; /* 25% of the viewport width */
-		}
-
-		.byviewportheight {
-			width: 25vh; /* 25% of the viewport height */
+			height: 300px;
+			background-color: plum;
 		}
 	</style>
 </head>
 <body>
-	<p class="bypixels">Sized by pixel</p>
-	<p class="bypercent">Sized by percent</p>
-	<p class="byviewportwidth">Sized by viewport width</p>
-	<p class="byviewportheight">Sized by viewport height</p>
+	<div id="box"></div>
 </body>
 </html>
