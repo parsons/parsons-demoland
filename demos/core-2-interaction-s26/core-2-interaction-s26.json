@@ -41,32 +41,26 @@
 		"active": true,
 		"demos": {
 			"example-demo-1": {
-				"name": "Inline display"
+				"name": "Inline vs. block display"
 			},
 			"example-demo-2": {
-				"name": "Block display"
-			},
-			"example-demo-3": {
 				"name": "Box model"
 			},
-			"example-demo-4": {
+			"example-demo-3": {
 				"name": "The position property"
+			},
+			"example-demo-4": {
+				"name": "CSS units"
 			}
 		}
 	},
 	"week-7": {
 		"title": "Week 7 (3/6/26)",
 		"desc": "An introdocution to CSS grid display",
-		"active": true,
+		"active": false,
 		"demos": {
 			"example-demo-1": {
 				"name": "HTML table basics"
-			},
-			"example-demo-2": {
-				"name": "CSS grid display"
-			},
-			"example-demo-3": {
-				"name": "Align and justify"
 			}
 		}
 	},

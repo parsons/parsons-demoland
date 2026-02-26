@@ -3,35 +3,39 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Position property</title>
+	<title>Absolute v. Relative Units</title>
+
 	<style>
-        body {
-            height: 200vh;
-        }
-		#large {
-			background-color: pink;
-			width: 300px;
-			height: 400px;
-			/* position: fixed; */
+		p {
+			border: 2px dotted dodgerblue;
 		}
-		#medium {
+
+		.pixels {
 			width: 200px;
-			height: 300px;
-			background-color: plum;
-		/* 	position: absolute;
-			top: 0;
-			right: 0; */
 		}
-		#small {
-			width: 100px;
-			height: 200px;
-			background-color: green;
+
+		.percent {
+			width: 50%; /* 25% of the width of the parent element */
+		}
+
+		.viewportwidth {
+			width: 50vw; /* 50% of the viewport width */
+		}
+
+		.viewportheight {
+			width: 25vh; /* 25% of the viewport height */
+		}
+
+		.em {
+			width: 5em;
 		}
 	</style>
 </head>
 <body>
-	<div id="large"></div>
-	<div id="medium"></div>
-	<div id="small"></div>
+	<p class="pixels">Sized by pixel</p>
+	<p class="percent">Sized by percent</p>
+	<p class="viewportwidth">Sized by viewport width</p>
+	<p class="viewportheight">Sized by viewport height</p>
+	<p class="em">Sized by em</p>
 </body>
 </html>

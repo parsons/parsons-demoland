@@ -7,17 +7,29 @@
 	<title>Inline display</title>
 
 	<style>
+		* {
+			margin: 0;
+		}
 		span {
-			border: solid 1px brown;
+			border: solid 1px dodgerblue;
 			line-height: 1.5;
-			width: 100px; /* Doesn't work */
-			height: 100px; /* Doesn't work */
+			/* width: 100px;
+			height: 100px; */
+		}
+
+		p {
+			border: dotted 2px green;
+			/* p is a block element, but we can overwrite it by specifying a new display value */
+			/* display: inline-block; */
+			/* width: 150px; */
+			/* vertical-align: top; */
 		}
 	</style>
 
 </head>
 
 <body>
+	<!-- Exerpt from Helen Mirra, Escritura-a-través -->
 	<span>Barely raining on woodland trail</span>
 	<span>Along dry riverbed, leaves rustling, falling</span>
 	<span>Fuzzy
@@ -28,6 +40,15 @@
 	<span>Tender feet, sparkling woods, sleepy mood</span>
 	<span>Shrew-mole scurrying in orange
 		leaves</span>
+
+	<p>Up dirt road</p>
+	<p>Up on juniper and bearberry slope, greens and rusty reds</p>
+	<p>Climb through lichen-covered boulders on crest</p>
+	<p>Intermittent wind on ridge between peaks, small glacial ponds, low clouds arriving and departing</p>
+	<p>Feet in stream, then slanted pause with view to upside-down mountains</p>
+	<p>Down loose trail through scrub</p>
+	<p>Down dirt road among larches, along river</p>
+
 </body>
 
 </html>

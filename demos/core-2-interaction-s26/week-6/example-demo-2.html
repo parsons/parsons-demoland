@@ -1,26 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Block display</title>
+	<title>CSS box model</title>
 	<style>
-		p {
-			border: dotted 2px green;
-			/* p is a block element, but we can overwrite it by specifying a new display value */
-			/* display: inline-block;
-			width: 200px;
-			vertical-align: top; */
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+		body {
+			width: 100vw;
+			height: 100vh;
+			overflow: hidden;
+		}
+		.box {
+			width: 100px;
+			height: 100px;
+		}
+		.a {
+			background-color: plum;
+		}
+		.b {
+			background-color: darkseagreen;
+		}
+		.c {
+			background-color: paleturquoise;
+		}
+		.d {
+			background-color: tan;
 		}
 	</style>
 </head>
+
 <body>
-	<p>Up dirt road</p>
-	<p>Up on juniper and bearberry slope, greens and rusty reds</p>
-	<p>Climb through lichen-covered boulders on crest</p>
-	<p>Intermittent wind on ridge between peaks, small glacial ponds, low clouds arriving and departing</p>
-	<p>Feet in stream, then slanted pause with view to upside-down mountains</p>
-	<p>Down loose trail through scrub</p>
-	<p>Down dirt road among larches, along river</p>
+	<div class="box a"></div>
+	<div class="box b"></div>
+	<div class="box c"></div>
+	<div class="box d"></div>
 </body>
+
 </html>
