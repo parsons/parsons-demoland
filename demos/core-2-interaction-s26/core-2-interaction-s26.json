@@ -57,10 +57,16 @@
 	"week-7": {
 		"title": "Week 7 (3/6/26)",
 		"desc": "An introdocution to CSS grid display",
-		"active": false,
+		"active": true,
 		"demos": {
 			"example-demo-1": {
 				"name": "HTML table basics"
+			},
+			"example-demo-2": {
+				"name": "CSS grid layout I"
+			},
+			"example-demo-3": {
+				"name": "CSS grid layout II"
 			}
 		}
 	},
