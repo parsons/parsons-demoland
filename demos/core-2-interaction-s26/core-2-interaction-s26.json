@@ -60,12 +60,15 @@
 		"active": true,
 		"demos": {
 			"example-demo-1": {
-				"name": "HTML table basics"
+				"name": "Intro to CSS animation"
 			},
 			"example-demo-2": {
-				"name": "CSS grid layout I"
+				"name": "HTML table basics"
 			},
 			"example-demo-3": {
+				"name": "CSS grid layout I"
+			},
+			"example-demo-4": {
 				"name": "CSS grid layout II"
 			}
 		}

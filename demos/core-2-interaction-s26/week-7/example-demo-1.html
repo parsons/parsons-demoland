@@ -4,43 +4,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HTML tables</title>
-    <style>
-        table {
-            border: 1px solid black;
-            /* border-collapse: collapse; */
-        }
-
-        th, td {
-            padding: 5px;
-            border: 1px solid black;
-        }
-    </style>
+    <title>Intro to CSS animation</title>
 </head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    @keyframes bounce {
+        0% {
+            top: 0;
+            left: 200px;
+        }
+        25% {
+            top: 20vh;
+            left: calc(100vw - 227.5px);
+        }
+        50% {
+            top: calc(100vh - 100px);
+            left: 60vw;
+        }
+        75% {
+            top: 70vh;
+            left: 0;
+        }
+        100%{
+            top: 0;
+            left: 200px;
+        }
+    }
 
+    .dvd-logo {
+        width: 227.5px;
+        height: 100px;
+        object-fit: contain;
+        position: absolute;
+        /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+        animation: bounce 6s linear 0s infinite normal forwards;
+    }
+</style>
 <body>
-    <table>
-        <thead>
-            <tr>
-                <th>Do</th>
-                <th>Don't</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Comedies</td>
-                <td>Oohs and aahs</td>
-            </tr>
-            <tr>
-                <td>Vitamin C</td>
-                <td>Name drop</td>
-            </tr>
-            <tr>
-                <td>Confetti</td>
-                <td>Toasts</td>
-            </tr>
-        </tbody>
-    </table>
+    <img class="dvd-logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/DVD_logo.svg/1280px-DVD_logo.svg.png?_=20240510210001"
+        alt="black DVD logo">
 </body>
-
 </html>
