@@ -89,6 +89,9 @@
 			},
 			"example-demo-4": {
 				"name": "Grow, shrink, and basis"
+			},
+			"example-demo-5": {
+				"name": "A card component in flexbox"
 			}
 		}
 	},
