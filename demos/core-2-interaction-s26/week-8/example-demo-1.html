@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Flow Demo</title>
+    <title>CSS grid: justify and align</title>
     <style>
         /* Reset and Global Styles */
         * {
@@ -12,47 +13,56 @@
             box-sizing: border-box;
         }
 
-        .envelope {
-            width: 75%;
-            margin: 2em auto;
-            padding: 1em;
-            font-size: 1.5em;
-            background-color: yellow;
-            position: relative;
+        body {
+            background-color: gray;
+
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 24px;
         }
 
-        .relative-box {
-            background-color: red;
-            color: white;
-            position: relative;
-            top: .5em;
-            left: .5em;
+        .container {
+            background-color: gainsboro;
+            height: 720px;
+            padding: 20px;
+            
+            display: grid;
+            grid-template-columns: 30% 30%;
+            column-gap: 20px;
+            row-gap: 20px;
+
+            /* flex-start / flex-end / center / space-around / space between / space-evenly */
+            justify-content: flex-start;
+            align-items: stretch;
         }
 
-        .absolute-box {
-            background-color: blue;
-            color: white;
-            position: absolute;
-            top: 1.5em;
-            left: 1.5em;
+        .item {
+            background-color: palegreen;
         }
-
-        .fixed-box {
-            background-color: green;
-            color: white;
-            position: fixed;
-            bottom: 1.5em;
-            right: 1.5em;
-        }
-
     </style>
 </head>
+
 <body>
 
-
-    <div class="envelope">
-        Most everything in a regular HTML document with CSS styling flows "normally." Boxes that have display set as "inline-block" flow one after another. Boxes displayed as "block" will stack one after another. Boxes within a parent container set with the display of "flex" will follow the specified flex box rules. Boxes within a parent container set with the display of "grid" will follow the specified row and column rules. Even specifying <span class="relative-box">relative</span> positioning will preserve the space that the element was originally supposed to be in. But, there are two special positioning properties like <span class="absolute-box">absolute</span> and <span class="fixed-box">fixed</span> that will take an element out of the normal flow. When that happens, it is as if that element was not there at all. Keep this especially in mind when you are using absolute and fixed child elements within a parent that has display set as flex or grid.
+    <div class="container">
+        <div class="item">
+            A is for apple
+        </div>
+        <div class="item">
+            B is for ball
+        </div>
+        <div class="item">
+            C candle
+        </div>
+        <div class="item">
+            D is for door
+        </div>
+        <div class="item">
+            E is for egg
+        </div>
+        <div class="item">
+            F is for fall
+        </div>
     </div>
-
 </body>
+
 </html>

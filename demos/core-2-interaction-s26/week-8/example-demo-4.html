@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CSS flexbox: justify and align</title>
+    <title>CSS flexbox: grow, shrink and basis</title>
     <style>
         /* Reset and Global Styles */
         * {
@@ -22,19 +22,24 @@
 
         .container {
             background-color: gainsboro;
-            height: 720px;
+            min-height: 720px;
             padding: 20px;
-            
+
             display: flex;
+            /* flex-direction: column; */
             gap: 20px;
 
-            /* flex-start / flex-end / center / space-around / space between / space-evenly */
-            justify-content: flex-start;
+            justify-content: center;
             align-items: stretch;
         }
 
         .item {
             background-color: palegreen;
+            flex-basis: 150px;
+
+            /* 0 / 1 */
+            flex-shrink: 1;
+            flex-grow: 0;
         }
     </style>
 </head>
@@ -56,7 +61,7 @@
         </div>
         <div class="item">
             E is for egg
-        </div>
+        </div> 
         <div class="item">
             F is for fall
         </div>
