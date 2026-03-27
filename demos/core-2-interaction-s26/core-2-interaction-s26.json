@@ -97,14 +97,20 @@
 	},
 	"week-9": {
 		"title": "Week 9 (3/27/26)",
-		"desc": "We'll be creating microinteractions with the help of CSS transforms, transitions, and animations.",
-		"active": false,
+		"desc": "A brief introduction to common JavaScript examples",
+		"active": true,
 		"demos": {
-			"example-demo-1": {
-				"name": "Transforms, Transitions, and Animations"
+			"demo-1": {
+				"name": "A brief introduction to DOM"
 			},
-			"example-demo-2": {
-				"name": "3D Transforms"
+			"demo-2": {
+				"name": "Set styles and classes using JavaScript"
+			},
+			"demo-3": {
+				"name": "Iterate through data in an array"
+			},
+			"demo-4": {
+				"name": "Set up a randomizer"
 			}
 		}
 	},
