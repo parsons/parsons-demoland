@@ -126,53 +126,11 @@
 	},
 	"week-11": {
 		"title": "Week 11 (4/10/26)",
-		"desc": "Introducing JavaScript, a way of dynamically altering a page’s content and style.",
-		"active": false,
+		"desc": "An introduction to JSON objects in JavaScript.",
+		"active": true,
 		"demos": {
-			"example-demo-1": {
-				"name": "A Normal Website"
-			},
-			"example-demo-2": {
-				"name": "Sneak Peek: Toggling Classes"
-			},
-			"example-demo-3": {
-				"name": "Sneak Peek: Randomizing CSS"
-			},
-			"example-demo-4": {
-				"name": "Sneak Peek: Adding HTML"
-			},
-			"example-demo-5": {
-				"name": "Sneak Peek: Repeating Code"
-			},
-			"example-demo-6": {
-				"name": "Sneak Peek: Generative Art"
-			},
-			"example-demo-7": {
-				"name": "Variables"
-			},
-			"example-demo-8": {
-				"name": "Operators"
-			},
-			"example-demo-9": {
-				"name": "Functions"
-			},
-			"example-demo-10": {
-				"name": "Conditionals"
-			},
-			"example-demo-11": {
-				"name": "Targeting Elements and Adding Event Listeners"
-			},
-			"example-demo-12": {
-				"name": "Modifying CSS"
-			},
-			"example-demo-13": {
-				"name": "Modifying CSS, Dynamically"
-			},
-			"example-demo-14": {
-				"name": "Toggling Classes"
-			},
-			"weekly-challenge": {
-				"name": "Weekly Challenge"
+			"json-object": {
+				"name": "A JSON Object"
 			}
 		}
 	},
