@@ -1,0 +1,28 @@
+<h1>
+	<span>JavaScript</span>
+	Troubleshooting Errors
+</h1>
+<p>
+	Errors are a normal part of writing code. The browser's <strong>console</strong> is the first place to look when something isn't working. Right-click the page, choose "Inspect," and click the "Console" tab.
+</p>
+
+<h2>Common error types</h2>
+<p>
+	<strong>SyntaxError</strong> — you made a typo in the code's structure. Missing quotes, parentheses, or brackets. The browser can't even run the code.
+</p>
+<p>
+	<strong>ReferenceError</strong> — you're using a variable that doesn't exist. Usually a spelling mistake.
+</p>
+<p>
+	<strong>TypeError</strong> — you're trying to do something with a value that doesn't support it, like calling <span class="info-code">.textContent</span> on something that's <span class="info-code">undefined</span>.
+</p>
+
+<h2>Try it</h2>
+<p>
+	This demo has three intentional bugs. Open the console — it will point you to the line number where each error occurs. Read the error message, find the bug in the code, and fix it. The fourth example works correctly as a reference.
+</p>
+
+<h2>Tip</h2>
+<p>
+	When a SyntaxError stops the script, <em>nothing below it runs either</em>. Fix errors from top to bottom — the first one might be causing the others.
+</p>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intro to Functions</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 18px;
+            padding: 40px;
+            background-color: #f0f0f0;
+        }
+
+        pre {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <pre id="output"></pre>
+
+    <script>
+        function add(a, b) {
+            return a + b;
+        }
+
+        var result1 = add(2, 3);
+        var result2 = add(10, 20);
+        var result3 = add(100, 1);
+
+        document.getElementById("output").textContent =
+            "add(2, 3) = " + result1 + "\n" +
+            "add(10, 20) = " + result2 + "\n" +
+            "add(100, 1) = " + result3;
+    </script>
+
+</body>
+
+</html>

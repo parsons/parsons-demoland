@@ -1,0 +1,20 @@
+<h1>
+	<span>CSS</span>
+	DRY CSS with Variables
+</h1>
+<p>
+	What if you want to change your brand color? Right now, <span class="info-code">coral</span> appears in three different rules. If you want to switch to <span class="info-code">steelblue</span>, you'd have to find and update each one.
+</p>
+<p>
+	<strong>CSS custom properties</strong> (also called CSS variables) let you define a value once and reuse it everywhere. You declare them with a double dash: <span class="info-code">--brand-color: coral;</span> and use them with <span class="info-code">var(--brand-color)</span>.
+</p>
+
+<h2>Try it</h2>
+<p>
+	Uncomment the DRY version in the CSS and delete the WET rules above it. Then try changing the value of <span class="info-code">--brand-color</span> to something else — the entire page updates in one edit.
+</p>
+
+<h2>Where to declare variables</h2>
+<p>
+	Putting variables on <span class="info-code">:root</span> makes them available everywhere on the page. You can also put them on a specific element to limit their scope.
+</p>

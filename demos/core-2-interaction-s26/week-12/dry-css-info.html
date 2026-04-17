@@ -1,0 +1,18 @@
+<h1>
+	<span>CSS</span>
+	DRY in CSS
+</h1>
+<p>
+	<strong>DRY</strong> stands for <strong>Don't Repeat Yourself</strong>. It's a principle that says: if you're writing the same code in multiple places, there's probably a better way.
+</p>
+<p>
+	The opposite is sometimes called <strong>WET</strong> — "We Enjoy Typing." In this example, <span class="info-code">.card-1</span>, <span class="info-code">.card-2</span>, and <span class="info-code">.card-3</span> all have the exact same styles. If you wanted to change the color, you'd have to change it in three places.
+</p>
+
+<h2>The fix</h2>
+<p>
+	Instead of giving each card its own class with duplicate styles, give them all a shared class like <span class="info-code">.card</span>. Now the styles live in one place — change it once, and it updates everywhere.
+</p>
+<p>
+	Try it: uncomment the <span class="info-code">.card</span> rule in the CSS, then change the class names in the HTML from <span class="info-code">card-1</span>, <span class="info-code">card-2</span>, <span class="info-code">card-3</span> to just <span class="info-code">card</span>. Then delete the three repetitive rules.
+</p>
