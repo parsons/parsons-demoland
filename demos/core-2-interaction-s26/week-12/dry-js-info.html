@@ -1,0 +1,23 @@
+<h1>
+	<span>JavaScript</span>
+	DRY in JavaScript
+</h1>
+<p>
+	The same DRY principle applies to JavaScript. In this example, we have three cards that all do the same thing when clicked — but the code is written out three separate times.
+</p>
+<p>
+	If you wanted to change the click color from <span class="info-code">coral</span> to <span class="info-code">steelblue</span>, you'd have to update it in three places. And if you added a fourth card, you'd have to copy the block again.
+</p>
+
+<h2>The fix</h2>
+<p>
+	Write a <strong>function</strong> that takes the card's ID as an input and handles the setup. Then call it once for each card. Now the behavior lives in one place.
+</p>
+<p>
+	Try it: comment out the WET code and uncomment the DRY version below it. The page works exactly the same — but the code is shorter and easier to change.
+</p>
+
+<h2>Why this matters</h2>
+<p>
+	Functions aren't just about saving keystrokes. When behavior lives in one place, there's only one place where bugs can hide, and only one place you need to update when something changes.
+</p>

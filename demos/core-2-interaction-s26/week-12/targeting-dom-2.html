@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Changing Content with JavaScript</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 18px;
+            padding: 40px;
+            background-color: #f0f0f0;
+        }
+
+        .box {
+            background-color: white;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="greeting" class="box">Hello!</div>
+    <div id="counter" class="box">Count: 0</div>
+    <div id="bio" class="box">My name is <strong>placeholder</strong> and I study <em>placeholder</em>.</div>
+
+    <script>
+        function changeText(selector, newText) {
+            var element = document.querySelector(selector);
+            element.textContent = newText;
+        }
+
+        function changeHTML(selector, newHTML) {
+            var element = document.querySelector(selector);
+            element.innerHTML = newHTML;
+        }
+
+        // textContent replaces the text inside an element
+        changeText("#greeting", "Welcome to class!");
+        changeText("#counter", "Count: 42");
+
+        // innerHTML lets you insert HTML tags, not just plain text
+        changeHTML("#bio", "My name is <strong>Jack</strong> and I study <em>interaction design</em>.");
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DRY in CSS</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 18px;
+            padding: 40px;
+            background-color: #f0f0f0;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+        }
+
+        /* WET: We Enjoy Typing (the repetitive way) */
+
+        .card-1 {
+            background-color: coral;
+            color: white;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            font-size: 16px;
+        }
+
+        .card-2 {
+            background-color: coral;
+            color: white;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            font-size: 16px;
+        }
+
+        .card-3 {
+            background-color: coral;
+            color: white;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            font-size: 16px;
+        }
+
+        /* DRY: Don't Repeat Yourself (the better way) */
+
+        /*
+        .card {
+            background-color: coral;
+            color: white;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            font-size: 16px;
+        }
+        */
+    </style>
+</head>
+
+<body>
+
+    <h2>Three cards, one look</h2>
+
+    <div class="card-1">
+        Card one
+    </div>
+    <div class="card-2">
+        Card two
+    </div>
+    <div class="card-3">
+        Card three
+    </div>
+
+</body>
+
+</html>

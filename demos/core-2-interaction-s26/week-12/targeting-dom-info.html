@@ -1,0 +1,22 @@
+<h1>
+	<span>JavaScript</span>
+	Targeting DOM Elements
+</h1>
+<p>
+	Before JavaScript can change anything on a page, it needs to <strong>find</strong> the element first. <span class="info-code">document.querySelector()</span> lets you target any element using the same selectors you already know from CSS.
+</p>
+
+<h2>querySelector</h2>
+<p>
+	<span class="info-code">document.querySelector("#first")</span> finds the element with the id "first." <span class="info-code">document.querySelector(".special")</span> finds the <strong>first</strong> element with the class "special." The selectors work just like CSS — <span class="info-code">#</span> for ids, <span class="info-code">.</span> for classes.
+</p>
+
+<h2>Wrapping it in a function</h2>
+<p>
+	Instead of writing <span class="info-code">document.querySelector()</span> and setting <span class="info-code">.style.backgroundColor</span> every time, we wrote a <span class="info-code">changeBackground()</span> function that takes two parameters: a <strong>selector</strong> and a <strong>color</strong>. Now recoloring any element is a single line.
+</p>
+
+<h2>Try it</h2>
+<p>
+	Try swapping in different colors or targeting different selectors. Can you color the last div? Notice that <span class="info-code">querySelector</span> only targets the <strong>first</strong> match — only one of the two "special" boxes changes.
+</p>

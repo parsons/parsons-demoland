@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Calculator with Functions</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 18px;
+            padding: 40px;
+            background-color: #f0f0f0;
+        }
+
+        pre {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <pre id="output"></pre>
+
+    <script>
+        function add(a, b) {
+            return a + b;
+        }
+
+        function subtract(a, b) {
+            return a - b;
+        }
+
+        function multiply(a, b) {
+            return a * b;
+        }
+
+        function divide(a, b) {
+            return a / b;
+        }
+
+        function calc(operation, a, b) {
+            if (operation === "add") {
+                return add(a, b);
+            }
+            if (operation === "subtract") {
+                return subtract(a, b);
+            }
+            if (operation === "multiply") {
+                return multiply(a, b);
+            }
+            if (operation === "divide") {
+                return divide(a, b);
+            }
+        }
+
+        var output = document.getElementById("output");
+
+        output.textContent =
+            'calc("add", 10, 5) = ' + calc("add", 10, 5) + "\n" +
+            'calc("subtract", 10, 5) = ' + calc("subtract", 10, 5) + "\n" +
+            'calc("multiply", 10, 5) = ' + calc("multiply", 10, 5) + "\n" +
+            'calc("divide", 10, 5) = ' + calc("divide", 10, 5);
+    </script>
+
+</body>
+
+</html>

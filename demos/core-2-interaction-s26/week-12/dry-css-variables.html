@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DRY CSS with Variables</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 18px;
+            padding: 40px;
+            background-color: #f0f0f0;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+        }
+
+        /* WET: the same color repeated everywhere */
+
+        .card {
+            background-color: coral;
+            color: white;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+        }
+
+        .card a {
+            color: coral;
+            background-color: white;
+            padding: 4px 8px;
+            border-radius: 4px;
+            text-decoration: none;
+        }
+
+        .sidebar {
+            background-color: coral;
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        /* DRY: define the color once using a CSS variable */
+
+        /*
+        :root {
+            --brand-color: coral;
+        }
+
+        .card {
+            background-color: var(--brand-color);
+            color: white;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+        }
+
+        .card a {
+            color: var(--brand-color);
+            background-color: white;
+            padding: 4px 8px;
+            border-radius: 4px;
+            text-decoration: none;
+        }
+
+        .sidebar {
+            background-color: var(--brand-color);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        */
+    </style>
+</head>
+
+<body>
+
+    <h2>A page with a brand color</h2>
+
+    <div class="card">
+        This is a card. <a href="#">Read more</a>
+    </div>
+    <div class="card">
+        This is another card. <a href="#">Read more</a>
+    </div>
+    <div class="sidebar">
+        This is a sidebar.
+    </div>
+
+</body>
+
+</html>

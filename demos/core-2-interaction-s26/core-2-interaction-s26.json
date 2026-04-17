@@ -136,62 +136,32 @@
 	},
 	"week-12": {
 		"title": "Week 12 (4/17/26)",
-		"desc": "Arrays and randomization.",
-		"active": false,
+		"desc": "DRY principles and working with arrays.",
+		"active": true,
 		"demos": {
-			"last-weeks-challenge": {
-				"name": "Last Week’s Challenge"
+			"dry-css": {
+				"name": "DRY in CSS"
 			},
-			"common-bugs-naming-variables": {
-				"name": "Common Bugs: Naming Variables"
+			"dry-css-variables": {
+				"name": "DRY CSS with Variables"
 			},
-			"common-bugs-quotes": {
-				"name": "Common Bugs: Quotes"
+			"dry-js": {
+				"name": "DRY in JavaScript"
 			},
-			"common-bugs-brackets": {
-				"name": "Common Bugs: Brackets"
+			"troubleshooting-errors": {
+				"name": "Troubleshooting Errors"
 			},
-			"recap": {
-				"name": "Recap: Variables, Operators, Conditionals, and Events"
+			"functions-intro": {
+				"name": "Intro to Functions"
 			},
-			"changing-content": {
-				"name": "Changing Content"
+			"functions-calc": {
+				"name": "A Calculator with Functions"
 			},
-			"arrays": {
-				"name": "Arrays"
+			"targeting-dom": {
+				"name": "Targeting DOM Elements"
 			},
-			"using-arrays-1": {
-				"name": "Arrays: Navigating Entries"
-			},
-			"using-arrays-2": {
-				"name": "Arrays: Edge Cases"
-			},
-			"common-bugs-scope": {
-				"name": "Common Bugs: Scope"
-			},
-			"using-arrays-3": {
-				"name": "Arrays: Moving Backwards"
-			},
-			"using-arrays-4": {
-				"name": "Arrays: Putting It Together"
-			},
-			"using-arrays-5": {
-				"name": "Arrays: Other Kinds of Data"
-			},
-			"randomization": {
-				"name": "Randomization"
-			},
-			"using-randomization-1": {
-				"name": "Randomization: Within a Range"
-			},
-			"using-randomization-1a": {
-				"name": "Randomization: Applied to CSS"
-			},
-			"using-randomization-2": {
-				"name": "Randomization: Random Entry in an Array"
-			},
-			"weekly-challenge": {
-				"name": "Weekly Challenge"
+			"targeting-dom-2": {
+				"name": "Changing Content with JavaScript"
 			}
 		}
 	},
