@@ -60,18 +60,14 @@
 
     <script>
         // Bug 1: Unclosed string
-        // Open the console — you'll see a SyntaxError.
-        // Fix: add the closing quote after "hello
         var greeting = "hello;
         document.getElementById("output-1").textContent = greeting;
 
         // Bug 2: Wrong variable name
-        // Fix: the variable is called "message" but we wrote "mesage"
         var message = "This should show up";
         document.getElementById("output-2").textContent = mesage;
 
         // Bug 3: Missing parenthesis
-        // Fix: add the closing ) to getElementById
         document.getElementById("output-3".textContent = "Fixed!";
 
         // Bug 4: This one works!
