@@ -179,6 +179,9 @@
 			"random-position": {
 				"name": "Random Position"
 			},
+			"random-stripes": {
+				"name": "Random Stripes"
+			},
 			"pixel-grid": {
 				"name": "Pixel Grid"
 			},
