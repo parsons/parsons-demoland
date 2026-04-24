@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Pixel Grid</title>
+	<style>
+		* {
+			box-sizing: border-box;
+			margin: 0;
+			padding: 0;
+		}
+
+		#container {
+			display: grid;
+			grid-template-columns: repeat(10, 40px);
+		}
+	</style>
+</head>
+
+<body>
+
+	<div id="container"></div>
+
+	<script>
+		var container = document.querySelector("#container");
+
+		for (var y = 0; y < 10; y++) {
+			for (var x = 0; x < 10; x++) {
+				var div = document.createElement("div");
+				div.style.backgroundColor = "rgb(" +
+					Math.floor(Math.random() * 256) + ", " +
+					Math.floor(Math.random() * 256) + ", " +
+					Math.floor(Math.random() * 256) + ")";
+				div.style.height = "40px";
+				div.style.width = "40px";
+				container.appendChild(div);
+			}
+		}
+	</script>
+
+</body>
+
+</html>

@@ -167,44 +167,29 @@
 	},
 	"week-13": {
 		"title": "Week 13 (4/24/26)",
-		"desc": "Repeating code, loops, and libraries.",
-		"active": false,
+		"desc": "Loops and loop-based aesthetics.",
+		"active": true,
 		"demos": {
-			"last-weeks-challenge": {
-				"name": "Last Week’s Challenge"
+			"striped-pattern": {
+				"name": "Striped Pattern"
 			},
-			"sneak-peek": {
-				"name": "Sneak Peek"
+			"random-color": {
+				"name": "Random Color"
 			},
-			"recap": {
-				"name": "Recap"
+			"random-position": {
+				"name": "Random Position"
 			},
-			"creating-new-elements": {
-				"name": "Creating New Elements"
+			"random-stripes": {
+				"name": "Random Stripes"
 			},
-			"template-literals": {
-				"name": "Template Literals"
+			"pixel-grid": {
+				"name": "Pixel Grid"
 			},
-			"repeating-code": {
-				"name": "Repeating Code"
+			"starfield": {
+				"name": "Starfield"
 			},
-			"while-loops": {
-				"name": "\"while\" Loops"
-			},
-			"for-loops": {
-				"name": "\"for\" Loops"
-			},
-			"looping-through-an-array": {
-				"name": "Looping Through an Array"
-			},
-			"targeting-multiple-elements": {
-				"name": "Targeting Multiple Elements"
-			},
-			"javascript-libraries": {
-				"name": "JavaScript Libraries"
-			},
-			"weekly-challenge": {
-				"name": "Weekly Challenge"
+			"generative-poster": {
+				"name": "Generative Poster"
 			}
 		}
 	},

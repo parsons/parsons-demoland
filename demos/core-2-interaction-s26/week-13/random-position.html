@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Random Position</title>
+	<style>
+		* {
+			box-sizing: border-box;
+			margin: 0;
+			padding: 0;
+		}
+
+		body {
+			height: 100vh;
+			position: relative;
+			width: 100vw;
+		}
+
+		#circle {
+			background-color: black;
+			border-radius: 50%;
+			height: 80px;
+			position: absolute;
+			width: 80px;
+		}
+	</style>
+</head>
+
+<body>
+
+	<div id="circle"></div>
+
+	<script>
+		var circle = document.querySelector("#circle");
+
+		circle.style.left = Math.random() * (window.innerWidth - 80) + "px";
+		circle.style.top = Math.random() * (window.innerHeight - 80) + "px";
+	</script>
+
+</body>
+
+</html>
