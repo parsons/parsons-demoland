@@ -195,50 +195,17 @@
 	},
 	"week-14": {
 		"title": "Week 14 (5/1/26)",
-		"desc": "Objects, APIs, and input elements.",
-		"active": false,
+		"desc": "Control flow, events, and timing.",
+		"active": true,
 		"demos": {
-			"next-week": {
-				"name": "Next Week"
+			"if-else": {
+				"name": "If / Else"
 			},
-			"sneak-peek": {
-				"name": "Sneak Peek"
+			"weather": {
+				"name": "Weather"
 			},
-			"last-weeks-challenge": {
-				"name": "Last Week’s Challenge"
-			},
-			"featured-submission-1": {
-				"name": "Featured Submission 1"
-			},
-			"featured-submission-2": {
-				"name": "Featured Submission 2"
-			},
-			"featured-submission-3": {
-				"name": "Featured Submission 3"
-			},
-			"recap": {
-				"name": "Recap"
-			},
-			"inputs": {
-				"name": "Inputs"
-			},
-			"building-an-interface": {
-				"name": "Building an Interface"
-			},
-			"objects": {
-				"name": "Objects"
-			},
-			"tracking-settings": {
-				"name": "Tracking Settings with Objects"
-			},
-			"document-object-model": {
-				"name": "The Document Object Model (DOM)"
-			},
-			"apis": {
-				"name": "APIs"
-			},
-			"weekly-challenge": {
-				"name": "Weekly Challenge"
+			"five-events": {
+				"name": "Five Events"
 			}
 		}
 	},
