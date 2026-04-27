@@ -18,15 +18,6 @@
 			transition: background-color 0.3s;
 		}
 
-		#status {
-			position: fixed;
-			top: 20px;
-			left: 20px;
-			font-size: 14px;
-			color: white;
-			mix-blend-mode: difference;
-		}
-
 		#heading {
 			position: fixed;
 			top: 50%;
@@ -53,40 +44,25 @@
 
 <body>
 
-	<div id="status"></div>
 	<div id="heading">click anywhere</div>
 	<div id="key-display"></div>
 
 	<script>
-		var status = document.querySelector("#status");
 		var heading = document.querySelector("#heading");
 		var keyDisplay = document.querySelector("#key-display");
 
-		// 1. load — set a greeting and random color on page load
-		window.addEventListener("load", function () {
-			var hour = new Date().getHours();
-
-			if (hour < 12) {
-				status.textContent = "good morning";
-			} else if (hour < 18) {
-				status.textContent = "good afternoon";
-			} else {
-				status.textContent = "good evening";
-			}
-
+		function randomColor() {
 			var r = Math.floor(Math.random() * 256);
 			var g = Math.floor(Math.random() * 256);
 			var b = Math.floor(Math.random() * 256);
 			document.body.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
-		});
+		}
 
-		// 2. click — random background color
-		document.body.addEventListener("click", function () {
-			var r = Math.floor(Math.random() * 256);
-			var g = Math.floor(Math.random() * 256);
-			var b = Math.floor(Math.random() * 256);
-			document.body.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
-		});
+		// 1. load
+		window.addEventListener("load", randomColor);
+
+		// 2. click
+		document.body.addEventListener("click", randomColor);
 
 		// 3. mousemove — show "moving"
 		var moveTimer;
