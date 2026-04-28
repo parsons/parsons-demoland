@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Clock</title>
+	<style>
+		* {
+			box-sizing: border-box;
+			margin: 0;
+			padding: 0;
+		}
+
+		body {
+			height: 100vh;
+			width: 100vw;
+			display: flex;
+			background-color: black;
+		}
+
+		.section {
+			flex: 1;
+			display: flex;
+			flex-wrap: wrap;
+			align-content: flex-start;
+			padding: 20px;
+			gap: 6px;
+		}
+
+		.dot {
+			width: 12px;
+			height: 12px;
+			border-radius: 50%;
+		}
+	</style>
+</head>
+
+<body>
+
+	<div class="section" id="hours"></div>
+	<div class="section" id="minutes"></div>
+	<div class="section" id="seconds"></div>
+
+	<script>
+		var hours = document.querySelector("#hours");
+		var minutes = document.querySelector("#minutes");
+		var seconds = document.querySelector("#seconds");
+
+		setInterval(function () {
+			var now = new Date();
+			var h = now.getHours();
+			var m = now.getMinutes();
+			var s = now.getSeconds();
+
+			hours.innerHTML = "";
+			minutes.innerHTML = "";
+			seconds.innerHTML = "";
+
+			for (var i = 0; i < h; i++) {
+				var dot = document.createElement("div");
+				dot.classList.add("dot");
+				dot.style.backgroundColor = "white";
+				hours.appendChild(dot);
+			}
+
+			for (var i = 0; i < m; i++) {
+				var dot = document.createElement("div");
+				dot.classList.add("dot");
+				dot.style.backgroundColor = "white";
+				minutes.appendChild(dot);
+			}
+
+			for (var i = 0; i < s; i++) {
+				var dot = document.createElement("div");
+				dot.classList.add("dot");
+				dot.style.backgroundColor = "white";
+				seconds.appendChild(dot);
+			}
+		}, 1000);
+	</script>
+
+</body>
+
+</html>

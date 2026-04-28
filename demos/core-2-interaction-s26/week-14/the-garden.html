@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>The Garden</title>
+	<style>
+		* {
+			box-sizing: border-box;
+			margin: 0;
+			padding: 0;
+		}
+
+		body {
+			height: 100vh;
+			width: 100vw;
+			overflow: hidden;
+			background-color: hsl(140, 30%, 85%);
+			cursor: crosshair;
+			transition: background-color 2s;
+		}
+
+		.placed {
+			position: absolute;
+			user-select: none;
+			transition: transform 0.3s, opacity 2s, filter 2s;
+		}
+
+		.raindrop {
+			position: fixed;
+			font-size: 16px;
+			user-select: none;
+			pointer-events: none;
+		}
+	</style>
+</head>
+
+<body>
+
+	<script>
+		// ==========================================
+		// THE TOOLBOX
+		// These are your building blocks.
+		// None of them do anything on their own —
+		// you wire them up to events below.
+		// ==========================================
+
+		// — tool switching —
+		// call these to change what click plants
+
+		var currentTool = "flower";
+
+		function selectFlower() { currentTool = "flower"; }
+		function selectTree() { currentTool = "tree"; }
+		function selectFence() { currentTool = "fence"; }
+		function selectHouse() { currentTool = "house"; }
+		function selectStone() { currentTool = "stone"; }
+		function selectMushroom() { currentTool = "mushroom"; }
+
+		function placeCurrentTool(x, y) {
+			if (currentTool === "flower") { plantFlower(x, y); }
+			if (currentTool === "tree") { plantTree(x, y); }
+			if (currentTool === "fence") { buildFence(x, y); }
+			if (currentTool === "house") { buildHouse(x, y); }
+			if (currentTool === "stone") { dropStone(x, y); }
+			if (currentTool === "mushroom") { plantMushroom(x, y); }
+		}
+
+		// — place things —
+
+		function plantFlower(x, y) {
+			var flowers = ["🌸", "🌺", "🌼", "🌷", "🌻"];
+			var pick = flowers[Math.floor(Math.random() * flowers.length)];
+			var el = document.createElement("div");
+			el.classList.add("placed");
+			el.textContent = pick;
+			el.style.fontSize = Math.floor(Math.random() * 20) + 20 + "px";
+			el.style.left = x + "px";
+			el.style.top = y + "px";
+			document.body.appendChild(el);
+		}
+
+		function plantTree(x, y) {
+			var trees = ["🌲", "🌳", "🌴"];
+			var pick = trees[Math.floor(Math.random() * trees.length)];
+			var el = document.createElement("div");
+			el.classList.add("placed");
+			el.textContent = pick;
+			el.style.fontSize = Math.floor(Math.random() * 30) + 40 + "px";
+			el.style.left = x + "px";
+			el.style.top = y + "px";
+			document.body.appendChild(el);
+		}
+
+		function buildFence(x, y) {
+			var el = document.createElement("div");
+			el.classList.add("placed");
+			el.textContent = "🪵";
+			el.style.fontSize = "28px";
+			el.style.left = x + "px";
+			el.style.top = y + "px";
+			document.body.appendChild(el);
+		}
+
+		function buildHouse(x, y) {
+			var el = document.createElement("div");
+			el.classList.add("placed");
+			el.textContent = "🏠";
+			el.style.fontSize = "60px";
+			el.style.left = x + "px";
+			el.style.top = y + "px";
+			document.body.appendChild(el);
+		}
+
+		function dropStone(x, y) {
+			var stones = ["🪨", "🪨", "🪨", "💎"];
+			var pick = stones[Math.floor(Math.random() * stones.length)];
+			var el = document.createElement("div");
+			el.classList.add("placed");
+			el.textContent = pick;
+			el.style.fontSize = "22px";
+			el.style.left = x + "px";
+			el.style.top = y + "px";
+			document.body.appendChild(el);
+		}
+
+		function plantMushroom(x, y) {
+			var el = document.createElement("div");
+			el.classList.add("placed");
+			el.textContent = "🍄";
+			el.style.fontSize = Math.floor(Math.random() * 10) + 16 + "px";
+			el.style.left = x + "px";
+			el.style.top = y + "px";
+			document.body.appendChild(el);
+		}
+
+		// — weather —
+
+		function rain() {
+			for (var i = 0; i < 20; i++) {
+				var drop = document.createElement("div");
+				drop.classList.add("raindrop");
+				drop.textContent = "💧";
+				drop.style.left = Math.random() * window.innerWidth + "px";
+				drop.style.top = "-20px";
+				document.body.appendChild(drop);
+
+				var duration = Math.random() * 1000 + 500;
+				drop.style.transition = `top ${duration}ms linear, opacity ${duration}ms`;
+				setTimeout(function (d) {
+					d.style.top = window.innerHeight + "px";
+					d.style.opacity = "0";
+				}, 10, drop);
+				setTimeout(function (d) {
+					d.remove();
+				}, 2000, drop);
+			}
+		}
+
+		function sunshine() {
+			document.body.style.backgroundColor = "hsl(45, 80%, 85%)";
+		}
+
+		function nightfall() {
+			document.body.style.backgroundColor = "hsl(230, 30%, 12%)";
+		}
+
+		function dawn() {
+			document.body.style.backgroundColor = "hsl(140, 30%, 85%)";
+		}
+
+		// — transform everything —
+
+		function growAll() {
+			var items = document.querySelectorAll(".placed");
+			for (var i = 0; i < items.length; i++) {
+				var current = parseFloat(items[i].style.fontSize);
+				items[i].style.fontSize = current * 1.1 + "px";
+			}
+		}
+
+		function shrinkAll() {
+			var items = document.querySelectorAll(".placed");
+			for (var i = 0; i < items.length; i++) {
+				var current = parseFloat(items[i].style.fontSize);
+				items[i].style.fontSize = current * 0.9 + "px";
+			}
+		}
+
+		function wiltAll() {
+			var items = document.querySelectorAll(".placed");
+			for (var i = 0; i < items.length; i++) {
+				items[i].style.filter = "grayscale(1)";
+				items[i].style.opacity = "0.4";
+			}
+		}
+
+		function reviveAll() {
+			var items = document.querySelectorAll(".placed");
+			for (var i = 0; i < items.length; i++) {
+				items[i].style.filter = "none";
+				items[i].style.opacity = "1";
+			}
+		}
+
+		function scatterAll() {
+			var items = document.querySelectorAll(".placed");
+			for (var i = 0; i < items.length; i++) {
+				var nudgeX = (Math.random() - 0.5) * 40;
+				var nudgeY = (Math.random() - 0.5) * 40;
+				var currentLeft = parseFloat(items[i].style.left) + nudgeX;
+				var currentTop = parseFloat(items[i].style.top) + nudgeY;
+				items[i].style.left = currentLeft + "px";
+				items[i].style.top = currentTop + "px";
+			}
+		}
+
+		function clearAll() {
+			var items = document.querySelectorAll(".placed");
+			for (var i = 0; i < items.length; i++) {
+				items[i].remove();
+			}
+		}
+
+
+		// ==========================================
+		// YOUR GARDEN
+		// Wire up the toolbox to events.
+		// What happens when you click?
+		// What happens when you hover?
+		// What happens on a timer?
+		// ==========================================
+
+		// — click —
+		document.body.addEventListener("click", function (event) {
+			placeCurrentTool(event.clientX, event.clientY);
+		});
+
+		// — mousemove —
+		document.body.addEventListener("mousemove", function (event) {
+
+		});
+
+		// — keydown —
+		document.addEventListener("keydown", function (event) {
+			if (event.key === "1") { selectFlower(); }
+			if (event.key === "2") { selectTree(); }
+			if (event.key === "3") { }
+			if (event.key === "4") { }
+			if (event.key === "5") { }
+			if (event.key === "6") { }
+		});
+
+		// — timer 1 —
+		setInterval(function () {
+
+		}, 3000);
+
+		// — timer 2 —
+		setInterval(function () {
+
+		}, 10000);
+	</script>
+
+</body>
+
+</html>

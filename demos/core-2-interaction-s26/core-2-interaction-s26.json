@@ -204,8 +204,17 @@
 			"weather": {
 				"name": "Weather"
 			},
+			"event-listener": {
+				"name": "Event Listener"
+			},
 			"five-events": {
 				"name": "Five Events"
+			},
+			"clock": {
+				"name": "Clock"
+			},
+			"the-garden": {
+				"name": "The Garden"
 			}
 		}
 	},
