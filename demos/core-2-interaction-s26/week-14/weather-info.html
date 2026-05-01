@@ -1,0 +1,15 @@
+<h1>
+	<span>Control Flow</span>
+	Weather
+</h1>
+<p>
+	Same <span class="info-code">if / else</span> structure as the previous demo, but now the data is real. The page fetches the current temperature in New York City from the Open-Meteo API and runs it through the same branching logic.
+</p>
+<p>
+	<span class="info-code">fetch()</span> makes a request to an external server. The <span class="info-code">.then()</span> chain waits for the response, converts it to JSON, and pulls out <span class="info-code">data.current.temperature_2m</span>. From there it's the same <span class="info-code">if / else</span> you already know.
+</p>
+
+<h2>Try it</h2>
+<p>
+	Change the latitude and longitude in the URL to get the weather for a different city. Try adding a background color that changes with the temperature too.
+</p>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Weather</title>
+	<style>
+		* {
+			box-sizing: border-box;
+			margin: 0;
+			padding: 0;
+		}
+
+		body {
+			height: 100vh;
+			width: 100vw;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			font-family: Helvetica, Arial, sans-serif;
+			font-size: 48px;
+			padding: 40px;
+			text-align: center;
+		}
+	</style>
+</head>
+
+<body>
+
+	<div id="message">loading...</div>
+
+	<script>
+		var message = document.querySelector("#message");
+
+		fetch("https://api.open-meteo.com/v1/forecast?latitude=40.71&longitude=-74.01&current=temperature_2m&temperature_unit=fahrenheit")
+			.then(function (response) {
+				return response.json();
+			})
+			.then(function (data) {
+				var temp = data.current.temperature_2m;
+
+				if (temp > 90) {
+					message.textContent = temp + '°F — too hot to go outside.';
+				} else if (temp > 70) {
+					message.textContent = temp + '°F — nice day for a walk.';
+				} else if (temp > 50) {
+					message.textContent = temp + '°F — maybe think about layering.';
+				} else {
+					message.textContent = temp + '°F — bundle up.';
+				}
+			});
+	</script>
+
+</body>
+
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Five Events</title>
+	<style>
+		* {
+			box-sizing: border-box;
+			margin: 0;
+			padding: 0;
+		}
+
+		body {
+			font-family: Helvetica, Arial, sans-serif;
+			height: 300vh;
+			transition: background-color 0.3s;
+		}
+
+		#heading {
+			position: fixed;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			font-size: 48px;
+			color: white;
+			mix-blend-mode: difference;
+			text-align: center;
+			pointer-events: none;
+		}
+
+		#key-display {
+			position: fixed;
+			bottom: 20px;
+			right: 20px;
+			font-size: 24px;
+			color: white;
+			mix-blend-mode: difference;
+		}
+
+	</style>
+</head>
+
+<body>
+
+	<div id="heading">click anywhere</div>
+	<div id="key-display"></div>
+
+	<script>
+		var heading = document.querySelector("#heading");
+		var keyDisplay = document.querySelector("#key-display");
+
+		function randomColor() {
+			var r = Math.floor(Math.random() * 256);
+			var g = Math.floor(Math.random() * 256);
+			var b = Math.floor(Math.random() * 256);
+			document.body.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
+		}
+
+		// 1. load
+		window.addEventListener("load", randomColor);
+
+		// 2. click
+		document.body.addEventListener("click", randomColor);
+
+		// 3. mousemove — show "moving"
+		var moveTimer;
+		document.body.addEventListener("mousemove", function () {
+			heading.textContent = "moving";
+			clearTimeout(moveTimer);
+			moveTimer = setTimeout(function () {
+				heading.textContent = "click anywhere";
+			}, 500);
+		});
+
+		// 4. scroll — cycle through typefaces
+		var fonts = [
+			"Helvetica, sans-serif",
+			"Georgia, serif",
+			"Courier New, monospace",
+			"Times New Roman, serif",
+			"Futura, sans-serif",
+			"Palatino, serif",
+			"Impact, sans-serif",
+			"Trebuchet MS, sans-serif"
+		];
+		window.addEventListener("scroll", function () {
+			var scrollPercent = window.scrollY / (document.body.scrollHeight - window.innerHeight);
+			var index = Math.floor(scrollPercent * fonts.length);
+			if (index >= fonts.length) { index = fonts.length - 1; }
+			heading.style.fontFamily = fonts[index];
+		});
+
+		// 5. keydown — display the pressed key
+		document.addEventListener("keydown", function (event) {
+			keyDisplay.textContent = event.key;
+		});
+	</script>
+
+</body>
+
+</html>
