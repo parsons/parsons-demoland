@@ -33,12 +33,27 @@
 			user-select: none;
 			pointer-events: none;
 		}
+		#toolbar {
+			position: fixed;
+			bottom: 12px;
+			left: 12px;
+			font-family: monospace;
+			font-size: 14px;
+			color: rgba(255, 255, 255, 0.5);
+			background-color: rgba(0, 0, 0, 0.3);
+			padding: 6px 10px;
+			border-radius: 4px;
+			pointer-events: none;
+		}
 	</style>
 </head>
 
 <body>
 
+	<div id="toolbar">tool: flower</div>
+
 	<script>
+		var toolbar = document.querySelector("#toolbar");
 		// ==========================================
 		// THE TOOLBOX
 		// These are your building blocks.
@@ -51,12 +66,12 @@
 
 		var currentTool = "flower";
 
-		function selectFlower() { currentTool = "flower"; }
-		function selectTree() { currentTool = "tree"; }
-		function selectFence() { currentTool = "fence"; }
-		function selectHouse() { currentTool = "house"; }
-		function selectStone() { currentTool = "stone"; }
-		function selectMushroom() { currentTool = "mushroom"; }
+		function selectFlower() { currentTool = "flower"; toolbar.textContent = "tool: flower"; }
+		function selectTree() { currentTool = "tree"; toolbar.textContent = "tool: tree"; }
+		function selectFence() { currentTool = "fence"; toolbar.textContent = "tool: fence"; }
+		function selectHouse() { currentTool = "house"; toolbar.textContent = "tool: house"; }
+		function selectStone() { currentTool = "stone"; toolbar.textContent = "tool: stone"; }
+		function selectMushroom() { currentTool = "mushroom"; toolbar.textContent = "tool: mushroom"; }
 
 		function placeCurrentTool(x, y) {
 			if (currentTool === "flower") { plantFlower(x, y); }
