@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>JavaScript + CSS</title>
+
+	<style>
+		button {
+			transition: .5s;
+		}
+	</style>
+</head>
+
+<body>
+
+	<button id="myButton">Click me!</button>
+
+	<script>
+		// First, we target the element and assign it to a variable
+		let button = document.querySelector('#myButton');
+		
+		// Then, we add the event listener
+		let buttonSize = 20;
+		button.addEventListener('click', function() {
+
+			// Some math
+			buttonSize = buttonSize * 2;
+			if (buttonSize > 300) {
+				buttonSize = 20;
+			}
+
+			// Editing the button’s CSS styles
+			// We can’t forget to add a unit!
+			button.style.fontSize = buttonSize + "px";
+
+		})
+	</script>
+</body>
+
+</html>

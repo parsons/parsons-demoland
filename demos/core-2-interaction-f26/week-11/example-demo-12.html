@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>JavaScript + CSS</title>
+</head>
+
+<body>
+
+	<button id="myButton">Click me!</button>
+
+	<script>
+		// First, we target the element and assign it to a variable
+		let button = document.querySelector('#myButton');
+		
+		// Then, we add the event listener
+		button.addEventListener('click', function() {
+
+			// Changing CSS using .style.__propertyName__
+			button.style.color = 'red';
+			button.style.backgroundColor = 'blue';
+			button.style.border = '20px solid yellow';
+			button.style.fontSize = '80px';
+			button.style.padding = '40px';
+			button.style.borderRadius = '50%';
+
+		})
+	</script>
+</body>
+
+</html>

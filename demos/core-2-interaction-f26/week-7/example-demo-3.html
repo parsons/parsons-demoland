@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    </meta>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </meta>
+    <title>Sample layout: CSS grid</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            letter-spacing: 0.01em;
+            line-height: 1.25;
+        }
+
+        h1,
+        h2 {
+            font-weight: normal;
+            font-size: 32px;
+        }
+
+        p {
+            font-size: 22px;
+        }
+
+        img {
+            width: 100%;
+            object-fit: contain;
+        }
+
+        .grid-container {}
+
+        .grid-item {
+            padding: 20px;
+            border-right: 1px solid black;
+            border-bottom: 1px solid black;
+        }
+
+        .title {}
+
+        .image {}
+
+        .essay {}
+
+        .essay p {
+            text-indent: 2em;
+        }
+
+        .essay p.about {
+            text-indent: 0;
+            font-size: 16px;
+            margin-top: 2em;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="grid-container">
+        <h1 class="grid-item title">Etel Adnan: <em>Voyage, War and Exile</em> (excerpt)</h1>
+
+        <div class="grid-item image">
+            <img src="https://static-assets.artlogic.net/w_2400,h_2400,c_limit,f_auto,fl_lossy,q_auto/artlogicstorage/meemgallery/images/view/2ca469ef7a03fc8e8d590c25f0d50043j/meemgallery-etel-adnan-poids-de-la-lune-ii-2019.jpg"
+                alt="Etel Adnan, Poids de la Lune II, 2019">
+                <figcaption>
+                    Poids de la Lune II, 2019
+                </figcaption>
+        </div>
+
+        <div class="grid-item image">
+            <img src="https://static-assets.artlogic.net/w_1600,h_1600,c_limit,f_auto,fl_lossy,q_auto/artlogicstorage/meemgallery/images/view/bfff3177c6dbc7293f04ce227d201c96j/meemgallery-etel-adnan-poids-du-monde-le-ii-2016.jpg"
+                alt="Etel Adnan, Poids Du Monde (Le) II, 2016">
+                <figcaption>
+                    Poids Du Monde (Le) II, 2016
+                </figcaption>
+        </div>
+
+        <div class="grid-item image">
+            <img src="https://static-assets.artlogic.net/w_1600,h_1600,c_limit,f_auto,fl_lossy,q_auto/artlogicstorage/meemgallery/images/view/a5a6cc677dd647a15eb2f69afd934a0bj/meemgallery-etel-adnan-poids-du-monde-iv-2016.jpg"
+                alt="Etel Adnan, Poids du Monde IV, 2016">
+                <figcaption>
+                    Poids du Monde IV, 2016
+                </figcaption>
+        </div>
+
+        <div class="grid-item essay">
+            <p>
+                I originated in a part of the world that war has made and unmade since the beginning of this century. My
+                memory as well as my daily life are woven with war. I often wondered how as fragile a system as the
+                human body could bear upheavals become chronic as the ones that the Arab East has known and is still
+                experiencing.
+            </p>
+            <p>
+                I was the only child of a family which has known war and exile as a consequence of war. My father was a
+                Syrian, a high ranking officer of the Ottoman Empire, and my mother was a Greek from Smyrna, her father
+                being a wood-carver; they met and married during World War I. In 1922, Smyrna burned in a cataclysmic
+                fire, the war was lost, the Empire dismembered, so they came to Lebanon and settled in Beirut, a garden
+                city with a view from all over, on the sea they knew and the most beautiful harbor of the Mediterranean.
+            </p>
+            <p>
+                They exiled themselves into charm and beauty. Geographically it was a bearable exile for my father, for
+                after all, he was on Arab Land and close to his birthplace, Damascus. But he was living another exile, a
+                terrible one this one: the empire that he knew and served had disappeared; he was living on enemy
+                territory, a country under French occupation. I lived since my childhood with a knowledge which remained
+                inscribed in me: that geographical exile is but the frame for an exile which goes much deeper and
+                against which one can do nothing. As for my mother, she thought of Smyrna day and night, suffering from
+                its absence, and often, I would say too often, I saw her questioning the horizon which encircles Beirut
+                and wondering where Smyrna would have been, behind which cloud, on which side of the North of the
+                setting sun. Her education had been left to hazard and to the meanderings of her life, and she resided
+                in the twilight zone where most people live and in which they orient themselves according to their
+                desires and sorrows.
+            </p>
+            <p>
+                A little after I turned twenty, I started considering going to Paris for studies in Philosophy.
+                Considering was a term which can hardly describe my state of mind. I was impatient, yearning to go, and
+                I did get there. My father had already died and my mother was left behind by me, with a pain whose scope
+                I realized only much later. The amplitude of her sorrow took years to reach me. I was a bird then who
+                flew out of her cage and was desirous to go further away. Everywhere and nowhere. Going to the café in
+                those years was already a voyage and that is still one of my favorite trips.
+            </p>
+            <p>
+                But I went beyond the café. After Paris, I went to California by a series of occurrences which I am not
+                going to linger on today. I landed in Berkeley, far, very far, from every point of view, from Beirut and
+                from everything I knew.
+            </p>
+            <p>
+                This break which proved to be a radical one, was not an exile. It was adventure. I had decided to give
+                myself a destiny for which nothing had prepared me. After a few years of study at U.C. Berkeley, and
+                Harvard, I found a teaching job at a small college near San Francisco, and gave up my preparations for a
+                Ph.D. ( I should say, most happily)! It was in 1958 and I considered that I had found a roof, a salary,
+                a reason to be, some kind of a new identity. Then followed the Sixties and the worldwide cultural
+                revolution that they brought about. I remember then as a period where I became intensely American, and
+                intensely an Arab, given the new perspective I acquired, from the Bay Area, on the Arab World. Most of
+                all I sensed an exhilarating belonging to the world <em>per se</em>. I was not living an exile but a
+                freedom which I found on my own and at my own risks. It was fun!
+            </p>
+            <p>
+                But we know that the Earth contains under its crust formidable plates which move constantly and in
+                contradictory directions, creating earthquakes, and like herself, I was creating, within my soul,
+                opposite currents equally ominous: I was espousing the dreams of the Arabs, their dramatic dreams of
+                freedom, dignity, and unity, all symbolized then by Gamal Abdel Nasser; in the same time, and in another
+                direction, I was plunging wholeheartedly into America, its history, its literature (falling in lasting
+                love with the American Indians and with jazz music), aware and practically hypnotized by its frightful
+                possibilities of mass destruction and by its incredible conquests of the moon and of space. I was living
+                in a new time and space scale, in the absolute sense of the present, merging my own mythical time with
+                America’s own. Following the Apollo missions and its rockets, I was extra-territorial and tuned to the
+                universe.
+            </p>
+            <p>But the foreseeable earthquake did manifest itself; war broke out in 1967, involving Egypt, Syria, and
+                Jordan, and America did decisively participate in the destruction of the Arabs, or their dreams and
+                their lands, and I experienced terror, a terror that my surroundings were not sharing, and I started
+                losing ground, getting not confused, but wounded, isolated, detached although still attached, a conflict
+                which later made me ill for practically a whole year, from 1971 to 1972. I felt the urge to break away,
+                go back to Beirut without looking behind me and not knowing what the future would be. I had come full
+                circle. In the summer of ’72, I was returning to Beirut literally on a stretcher. I had left as a
+                voyager and I was coming back in exile.</p>
+            <p>I had no family left in Beirut by that summer of ’72. On my father’s side, my half-sisters and brother
+                were living in Damascus. My mother’s own brothers and sister had been dispersed after the fire of Smyrna
+                in different places such as Cyprus, Alexandria, Saloniki and Genova. But it was home, after all, the
+                more so that I was thinking that I was coming back “for good.” I found a tiny apartment with a great
+                view, five stories to climb with steep stairs, and no telephone. I could barely walk then, and I had to
+                rebuild myself, physically and morally, while looking for a job. I reconnected with childhood friends
+                and those I had made during the few trips that I took to Beirut during the regular summer vacations of
+                my teaching years.</p>
+            <p>A new paper in the French language was being launched and I was hired as the editor of its cultural daily
+                pages. The personnel was made of mostly young women or men whose enthusiasm was contagious. There was
+                excitement in the air and these young people had the impression that they were participating in the
+                creation of a new world, a better one, where Arabs will recover their rights and cease to be excluded
+                from the decisions which concerned them the most.</p>
+            <p>I was both sharing the feelings of this new generation and expecting the worst. Beirut was a laboratory
+                and a stirring volcano. I had, after all, after Black September of 1970 and after Nasser’s death,
+                written a long poem on Beirut, the “Beirut Hell Express,” which was announcing Beirut’s total
+                destruction. Of course, one does not follow one’s visionary knowledge, but rather gives-in to one’s most
+                obscure wishes and desires.</p>
+            <p>War did break out again, the civil war which started in April 1975. It was as if a galaxy of fire and
+                death had been born and had started to churn with no end in sight. Like all galaxies it fed on its own
+                energy to its bitter end.</p>
+            <p>A real exodus followed: first a trickle, then a gradual and constant flow. The Lebanese started to leave.
+                The buildings were disappearing too, the neighborhoods, the streets. With every wall which was falling
+                and every man dying, something of a collective life and memory was being obliterated.</p>
+            <p>I was discovering—living—exile’s profound meaning. What is exile if not the violent and involuntary loss
+                of all the living symbols of one’s identity? At this point, instead of me leaving, it was Beirut which
+                was leaving me, and, we know it now, forever. Here was an exile which was total, absolute: I was in
+                Beirut and I was witnessing that she was never going to grow normally, to remain the core of what she
+                was. I was seeing (without any exaggeration) the meaning of Paradise lost.</p>
+            <p>Exile is a dispossession with no recourse. It is always accompanied by a feeling of humiliation: it is
+                the “other,” somebody or something, who takes possession of what you give up, or leave behind. It makes
+                you feel pushed aside, as if you were a material object that is to be displaced.</p>
+
+            <p class="about">
+                Over the course of a lifetime that spanned almost a century, Etel Adnan (b. 1925, Beirut; d. 2021,
+                Paris) expressed her prodigious creative and intellectual vision in many forms. In addition to being a
+                visual artist, she was a renowned poet, a prominent journalist, and the author of one of the defining
+                novels of the modern Arab world. Adnan’s biography is notable for its rich convergence of cultural
+                influences. She was born in Lebanon to a Greek mother and Syrian father; grew up speaking French,
+                Arabic, and Greek; and as an adult lived for extended periods in Lebanon, the United States, and France.
+                She began to paint in the late 1950s, while working as a professor of philosophy in Northern California.
+                It was a period when, in protest of France’s colonial rule in Algeria, she renounced writing in French
+                and declared that she would begin “painting in Arabic.” (Guggenheim, 2021)
+            </p>
+        </div>
+    </section>
+</body>
+
+</html>

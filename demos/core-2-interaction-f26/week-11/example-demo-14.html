@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>JavaScript + CSS</title>
+
+	<style>
+		.cool-text {
+			font-family: sans-serif;
+			font-size: 40px;
+			color: red;
+		}
+	</style>
+</head>
+
+<body>
+
+	<button id="myButton1">Add class</button>
+	<button id="myButton2">Remove class</button>
+	<button id="myButton3">Toggle class</button>
+
+	<div id="text">Hi there. What’s up?</div>
+
+	<script>
+		let text = document.querySelector('#text');
+		let button1 = document.querySelector('#myButton1');
+		let button2 = document.querySelector('#myButton2');
+		let button3 = document.querySelector('#myButton3');
+		
+		button1.addEventListener('click', function() {
+			text.classList.add('cool-text');
+		})
+
+		button2.addEventListener('click', function() {
+			text.classList.remove('cool-text');
+		})
+
+		button3.addEventListener('click', function() {
+			text.classList.toggle('cool-text');
+		})
+	</script>
+</body>
+
+</html>

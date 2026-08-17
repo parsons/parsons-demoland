@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Common Bugs</title>
+</head>
+<body>
+	<script>
+		
+		// —————————
+		// EXAMPLE 1
+		// Variable names are case sensitive
+
+		let myVar1 = 'Hello!';
+		// console.log(myvar1) // error
+
+		// —————————
+		// EXAMPLE 2
+		// Variables should be declared using let
+		// This is technically not required, but is best practice
+
+		myVar2 = 'Hello!';
+		// console.log(myVar2) // no error
+
+		// —————————
+		// EXAMPLE 3
+		// Variable names can’t be re-declared using let
+
+		let myVar3 = "Hello!";
+		// let myVar3 = "Goodbye!"; // error
+
+		// —————————
+		// EXAMPLE 4
+		// Variable names need to be unique
+		// Otherwise you’ll lose data
+
+		let myVar4 = "Hello!";
+		myVar4 = "Goodbye!";
+		// console.log(myVar4);
+
+		// —————————
+		// EXAMPLE 5
+		// Variable names should not be in quotes
+		// We use quotes to create strings
+		
+		let myVar5 = "Hello!";
+		// console.log("myVar5");
+
+	</script>
+</body>
+</html>

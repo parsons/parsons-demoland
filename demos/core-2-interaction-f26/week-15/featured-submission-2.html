@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Wikipedia Randomizer</title>
+
+	<style>
+		* {
+			box-sizing: border-box;
+			margin: 0;
+			padding: 0;
+		}
+
+		.controls {
+			background-color: #ccc;
+			display: flex;
+			flex-wrap: wrap;
+			gap: 20px;
+			padding: 20px;
+		}
+
+		.controls button {
+			padding: 10px;
+		}
+
+		.container {
+			display: flex;
+			flex-wrap: wrap;
+			padding: 10px;
+			gap: 10px;
+		}
+
+		.container a {
+			flex-grow: 1;
+			text-decoration: none;
+			font-family: sans-serif;
+			background-color: blue;
+			color: white;
+			text-align: center;
+			padding: 10px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			transition: all 0.3s ease;
+		}
+	</style>
+
+	<script src="https://cdn.jsdelivr.net/npm/tone@latest/build/Tone.js"></script>
+</head>
+
+<body>
+
+	<div class="controls">
+		<div>
+			<h2>Number of articles</h2>
+			<input id="controlsNumberOfArticles" type="range" value="20" min="1" max="200">
+			<label id="controlsNumberOfArticlesLabel">20</label>
+		</div>
+		<div>
+			<h2>Font size</h2>
+			<input id="controlsFontSize" type="range" value="18" min="4" max="32">
+			<label id="controlsFontSizeLabel">18</label>
+		</div>
+		<div>
+			<h2>Background color</h2>
+			<input id="controlsBackgroundColor" type="color" value="#0000ff">
+			<label id="controlsBackgroundColorLabel">#0000ff</label>
+		</div>
+		<div>
+			<h2>Text color</h2>
+			<input id="controlsTextColor" type="color" value="#ffffff">
+			<label id="controlsTextColorLabel">#ffffff</label>
+		</div>
+		<div>
+			<h2>Border radius</h2>
+			<input id="controlsBorderRadius" type="range" value="0" min="0" max="50">
+			<label id="controlsBorderRadiusLabel">0</label>
+		</div>
+		<div>
+			<h2>Padding</h2>
+			<input id="controlsPadding" type="range" value="10" min="0" max="50">
+			<label id="controlsPaddingLabel">10</label>
+		</div>
+		<button id="generateButton">Fetch Wikipedia articles!</button>
+	</div>
+
+	<div class="container"></div>
+
+	<script>
+		let synth = new Tone.Synth().toDestination();
+
+		let settings = {
+			"numberOfArticles": 20,
+			"fontSize": 18,
+			"backgroundColor": "#0000ff",
+			"textColor": "#ffffff",
+			"borderRadius": 0,
+			"padding": 10,
+		}
+
+		let controlsNumberOfArticles = document.querySelector("#controlsNumberOfArticles");
+		let controlsNumberOfArticlesLabel = document.querySelector("#controlsNumberOfArticlesLabel");
+
+		let controlsFontSize = document.querySelector("#controlsFontSize");
+		let controlsFontSizeLabel = document.querySelector("#controlsFontSizeLabel");
+
+		let controlsBackgroundColor = document.querySelector("#controlsBackgroundColor");
+		let controlsBackgroundColorLabel = document.querySelector("#controlsBackgroundColorLabel");
+
+		let controlsTextColor = document.querySelector("#controlsTextColor");
+		let controlsTextColorLabel = document.querySelector("#controlsTextColorLabel");
+
+		let controlsBorderRadius = document.querySelector("#controlsBorderRadius");
+		let controlsBorderRadiusLabel = document.querySelector("#controlsBorderRadiusLabel");
+
+		let controlsPadding = document.querySelector("#controlsPadding");
+		let controlsPaddingLabel = document.querySelector("#controlsPaddingLabel");
+
+		controlsNumberOfArticles.addEventListener('input', function () {
+			settings.numberOfArticles = controlsNumberOfArticles.value;
+			controlsNumberOfArticlesLabel.textContent = controlsNumberOfArticles.value;
+		});
+
+		controlsFontSize.addEventListener('input', function () {
+			settings.fontSize = controlsFontSize.value;
+			controlsFontSizeLabel.textContent = controlsFontSize.value;
+		});
+
+		controlsBackgroundColor.addEventListener('input', function () {
+			settings.backgroundColor = controlsBackgroundColor.value;
+			controlsBackgroundColorLabel.textContent = controlsBackgroundColor.value;
+		});
+
+		controlsTextColor.addEventListener('input', function () {
+			settings.textColor = controlsTextColor.value;
+			controlsTextColorLabel.textContent = controlsTextColor.value;
+		});
+
+		controlsBorderRadius.addEventListener('input', function () {
+			settings.borderRadius = controlsBorderRadius.value;
+			controlsBorderRadiusLabel.textContent = controlsBorderRadius.value;
+		});
+
+		controlsPadding.addEventListener('input', function () {
+			settings.padding = controlsPadding.value;
+			controlsPaddingLabel.textContent = controlsPadding.value;
+		});
+
+		function getRandomArticles() {
+			let container = document.querySelector('.container');
+			container.innerHTML = '';
+
+			let url = `https://en.wikipedia.org/w/api.php?origin=*&action=query&format=json&list=random&rnnamespace=0&rnlimit=${settings.numberOfArticles}`;
+
+			fetch(url)
+				.then(response => response.json())
+				.then(response => {
+					let wikipediaData = response.query.random;
+					for (let key in wikipediaData) {
+						let entry = wikipediaData[key];
+						let articleName = entry.title;
+
+						let newLink = document.createElement('a');
+						newLink.href = `https://en.wikipedia.org/wiki/${articleName}`;
+						newLink.target = "_blank";
+						newLink.textContent = articleName;
+
+						newLink.style.fontSize = settings.fontSize + "px";
+						newLink.style.backgroundColor = settings.backgroundColor;
+						newLink.style.color = settings.textColor;
+						newLink.style.borderRadius = settings.borderRadius + "px";
+						newLink.style.padding = settings.padding + "px";
+
+						newLink.addEventListener("mouseenter", function () {
+							newLink.style.backgroundColor = "#FF4500";
+							synth.triggerAttackRelease("C5", "8n");
+						});
+						newLink.addEventListener("mouseleave", function () {
+							newLink.style.backgroundColor = settings.backgroundColor;
+						});
+
+						container.append(newLink);
+					}
+				});
+		}
+
+		let generateButton = document.querySelector('#generateButton');
+		generateButton.addEventListener('click', getRandomArticles);
+	</script>
+</body>
+
+</html>

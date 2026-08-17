@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Changing Content</title>
+</head>
+<body>
+
+	<div id="output">Change me!</div>
+	<button id="button1">Change using .textContent</button>
+	<button id="button2">Change using .innerHTML</button>
+
+	<script>
+
+		// Target the element we want to change
+		let output = document.querySelector("#output");
+
+		// Change using .textContent
+		let button1 = document.querySelector('#button1');
+		button1.addEventListener('click', function() {
+			output.textContent = "I’VE CHANGED!!!"
+		})
+
+		// Change using .innerHTML
+		let button2 = document.querySelector('#button2');
+		button2.addEventListener('click', function() {
+			output.innerHTML = "<span style='font-size: 100px; color: blue;'>I’VE CHANGED!!!</span>"
+		})
+
+	</script>
+</body>
+</html>

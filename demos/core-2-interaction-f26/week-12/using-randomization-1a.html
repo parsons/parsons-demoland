@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Randomization</title>
+
+	<style>
+		#myButton {
+			transition: .5s;
+		}
+	</style>
+</head>
+<body>
+
+	<button id="myButton">Hover over me!</button>
+
+	<script>
+
+		function getRandomArbitrary(min, max) {
+			return Math.random() * (max - min) + min;
+		}
+
+		let button = document.querySelector("#myButton");
+		button.addEventListener('mouseover', function() {
+			button.style.fontSize = getRandomArbitrary(10, 100) + "px";
+			button.style.letterSpacing = getRandomArbitrary(-.5, 2) + "em";
+			button.style.transform = "rotate(" + getRandomArbitrary(-180, 180) + "deg)";
+		})
+
+	</script>
+</body>
+</html>

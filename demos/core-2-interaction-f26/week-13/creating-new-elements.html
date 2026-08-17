@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+
+	<style>
+		.childElement {
+			font-size: 24px;
+		}
+	</style>
+</head>
+<body>
+	<button id="button">Click me!</button>
+
+	<div id="container"></div>
+
+	<script>
+		// Our custom function that creates new elements
+		function generateElement() {
+
+			// Create a new element (specify the type) and set it to a variable
+			let newElement = document.createElement('div');
+
+			// Add styles (or classes) to the element
+			newElement.classList.add('childElement');
+
+			// Add content to the element
+			newElement.textContent = "Hello!";
+
+			// Add the element inside of another element
+			let container = document.querySelector('#container');
+			container.append(newElement);
+		}
+
+		// Event handling for the button
+		let button = document.querySelector('#button');
+		button.addEventListener('click', generateElement);
+	</script>
+</body>
+</html>

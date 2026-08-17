@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iterate through an array</title>
+</head>
+<style>
+    /* CSS reset */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        min-height: 100vh;
+
+        padding: 40px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        gap: 40px;
+
+        transition: background-color 0.5s ease-in-out,
+        color 0.5s ease-in-out;
+    }
+
+    .text {
+        text-align: center;
+        font-size: 32px;
+    }
+</style>
+
+<body>
+    <p class="text">This is the initial text set in HTML.</p>
+
+<script>
+    const bodyTag = document.querySelector("body")
+    const pTag = document.querySelector("p")
+
+    const phrases = [
+        "Rootless, wanting true roots", // 0
+        "Conspicuous", // 1
+        "In exile", // 2
+        "Rustling" // 3
+    ]
+
+    const colors = [
+        "dodgerblue", // 0
+        "yellow", // 1
+        "olive", // 2
+        "crimson" // 3
+    ]
+
+    let counter = 0
+
+    pTag.addEventListener("click", function () {
+        bodyTag.style.backgroundColor = colors[0]
+        pTag.innerHTML = phrases[0]
+
+        // bodyTag.style.backgroundColor = colors[counter]
+        // pTag.innerHTML = phrases[counter]
+
+        // counter = counter + 1
+        // if (counter > phrases.length - 1) {
+        //     counter = 0
+        // }
+    })
+</script>
+
+</body>
+</html>

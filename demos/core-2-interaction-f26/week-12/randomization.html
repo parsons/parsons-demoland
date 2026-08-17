@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Randomization</title>
+</head>
+<body>
+
+	<button id="myButton">Flip a coin!</button>
+
+	<script>
+		
+		function coinFlip() {
+			let randomNumber = Math.random();
+
+			if (randomNumber < .5) {
+				alert('Heads! ' + randomNumber);
+			} else {
+				alert('Tails! ' + randomNumber);
+			}
+		}
+
+		let myButton = document.querySelector('#myButton');
+		myButton.addEventListener('click', coinFlip);
+
+	</script>
+</body>
+</html>

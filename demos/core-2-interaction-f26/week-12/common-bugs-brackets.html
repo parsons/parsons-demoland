@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Common Bugs</title>
+</head>
+<body>
+	<script>
+
+		// Just like with quotes, make sure to always close brackets or parentheses
+
+		// This function is missing all of its closing brackets
+
+		function myFunction1( {
+			console.log('Hello!';
+
+		// Here’s what it should look like:
+
+		function myFunction2() {
+			console.log('Hello!');
+		}
+
+		// Try to indent your code to keep track of opening and closing brackets
+
+		function myFunction3() {
+			// Indented code inside bracket
+			if (1 < 2) {
+				// Indented code inside bracket
+				console.log("Hello!");
+			} else {
+				// Indented code inside bracket
+				console.log("Goodbye!");
+			}
+		}
+
+	</script>
+</body>
+</html>

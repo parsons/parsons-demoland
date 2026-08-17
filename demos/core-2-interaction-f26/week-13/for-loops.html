@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<div id="container"></div>
+
+	<script>
+		// OLD CODE: same as the last demo
+
+		// Our custom function that creates new elements
+		function generateElement() {
+
+			// Create a new element (specify the type) and set it to a variable
+			let newElement = document.createElement('div');
+
+			// Generating random styles for the element
+			let red = Math.round(Math.random()*255);
+			let green = Math.round(Math.random()*255);
+			let blue = Math.round(Math.random()*255);
+			newElement.style.backgroundColor = `rgb(${red}, ${green}, ${blue})`;
+
+			// Add content to the element
+			newElement.textContent = "Hello!";
+
+			// Add the element inside of another element
+			let container = document.querySelector('#container');
+			container.append(newElement);
+		}
+		
+		// NEW CODE: a "for" loop!
+		// The initialization of a for loop contains the counter variable, condition, and increment all in one
+		
+		for (let i=0; i<200; i++) {
+			generateElement();
+		}
+	</script>
+</body>
+</html>

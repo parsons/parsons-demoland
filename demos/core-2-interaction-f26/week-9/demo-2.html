@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Set styles and classes using JavaScript</title>
+</head>
+<style>
+    /* CSS reset */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: Helvetica, Arial, sans-serif;
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 16px;
+
+        /* transition: background 0.5s ease-in; */
+    }
+
+    .switch {
+        height: 32px;
+        width: 60px;
+        border-radius: 16px;
+        background-color: #cecece;
+
+        position: relative;
+    }
+
+    .switch-inner {
+        height: 24px;
+        width: 24px;
+        border-radius: 12px;
+
+        background-color: white;
+
+        position: absolute;
+        top: 4px;
+        left: 4px;
+        /* transition: transform 0.25s; */
+    }
+    .dark-mode {
+        background-color: black;
+        color: white;
+    }
+    .dark-mode > .switch {
+        background-color: rgb(81, 188, 0);
+    }
+    .dark-mode > .switch > .switch-inner {
+        transform: translateX(28px);
+    }
+</style>
+
+<body>
+    <div class="switch is-on">
+        <div class="switch-inner"></div>
+    </div>
+    <span>Dark mode</span>
+    
+<script>
+    const buttonTag = document.querySelector(".switch");
+    const bodyTag = document.querySelector("body");
+    // ————————————— 1
+    // buttonTag.addEventListener("click", function(){
+    //     bodyTag.style.backgroundColor = "black";
+    //     bodyTag.style.color = "white"
+    // })
+    // ————————————— 2
+    // buttonTag.addEventListener("click", function() {
+    //     bodyTag.classList.add("dark-mode")
+    // })
+    // ————————————— 3
+    // buttonTag.addEventListener("click", function() {
+    //     if (bodyTag.classList.contains("dark-mode")){
+    //         bodyTag.classList.remove("dark-mode");
+    //     } else {
+    //         bodyTag.classList.add("dark-mode")
+    //     }
+    // })
+    // ————————————— 4
+    // buttonTag.addEventListener("click", function(){
+    //     bodyTag.classList.toggle("dark-mode")
+    // })
+</script>
+
+</body>
+</html>

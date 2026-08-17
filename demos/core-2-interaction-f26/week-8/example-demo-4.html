@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS flexbox: grow, shrink and basis</title>
+    <style>
+        /* Reset and Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: gray;
+
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 18px;
+        }
+
+        .container {
+            background-color: gainsboro;
+            min-height: 720px;
+            padding: 20px;
+
+            display: flex;
+            /* flex-direction: column; */
+            gap: 20px;
+
+            justify-content: center;
+            align-items: stretch;
+        }
+
+        .item {
+            background-color: palegreen;
+            flex-basis: 150px;
+
+            /* 0 / 1 */
+            flex-shrink: 1;
+            flex-grow: 0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="item">
+            A is for apple
+        </div>
+        <div class="item">
+            B is for ball
+        </div>
+        <div class="item">
+            C candle
+        </div>
+        <div class="item">
+            D is for door
+        </div>
+        <div class="item">
+            E is for egg
+        </div> 
+        <div class="item">
+            F is for fall
+        </div>
+    </div>
+</body>
+
+</html>

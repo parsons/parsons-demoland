@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Common Bugs</title>
+</head>
+<body>
+	<script>
+
+		// —————————
+		// EXAMPLE 1: Global scope
+		// Variables defined outside of functions or if/else statements can be accessed anywhere
+
+		let counter1 = 0;
+		function increaseCounter1() {
+			counter1 = counter1 + 1;
+		}
+		increaseCounter1();
+		increaseCounter1();
+		increaseCounter1();
+		// What is counter1 now?
+
+		// —————————
+		// EXAMPLE 2: Local (block) scope
+		// Variables defined inside of functions or if/else statements can only be accessed inside that block
+		
+		let counter2 = 0;
+		function increaseCounter2() {
+			let counter2 = 0;
+			counter2 = counter2 + 1;
+		}
+		increaseCounter2();
+		increaseCounter2();
+		increaseCounter2();
+		// What is counter2 now?
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Recap</title>
+</head>
+
+<body>
+
+	<div id="container"></div>
+
+	<script>
+
+		// ————————————————
+		// CREATING NEW ELEMENTS
+
+		// Specifying element type
+		let newElement = document.createElement('div');
+
+		// Adding to another element
+		let container = document.querySelector('#container');
+		container.append(newElement);
+
+
+		// ————————————————
+		// TEMPLATE LITERALS
+
+		let red = Math.floor(Math.random() * 255);
+		let green = Math.floor(Math.random() * 255);
+		let blue = Math.floor(Math.random() * 255);
+
+		// Combining multiple pieces of data into one string
+		// Uses the back tick ` symbol (top-left of your keyboard)
+		newElement.style.backgroundColor = `rgb(${red}, ${green}, ${blue})`;
+
+
+		// ————————————————
+		// REPEATING CODE (setInterval)
+
+		// With an anonymous function
+		setInterval(function () {
+			console.log(1)
+		}, 1000)
+
+		// With a named function
+		function myFunction() {
+			console.log(1)
+		}
+		setInterval(myFunction, 1000);
+
+
+		// ————————————————
+		// LOOPS
+
+		// “while” loops
+		let counter = 0;
+		while (counter < 10) {
+			console.log(counter);
+			counter++;
+		}
+
+		// “for” loops
+		for (let i = 0; i < 10; i++) {
+			console.log(i);
+		}
+
+
+		// ————————————————
+		// LOOPING THROUGH AN ARRAY
+
+		let dogs = [
+			"pug",
+			"beagle",
+			"lab",
+			"poodle"
+		]
+
+		// By index
+		for (let i = 0; i < dogs.length; i++) {
+			console.log(dogs[i]);
+		}
+
+		// “for...of” loops
+		for (let entry of dogs) {
+			console.log(entry);
+		}
+
+	</script>
+</body>
+
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS grid: justify and align</title>
+    <style>
+        /* Reset and Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: gray;
+
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 18px;
+        }
+
+        .container {
+            background-color: gainsboro;
+            height: 720px;
+            padding: 20px;
+            
+            display: grid;
+            grid-template-columns: 30% 30%;
+            column-gap: 20px;
+            row-gap: 20px;
+
+            /* flex-start / flex-end / center / space-around / space between / space-evenly */
+            justify-content: flex-start;
+            align-items: stretch;
+        }
+
+        .item {
+            background-color: palegreen;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="item">
+            A is for apple
+        </div>
+        <div class="item">
+            B is for ball
+        </div>
+        <div class="item">
+            C candle
+        </div>
+        <div class="item">
+            D is for door
+        </div>
+        <div class="item">
+            E is for egg
+        </div>
+        <div class="item">
+            F is for fall
+        </div>
+    </div>
+</body>
+
+</html>

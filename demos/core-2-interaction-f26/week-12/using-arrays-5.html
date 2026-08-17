@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Arrays</title>
+
+	<style>
+		#output {
+			display: block;
+			width: 400px;
+		}
+	</style>
+</head>
+
+<body>
+
+	<button id="buttonPrev">Previous Image</button>
+	<button id="buttonNext">Next Image</button>
+	<img id="output" src="https://www.thesprucepets.com/thmb/YNW9oqXaG2AKcQH7DMZzB1yYEis=/1500x0/filters:no_upscale():strip_icc()/about-tuxedo-cats-554695-hero-1dada8b97a9f4f229880ce3ad9047e99.jpg">
+
+	<script>
+
+		let catPhotos = [
+			"https://www.thesprucepets.com/thmb/YNW9oqXaG2AKcQH7DMZzB1yYEis=/1500x0/filters:no_upscale():strip_icc()/about-tuxedo-cats-554695-hero-1dada8b97a9f4f229880ce3ad9047e99.jpg",
+			"https://images.ctfassets.net/sfnkq8lmu5d7/6qdaTH4Ea7KwpfXaFK4wEI/19a6c2bec471d6eef31039d02ccaed5c/2025-02-04_Are_Tuxedo_Cats_More_Intelligent?w=1000&h=750&fl=progressive&q=70&fm=jpg",
+			"https://www.thesprucepets.com/thmb/e4neS1OT0x2DK2qrKb26eJMnxKs=/1080x0/filters:no_upscale():strip_icc()/35616731_1598735883572052_5494475739635908608_n-5b45332ec9e77c0037110989.jpg",
+			"https://www.thesprucepets.com/thmb/jIEvS_jxy1-M4oLqk6w1ZqfXfWU=/1500x0/filters:no_upscale():strip_icc()/facts-about-tuxedo-cats-554704-hero-6fcf332fd5ee4d93aecc4bcd3657396c.jpg"
+		]
+
+		let index = 0;
+
+		let output = document.querySelector('#output');
+
+		function prevEntry() {
+			index = index - 1;
+			if (index < 0) {
+				index = catPhotos.length - 1;
+			}
+
+			// NEW CODE
+			output.src = catPhotos[index];
+		}
+
+		function nextEntry() {
+			index = index + 1;
+			if (index == catPhotos.length) {
+				index = 0;
+			}
+			
+			// NEW CODE
+			output.src = catPhotos[index];
+		}
+
+		let buttonPrev = document.querySelector("#buttonPrev");
+		buttonPrev.addEventListener('click', prevEntry)
+
+		let buttonNext = document.querySelector("#buttonNext");
+		buttonNext.addEventListener('click', nextEntry)
+		
+	</script>
+</body>
+
+</html>

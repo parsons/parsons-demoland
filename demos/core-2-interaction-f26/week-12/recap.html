@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Recap</title>
+</head>
+<body>
+	<button id="myButton">Hello!</button>
+
+	<script>
+		
+		// Variables and data types
+		let testNumber = 1;
+		let testString = "Hello!";
+		let testBoolean = true;
+
+		// Operators
+		let testAddition = 1 + 1;
+		let testConcatenation = "Hello " + "world!";
+		let testComparison = 1 < 2;
+
+		// Conditionals
+		let testConditional = "";
+		if (1 < 2) {
+			testConditional = "True case";
+		} else {
+			testConditional = "False case";
+		}
+
+		// Functions
+		function testFunction(num1, num2) {
+			return num1 < num2
+		}
+		console.log(testFunction(1, 2));
+		console.log(testFunction(2, 1));
+
+		// Targeting elements
+		let myButton = document.querySelector('#myButton');
+
+		// Event listeners and editing CSS
+		myButton.addEventListener('click', function() {
+			myButton.style.fontSize = "100px";
+		})
+
+	</script>
+</body>
+</html>
