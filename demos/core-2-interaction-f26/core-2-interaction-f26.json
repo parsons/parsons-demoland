@@ -17,11 +17,11 @@
 	},
 	"week-2": {
 		"title": "Week 2 (1/30/26)",
-		"desc": "A brief introduction of CSS.",
-		"active": false,
+		"desc": "A brief introduction of HTML, continued.",
+		"active": true,
 		"demos": {
 			"example-demo-1": {
-				"name": "Linking an external stylesheet"
+				"name": "Using images in HTML"
 			}
 		}
 	},
