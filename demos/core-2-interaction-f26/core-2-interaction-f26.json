@@ -1,6 +1,6 @@
 {
 	"week-1": {
-		"title": "Week 1 (1/23/26)",
+		"title": "Week 1 (8/28/26)",
 		"desc": "A brief introduction of HTML.",
 		"active": true,
 		"demos": {
@@ -16,7 +16,7 @@
 		}
 	},
 	"week-2": {
-		"title": "Week 2 (1/30/26)",
+		"title": "Week 2 (9/4/26)",
 		"desc": "A brief introduction of HTML, continued.",
 		"active": true,
 		"demos": {
@@ -26,12 +26,12 @@
 		}
 	},
 	"week-3": {
-		"title": "Week 3 (2/6/26)",
-		"desc": "An introduction in applying CSS to define interaction, accessibility, and responsiveness for a single component in a design system.",
-		"active": false,
+		"title": "Week 3 (9/11/26)",
+		"desc": "A brief introduction to CSS.",
+		"active": true,
 		"demos": {
 			"example-demo-1": {
-				"name": "A card component"
+				"name": "Linking an external stylesheet"
 			}
 		}
 	},
