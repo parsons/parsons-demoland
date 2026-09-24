@@ -32,6 +32,19 @@
 		"demos": {
 			"example-demo-1": {
 				"name": "Linking an external stylesheet"
+			},
+			"example-demo-2": {
+				"name": "Styling a complete document"
+			}
+		}
+	},
+	"week-4": {
+		"title": "Week 4 (9/18/26)",
+		"desc": "A brief introduction to CSS, continued.",
+		"active": true,
+		"demos": {
+			"example-demo-1": {
+				"name": "A few extra CSS properties"
 			}
 		}
 	},
