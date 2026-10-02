@@ -6,40 +6,31 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>CSS box model</title>
 	<style>
-		* {
-			margin: 0;
-			padding: 0;
-			box-sizing: border-box;
-		}
 		body {
 			width: 100vw;
 			height: 100vh;
 			overflow: hidden;
 		}
+		.container {
+			width: 500px;
+			height: 300px;
+			border: 10px solid darkseagreen;
+			/* padding: 40px;
+			box-sizing: border-box; */
+		}
 		.box {
-			width: 100px;
-			height: 100px;
-		}
-		.a {
+			width: 400px;
+			height: 200px;
 			background-color: plum;
-		}
-		.b {
-			background-color: darkseagreen;
-		}
-		.c {
-			background-color: paleturquoise;
-		}
-		.d {
-			background-color: tan;
+			/* margin: 50px; */
 		}
 	</style>
 </head>
 
 <body>
-	<div class="box a"></div>
-	<div class="box b"></div>
-	<div class="box c"></div>
-	<div class="box d"></div>
+	<section class="container">
+		<div class="box"></div>
+	</section>
 </body>
 
 </html>

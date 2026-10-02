@@ -49,9 +49,9 @@
 		}
 	},
 	"week-6": {
-		"title": "Week 6 (2/27/26)",
-		"desc": "An introduction to element placement on the webpage through document flow (or CSS flow layout), the display property, and the position property.",
-		"active": false,
+		"title": "Week 6 (10/2/26)",
+		"desc": "Document flow layout",
+		"active": true,
 		"demos": {
 			"example-demo-1": {
 				"name": "Inline vs. block display"
@@ -61,9 +61,6 @@
 			},
 			"example-demo-3": {
 				"name": "The position property"
-			},
-			"example-demo-4": {
-				"name": "CSS units"
 			}
 		}
 	},
