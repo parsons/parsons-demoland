@@ -2,50 +2,116 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Intro to CSS animation</title>
-</head>
-<style>
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
-    @keyframes bounce {
-        0% {
-            top: 0;
-            left: 200px;
-        }
-        25% {
-            top: 20vh;
-            left: calc(100vw - 227.5px);
-        }
-        50% {
-            top: calc(100vh - 100px);
-            left: 60vw;
-        }
-        75% {
-            top: 70vh;
-            left: 0;
-        }
-        100%{
-            top: 0;
-            left: 200px;
-        }
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BEM for NYC subway sign</title>
+  <style>
+    body {
+      background: whitesmoke;
+      padding: 20px;
+      font-family: Helvetica, Arial, sans-serif;
     }
 
-    .dvd-logo {
-        width: 227.5px;
-        height: 100px;
-        object-fit: contain;
-        position: absolute;
-        /* animation: name duration timing-function delay iteration-count direction fill-mode; */
-        animation: bounce 6s linear 0s infinite normal forwards;
+    /* ----- Block ----- */
+    .sign {
+      position: relative;
+      width: 700px;
+      padding: 30px;
+      background: black;
+      color: white;
     }
-</style>
+
+    /* ----- Elements ----- */
+    .sign__title {
+      margin: 0;
+      font-size: 56px;
+      line-height: 1;
+      letter-spacing: -0.01em;
+    }
+
+    .sign__note {
+      margin: 6px 0;
+      font-size: 30px;
+      letter-spacing: 0.01em;
+      font-weight: bold;
+    }
+
+    .sign__line {
+      display: inline-block;
+      margin-top: 6px;
+      width: 70px;
+      height: 70px;
+      line-height: 70px;
+      border-radius: 50%;
+      text-align: center;
+      font-size: 50px;
+      font-weight: bold;
+      color: white;
+    }
+
+    .sign__bar {
+      position: absolute;
+      top: 16px;
+      left: 0;
+      width: 100%;
+    }
+
+    /* ----- Modifiers ----- */
+
+    .sign__line--red {
+      background: #fc4842;
+    }
+
+    .sign__line--purple {
+      background: #c11eb3;
+    }
+
+    .sign__line--yellow {
+      background: #ffd322;
+      color: black;
+    }
+
+    .sign__line--gray {
+      background: #939393;
+    }
+
+    .sign__line--blue {
+      background: #004fe1;
+    }
+
+    .sign__line--small {
+      margin-top: 0;
+      width: 40px;
+      height: 40px;
+      line-height: 40px;
+      font-size: 28px;
+    }
+  </style>
+</head>
+
 <body>
-    <img class="dvd-logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/DVD_logo.svg/1280px-DVD_logo.svg.png?_=20240510210001"
-        alt="black DVD logo">
+  <div class="sign">
+    <hr class="sign__bar">
+    <h1 class="sign__title">Times Square</h1>
+    <h1 class="sign__title">42 Street Station</h1>
+
+    <span class="sign__line sign__line--red">1</span>
+    <span class="sign__line sign__line--red">2</span>
+    <span class="sign__line sign__line--red">3</span>
+    <span class="sign__line sign__line--purple">7</span>
+    <span class="sign__line sign__line--yellow">N</span>
+    <span class="sign__line sign__line--yellow">Q</span>
+    <span class="sign__line sign__line--yellow">R</span>
+    <span class="sign__line sign__line--gray">S</span>
+
+    <p class="sign__note">♿ Elevator at 42 St</p>
+
+    <p class="sign__note">
+      <span class="sign__line sign__line--blue sign__line--small">A</span>
+      <span class="sign__line sign__line--blue sign__line--small">C</span>
+      <span class="sign__line sign__line--blue sign__line--small">E</span>
+      at 8 Av
+    </p>
+  </div>
 </body>
 </html>

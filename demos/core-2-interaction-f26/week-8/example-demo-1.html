@@ -4,65 +4,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CSS grid: justify and align</title>
-    <style>
-        /* Reset and Global Styles */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            background-color: gray;
-
-            font-family: Verdana, Geneva, Tahoma, sans-serif;
-            font-size: 18px;
-        }
-
-        .container {
-            background-color: gainsboro;
-            height: 720px;
-            padding: 20px;
-            
-            display: grid;
-            grid-template-columns: 30% 30%;
-            column-gap: 20px;
-            row-gap: 20px;
-
-            /* flex-start / flex-end / center / space-around / space between / space-evenly */
-            justify-content: flex-start;
-            align-items: stretch;
-        }
-
-        .item {
-            background-color: palegreen;
-        }
-    </style>
+    <title>Intro to CSS animation</title>
 </head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    @keyframes bounce {
+        0% {
+            top: 0;
+            left: 200px;
+        }
+        25% {
+            top: 20vh;
+            left: calc(100vw - 227.5px);
+        }
+        50% {
+            top: calc(100vh - 100px);
+            left: 60vw;
+        }
+        75% {
+            top: 70vh;
+            left: 0;
+        }
+        100%{
+            top: 0;
+            left: 200px;
+        }
+    }
 
+    .dvd-logo {
+        width: 227.5px;
+        height: 100px;
+        object-fit: contain;
+        position: absolute;
+        /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+        animation: bounce 6s linear 0s infinite normal forwards;
+    }
+</style>
 <body>
-
-    <div class="container">
-        <div class="item">
-            A is for apple
-        </div>
-        <div class="item">
-            B is for ball
-        </div>
-        <div class="item">
-            C candle
-        </div>
-        <div class="item">
-            D is for door
-        </div>
-        <div class="item">
-            E is for egg
-        </div>
-        <div class="item">
-            F is for fall
-        </div>
-    </div>
+    <img class="dvd-logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/DVD_logo.svg/1280px-DVD_logo.svg.png?_=20240510210001"
+        alt="black DVD logo">
 </body>
-
 </html>

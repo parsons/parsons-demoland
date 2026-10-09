@@ -65,21 +65,12 @@
 		}
 	},
 	"week-7": {
-		"title": "Week 7 (3/6/26)",
-		"desc": "An introduction to CSS grid display",
-		"active": false,
+		"title": "Week 7 (10/8/26)",
+		"desc": "An introduction to components in the design system",
+		"active": true,
 		"demos": {
 			"example-demo-1": {
-				"name": "Intro to CSS animation"
-			},
-			"example-demo-2": {
-				"name": "HTML table basics"
-			},
-			"example-demo-3": {
-				"name": "CSS grid layout I"
-			},
-			"example-demo-4": {
-				"name": "CSS grid layout II"
+				"name": "BEM methodology for components"
 			}
 		}
 	},

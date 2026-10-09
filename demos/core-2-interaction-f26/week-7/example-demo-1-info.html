@@ -1,17 +1,13 @@
 <h1>
-	<span>CSS</span>
-	Animation
+    <span>CSS</span>
+    The BEM methodology
 </h1>
-<p>The CSS animation property is actually a big shorthand. In order, it takes values for:</p>
-<ul>
-	<li>animation-name</li>
-	<li>animation-duration</li>
-	<li>animation-timing-function</li>
-	<li>animation-delay</li>
-	<li>animation-iteration-count</li>
-	<li>animation-direction</li>
-	<li>animation-fill-mode</li>
-</ul>
-
-<p>Check out the MDN page for <a target="_blank"
-		href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/animation">CSS animation</a> to get to know what each of the properties controls, and know the available values for all of them.</p>
+<p>
+    The Block, Element, Modifier methodology (commonly referred to as <a href="https://en.bem.info/method" target="_blank">BEM</a>) is a popular naming convention for classes in
+    HTML and CSS. Developed by the team at Yandex, its goal is to help developers better understand the relationship
+    between the HTML and CSS in a given project.</p>
+<p>
+    A block is a top-level abstraction of a new component, for example a button: .btn { }. Elements, can be placed inside and these are denoted by two
+    underscores following the name of the block like .btn__price { }. Finally, modifiers can manipulate the block so
+    that we can theme or style that particular component without inflicting changes on a completely unrelated module.
+    This is done by appending two hyphens to the name of the block just like btn--orange.</p>
