@@ -75,7 +75,20 @@
 		}
 	},
 	"week-8": {
-		"title": "Week 8 (3/20/26)",
+		"title": "Week 8 (10/15/26)",
+		"desc": "An introduction to CSS grid layout",
+		"active": true,
+		"demos": {
+			"example-demo-1": {
+				"name": "Grid layout"
+			},
+			"example-demo-2": {
+				"name": "Semantic HTML"
+			}
+		}
+	},
+	"week-9": {
+		"title": "Week 9 (3/27/26)",
 		"desc": "An introduction to CSS flexbox layout",
 		"active": false,
 		"demos": {
@@ -93,25 +106,6 @@
 			},
 			"example-demo-5": {
 				"name": "A card component in flexbox"
-			}
-		}
-	},
-	"week-9": {
-		"title": "Week 9 (3/27/26)",
-		"desc": "A brief introduction to common JavaScript examples",
-		"active": false,
-		"demos": {
-			"demo-1": {
-				"name": "A brief introduction to DOM"
-			},
-			"demo-2": {
-				"name": "Set styles and classes using JavaScript"
-			},
-			"demo-3": {
-				"name": "Iterate through data in an array"
-			},
-			"demo-4": {
-				"name": "Set up a randomizer"
 			}
 		}
 	},

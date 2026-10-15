@@ -4,43 +4,84 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HTML tables</title>
+    <title>Semantic HTML</title>
     <style>
-        table {
-            border: 1px solid black;
-            /* border-collapse: collapse; */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        ul > li {
+            list-style: none;
+        }
+        body {
+            padding: 40px;
+            font-family: Helvetica, Arial, sans-serif;
+            font-size: 17px;
+            letter-spacing: 0.01em;
+            line-height: 1.4;
+
+            /* display: grid;
+            grid-template-columns: 30% auto; */
         }
 
-        th, td {
-            padding: 5px;
-            border: 1px solid black;
+        header {
+            background-color: aliceblue;
+            padding: 20px;
+        }
+
+        menu {
+            background-color: lightblue;
+        }
+
+        nav {
+            background-color: lightgreen;
+            padding: 20px;
+        }
+
+        main {
+            background-color: lightpink;
+            padding: 20px;
+        }
+
+        article {
+            background-color: lightcoral;
+            padding: 20px;
+        }
+        footer {
+            background-color: yellow;
+            padding: 20px;
         }
     </style>
 </head>
 
 <body>
-    <table>
-        <thead>
-            <tr>
-                <th>Do</th>
-                <th>Don't</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Comedies</td>
-                <td>Oohs and aahs</td>
-            </tr>
-            <tr>
-                <td>Vitamin C</td>
-                <td>Name drop</td>
-            </tr>
-            <tr>
-                <td>Confetti</td>
-                <td>Toasts</td>
-            </tr>
-        </tbody>
-    </table>
+    <header>This is the header
+        <menu>
+            This is the menu
+            <ul>
+                <li>item 1</li>
+                <li>item 2</li>
+                <li>item 3</li>
+                <li>item 4</li>
+            </ul>
+        </menu>
+    </header>
+    <nav>This is the nav
+        <ul>
+            <li>item 1</li>
+            <li>item 2</li>
+            <li>item 3</li>
+            <li>item 4</li>
+        </ul>
+    </nav>
+    <main>
+        This is the main content
+        <article>article 1</article>
+        <article>article 2</article>
+        <article>article 3</article>
+    </main>
+    <footer>This is the footer</footer>
 </body>
 
 </html>
