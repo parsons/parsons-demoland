@@ -1,0 +1,50 @@
+<h1>
+	<span>JavaScript</span>
+	Writing JavaScript
+</h1>
+<p>
+	HTML gives a page its content, and CSS gives it style. <strong>JavaScript</strong> is a programming language that lets the page do things.
+</p>
+
+<h2>The script element</h2>
+<p>
+	CSS goes inside a <span class="info-code">&lt;style&gt;</span> element, and JavaScript goes inside a <strong class="info-code">&lt;script&gt;</strong> element. Put it at the end of the <span class="info-code">&lt;body&gt;</span>, so the rest of the page loads first.
+</p>
+<p>
+	Each line of JavaScript is an instruction, and the browser runs them in order, from top to bottom. End each one with a semicolon <span class="info-code">;</span>
+</p>
+<p>
+	Anything after <span class="info-code">//</span> is a <strong>comment</strong>. JavaScript skips it, so you can use comments to leave notes for the people reading your code.
+</p>
+
+<h2>The console</h2>
+<p>
+	JavaScript doesn’t put anything on the page unless we tell it to. To see what it’s doing, open the <strong>console</strong> with the Console button in the Editor panel.
+</p>
+<p>
+	<strong class="info-code">console.log()</strong> prints whatever you put inside its parentheses to the console. Text goes inside quotes, like <span class="info-code">"Hello from JavaScript!"</span>
+</p>
+<p>
+	The console also shows errors, with the line number where they happened. When something isn’t working, check the console first.
+</p>
+
+<h2>Variables</h2>
+<p>
+	<span class="info-code">var myName = "Jack";</span> creates a <strong>variable</strong>, a named container that stores a value. Here, <span class="info-code">myName</span> holds the text <span class="info-code">"Jack"</span>.
+</p>
+<p>
+	When we write <span class="info-code">console.log(myName)</span> without quotes, JavaScript prints the value stored inside the variable.
+</p>
+
+<h2>Try it</h2>
+<ul>
+	<li>Change <span class="info-code">"Jack"</span> to your own name.</li>
+	<li>Add another <span class="info-code">console.log()</span> with a message of your own.</li>
+	<li>Change <span class="info-code">console.log(myName)</span> to <span class="info-code">console.log("myName")</span>. What’s the difference?</li>
+	<li>Delete one of the quotation marks around <span class="info-code">"Jack"</span> and read the error in the console. Then put it back!</li>
+</ul>
+
+<h2>In your own projects</h2>
+<p>
+	You can also keep JavaScript in its own file, like <span class="info-code">script.js</span>, and link it with <span class="info-code">&lt;script src="script.js"&gt;&lt;/script&gt;</span>, just like linking an external stylesheet.
+</p>
