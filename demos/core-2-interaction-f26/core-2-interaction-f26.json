@@ -120,12 +120,18 @@
 		}
 	},
 	"week-11": {
-		"title": "Week 11 (4/10/26)",
-		"desc": "An introduction to JSON objects in JavaScript.",
-		"active": false,
+		"title": "Week 11 (11/5/26)",
+		"desc": "An introduction to JavaScript, data types, and objects.",
+		"active": true,
 		"demos": {
-			"json-object": {
-				"name": "A JSON Object"
+			"writing-javascript": {
+				"name": "Writing JavaScript"
+			},
+			"data-types": {
+				"name": "Data types"
+			},
+			"data-portrait": {
+				"name": "A data portrait of your week"
 			}
 		}
 	},

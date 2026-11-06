@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Data types</title>
+	<style>
+		body {
+			padding: 40px;
+			font-family: Helvetica, Arial, sans-serif;
+		}
+		.type {
+			padding: 16px 0;
+			border-bottom: 1px solid lightgray;
+		}
+		.type h2 {
+			margin: 0 0 8px 0;
+			font-size: 14px;
+			color: gray;
+			text-transform: uppercase;
+			letter-spacing: 0.05em;
+		}
+		.type pre {
+			margin: 0;
+			font-size: 17px;
+			white-space: pre-wrap;
+		}
+	</style>
+</head>
+<body>
+
+	<h1>Data types</h1>
+	<div id="output"></div>
+
+	<script>
+		// Primitive data types
+		var myNumber = 3.14;
+		var myString = "Hello!";
+		var myBoolean = true;
+		var myNull = null;
+		var myUndefined;
+
+		// Higher level data types
+		var myArray = ["dog", "cat", "mouse"];
+		var myObject = {
+			myFavoriteAnimal: "dog",
+			myLeastFavoriteAnimal: "shark"
+		};
+
+		show("Number", myNumber);
+		show("String", myString);
+		show("Boolean", myBoolean);
+		show("null", myNull);
+		show("undefined", myUndefined);
+		show("Array", myArray);
+		show("Object", myObject);
+
+		// You don’t need to understand this part yet: it prints each value on the page
+		function show(type, value) {
+			var row = document.createElement("div");
+			var label = document.createElement("h2");
+			var code = document.createElement("pre");
+			row.className = "type";
+			label.textContent = type;
+			code.textContent = String(JSON.stringify(value, null, 2));
+			row.append(label, code);
+			document.querySelector("#output").append(row);
+		}
+	</script>
+
+</body>
+</html>
