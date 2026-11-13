@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>The Type Machine</title>
+	<style>
+		body {
+			margin: 0;
+			overflow: hidden;
+			font-family: Arial, sans-serif;
+			background-color: #f4f1ea;
+			color: #1e1e1e;
+		}
+		.machine {
+			display: grid;
+			grid-template-columns: repeat(5, 1fr);
+			grid-template-rows: repeat(5, 1fr);
+			place-items: center;
+			height: 100vh;
+		}
+		.center {
+			grid-area: 2 / 2 / 5 / 5;
+			position: relative;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			width: 100%;
+			height: 100%;
+		}
+		#word {
+			margin: 0;
+			font-size: 72px;
+			font-weight: normal;
+			text-align: center;
+		}
+		#stickers {
+			position: absolute;
+			inset: 0;
+			pointer-events: none;
+		}
+		.sticker {
+			position: absolute;
+			width: 72px;
+			height: 72px;
+			border-radius: 50%;
+			color: white;
+			font-weight: bold;
+			line-height: 72px;
+			text-align: center;
+			transform: rotate(15deg);
+		}
+		.square {
+			position: relative;
+			z-index: 1;
+			width: min(88px, 16vw);
+			aspect-ratio: 1;
+			padding: 4px;
+			border: 2px solid #1e1e1e;
+			background-color: white;
+			font-family: Arial, sans-serif;
+			font-size: 12px;
+			font-weight: bold;
+			cursor: pointer;
+		}
+		.yours {
+			border-style: dashed;
+			font-size: 24px;
+		}
+	</style>
+</head>
+<body>
+
+	<div class="machine">
+		<div class="center">
+			<h1 id="word">Type</h1>
+		</div>
+		<div id="stickers"></div>
+
+		<button class="square yours" onclick="yourIdea1()">?</button>
+		<button class="square" onclick="makeBold()">Bold</button>
+		<button class="square" onclick="makeHuge()">Huge</button>
+		<button class="square" onclick="spreadOut()">Spread</button>
+		<button class="square yours" onclick="yourIdea2()">?</button>
+
+		<button class="square" onclick="tilt()">Tilt</button>
+		<button class="square" onclick="makeUppercase()">Upper&shy;case</button>
+
+		<button class="square" onclick="nightMode()">Night</button>
+		<button class="square" onclick="setBackground('coral')">Coral</button>
+
+		<button class="square" onclick="addSticker()">Sticker</button>
+		<button class="square" onclick="fadeOut()">Fade</button>
+
+		<button class="square yours" onclick="yourIdea3()">?</button>
+		<button class="square" onclick="changeText('Hello')">Hello</button>
+		<button class="square" onclick="exclaim()">!</button>
+		<button class="square" onclick="reset()">Reset</button>
+		<button class="square yours" onclick="yourIdea4()">?</button>
+	</div>
+
+	<script>
+
+		var word = document.querySelector("#word");
+		var stickers = document.querySelector("#stickers");
+		var colors = ["#ff3b30", "#ff9500", "#ffcc00", "#34c759", "#3378ff", "#af52de"];
+
+		// ——————————
+		// The type
+
+		function makeBold() {
+			word.style.fontWeight = "bold";
+		}
+
+		function makeHuge() {
+			word.style.fontSize = "200px";
+		}
+
+		function spreadOut() {
+			word.style.letterSpacing = "20px";
+		}
+
+		function tilt() {
+			word.style.transform = "rotate(-12deg)";
+		}
+
+		function makeUppercase() {
+			word.style.textTransform = "uppercase";
+		}
+
+		// ——————————
+		// The page
+
+		function nightMode() {
+			document.body.style.backgroundColor = "#1e1e1e";
+			word.style.color = "white";
+		}
+
+		function setBackground(color) {
+			document.body.style.backgroundColor = color;
+		}
+
+		// ——————————
+		// Appear and disappear
+
+		function addSticker() {
+			var sticker = document.createElement("div");
+			sticker.className = "sticker";
+			sticker.textContent = "NEW!";
+			sticker.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+			sticker.style.top = Math.random() * 85 + "%";
+			sticker.style.left = Math.random() * 85 + "%";
+			stickers.appendChild(sticker);
+		}
+
+		function fadeOut() {
+			word.style.opacity = "0.15";
+		}
+
+		// ——————————
+		// The text
+
+		function changeText(newText) {
+			word.textContent = newText;
+		}
+
+		function exclaim() {
+			word.textContent = word.textContent + "!";
+		}
+
+		// ——————————
+		// Reset
+
+		function reset() {
+			document.body.style.backgroundColor = "";
+			word.textContent = "Type";
+			word.style.fontWeight = "";
+			word.style.fontSize = "";
+			word.style.letterSpacing = "";
+			word.style.transform = "";
+			word.style.textTransform = "";
+			word.style.color = "";
+			word.style.opacity = "";
+			stickers.innerHTML = "";
+		}
+
+		// ——————————
+		// Your four functions
+		// TODO: Make each one change the page in a new way, then give its square a label
+
+		function yourIdea1() {
+
+		}
+
+		function yourIdea2() {
+
+		}
+
+		function yourIdea3() {
+
+		}
+
+		function yourIdea4() {
+
+		}
+
+	</script>
+
+</body>
+</html>
