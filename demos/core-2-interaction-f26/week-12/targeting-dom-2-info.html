@@ -1,0 +1,22 @@
+<h1>
+	<span>JavaScript</span>
+	Changing Content with JavaScript
+</h1>
+<p>
+	In the previous demo we changed an element's <strong>style</strong>. Now we're changing what's <strong>inside</strong> the element — its content.
+</p>
+
+<h2>textContent</h2>
+<p>
+	<span class="info-code">element.textContent = "new text"</span> replaces everything inside an element with plain text. Any HTML tags inside will be removed.
+</p>
+
+<h2>innerHTML</h2>
+<p>
+	<span class="info-code">element.innerHTML = "new &lt;strong&gt;HTML&lt;/strong&gt;"</span> lets you insert HTML tags that the browser will render. Use this when you want bold, italic, links, or other elements inside.
+</p>
+
+<h2>Try it</h2>
+<p>
+	Try changing the text and HTML in the function calls. What happens if you use <span class="info-code">changeText</span> on the bio instead of <span class="info-code">changeHTML</span>? The <span class="info-code">&lt;strong&gt;</span> and <span class="info-code">&lt;em&gt;</span> tags will show up as plain text instead of being rendered.
+</p>

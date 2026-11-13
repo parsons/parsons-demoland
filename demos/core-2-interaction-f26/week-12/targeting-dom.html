@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Targeting DOM Elements</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 18px;
+            padding: 40px;
+            background-color: #f0f0f0;
+        }
+
+        .box {
+            background-color: white;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            transition: all 0.3s;
+        }
+
+        .highlight {
+            background-color: coral;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="first" class="box">I have an id: "first"</div>
+    <div id="second" class="box">I have an id: "second"</div>
+    <div class="box special">I have a class: "special"</div>
+    <div class="box special">I also have a class: "special"</div>
+    <div class="box">I'm just a div</div>
+
+    <script>
+        function changeBackground(selector, color) {
+            var element = document.querySelector(selector);
+            element.style.backgroundColor = color;
+        }
+
+        // querySelector — targets the FIRST element that matches a CSS selector
+        // Use # for ids, . for classes — just like CSS!
+        changeBackground("#first", "coral");
+        changeBackground("#second", "steelblue");
+        changeBackground(".special", "mediumpurple");
+
+    </script>
+
+</body>
+
+</html>

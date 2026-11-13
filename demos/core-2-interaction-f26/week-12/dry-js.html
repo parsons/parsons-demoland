@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DRY in JavaScript</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 18px;
+            padding: 40px;
+            background-color: #f0f0f0;
+        }
+
+        .card {
+            background-color: white;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="card" id="card-1">Click me</div>
+    <div class="card" id="card-2">Click me</div>
+    <div class="card" id="card-3">Click me</div>
+
+    <script>
+        // WET: the same code written three times
+
+        var card1 = document.getElementById("card-1");
+        card1.addEventListener("click", function() {
+            card1.style.backgroundColor = "coral";
+            card1.textContent = "Clicked!";
+        });
+
+        var card2 = document.getElementById("card-2");
+        card2.addEventListener("click", function() {
+            card2.style.backgroundColor = "coral";
+            card2.textContent = "Clicked!";
+        });
+
+        var card3 = document.getElementById("card-3");
+        card3.addEventListener("click", function() {
+            card3.style.backgroundColor = "coral";
+            card3.textContent = "Clicked!";
+        });
+
+        // DRY: use a function to avoid repeating yourself
+
+        /*
+        function setupCard(id) {
+            var card = document.getElementById(id);
+            card.addEventListener("click", function() {
+                card.style.backgroundColor = "coral";
+                card.textContent = "Clicked!";
+            });
+        }
+
+        setupCard("card-1");
+        setupCard("card-2");
+        setupCard("card-3");
+        */
+    </script>
+
+</body>
+
+</html>
