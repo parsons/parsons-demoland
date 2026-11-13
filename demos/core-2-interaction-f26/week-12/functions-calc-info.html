@@ -1,0 +1,28 @@
+<h1>
+	<span>JavaScript</span>
+	A Calculator with Functions
+</h1>
+<p>
+	Now we have four small functions — <span class="info-code">add</span>, <span class="info-code">subtract</span>, <span class="info-code">multiply</span>, and <span class="info-code">divide</span> — and one bigger function, <span class="info-code">calc</span>, that decides which one to call.
+</p>
+
+<h2>Functions calling functions</h2>
+<p>
+	<span class="info-code">calc</span> takes three arguments: an <strong>operation</strong> (a string like <span class="info-code">"add"</span>) and two numbers. It uses <span class="info-code">if</span> statements to figure out which math function to run, then returns the result.
+</p>
+<pre class="info-code">
+calc("add", 10, 5)      // 15
+calc("subtract", 10, 5) // 5
+calc("multiply", 10, 5) // 50
+calc("divide", 10, 5)   // 2
+</pre>
+
+<h2>Why this matters</h2>
+<p>
+	Breaking code into small, focused functions keeps things organized. Each function does one thing. The <span class="info-code">calc</span> function doesn't need to know <em>how</em> to add — it just calls <span class="info-code">add()</span> and lets that function handle it.
+</p>
+
+<h2>Try it</h2>
+<p>
+	Try adding a new operation — like <span class="info-code">modulo</span> (the <span class="info-code">%</span> operator, which gives you the remainder). Write a <span class="info-code">modulo()</span> function and add another <span class="info-code">if</span> block in <span class="info-code">calc</span>.
+</p>
