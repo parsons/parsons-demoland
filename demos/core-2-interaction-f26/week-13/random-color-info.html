@@ -1,0 +1,15 @@
+<h1>
+	<span>Randomness</span>
+	Random Color
+</h1>
+<p>
+	No loop here — just <span class="info-code">Math.random()</span>. Each time the page loads, three random numbers between 0 and 255 are generated and combined into an <span class="info-code">rgb()</span> color. Reload the page to get a new color every time.
+</p>
+<p>
+	<span class="info-code">Math.random()</span> returns a decimal between 0 and 1. Multiplying by 256 and rounding down with <span class="info-code">Math.floor()</span> gives you a whole number in the range you need.
+</p>
+
+<h2>Try it</h2>
+<p>
+	Lock one of the values — set <span class="info-code">red</span> to <span class="info-code">0</span> and reload a few times to see what happens when only green and blue vary.
+</p>

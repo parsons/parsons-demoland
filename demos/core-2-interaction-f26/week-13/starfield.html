@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Starfield</title>
+	<style>
+		* {
+			box-sizing: border-box;
+			margin: 0;
+			padding: 0;
+		}
+
+		#container {
+			background-color: black;
+			height: 500px;
+			position: relative;
+			width: 500px;
+		}
+	</style>
+</head>
+
+<body>
+
+	<div id="container"></div>
+
+	<script>
+		var container = document.querySelector("#container");
+
+		for (var counter = 0; counter < 50; counter++) {
+			var div = document.createElement("div");
+			var size = Math.floor(Math.random() * 8) + 2;
+			div.style.position = "absolute";
+			div.style.left = Math.random() * 500 + "px";
+			div.style.top = Math.random() * 500 + "px";
+			div.style.width = size + "px";
+			div.style.height = size + "px";
+			div.style.borderRadius = "50%";
+			div.style.backgroundColor = "white";
+			container.appendChild(div);
+		}
+	</script>
+
+</body>
+
+</html>

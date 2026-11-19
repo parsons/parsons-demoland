@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Striped Pattern</title>
+	<style>
+		* {
+			box-sizing: border-box;
+			margin: 0;
+			padding: 0;
+		}
+	</style>
+</head>
+
+<body>
+
+	<div id="container"></div>
+
+	<script>
+		var container = document.querySelector('#container');
+
+		for (var count = 0; count < 20; count++) {
+			var div = document.createElement('div');
+			div.style.backgroundColor = 'pink';
+			div.style.border = '2px solid blue';
+			div.style.height = '20px';
+			div.style.width = '100%';
+			container.appendChild(div);
+		}
+	</script>
+
+</body>
+
+</html>
