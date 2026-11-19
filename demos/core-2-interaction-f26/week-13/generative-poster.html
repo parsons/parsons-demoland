@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Generative Poster</title>
+	<style>
+		* {
+			box-sizing: border-box;
+			margin: 0;
+			padding: 0;
+		}
+
+		#poster {
+			display: grid;
+		}
+
+		.cell {
+			align-items: center;
+			display: flex;
+			font-family: Helvetica, Arial, sans-serif;
+			font-weight: bold;
+			justify-content: center;
+			overflow: hidden;
+		}
+	</style>
+</head>
+
+<body>
+
+	<div id="poster"></div>
+
+	<script>
+		// --- PARAMETERS (change these!) ---
+		var columns = 8;
+		var rows = 10;
+		var cellSize = 80;
+		var colors = ["#00ff66", "#0066ff", "#000000", "#ffffff"];
+		var words = ["LOOP", "CODE", "GRID", "TYPE", "MAKE"];
+		var textChance = 0.3;
+
+		// --- HELPER FUNCTIONS ---
+		function randomInt(min, max) {
+			return Math.floor(Math.random() * (max - min + 1)) + min;
+		}
+
+		function randomFrom(array) {
+			return array[Math.floor(Math.random() * array.length)];
+		}
+
+		// --- POSTER GENERATION ---
+		var poster = document.querySelector("#poster");
+		poster.style.gridTemplateColumns = "repeat(" + columns + ", " + cellSize + "px)";
+		poster.style.width = (columns * cellSize) + "px";
+
+		for (var row = 0; row < rows; row++) {
+			for (var col = 0; col < columns; col++) {
+				var div = document.createElement("div");
+				div.className = "cell";
+				div.style.backgroundColor = randomFrom(colors);
+				div.style.height = cellSize + "px";
+				div.style.width = cellSize + "px";
+
+				if (Math.random() < textChance) {
+					div.textContent = randomFrom(words);
+					div.style.color = randomFrom(colors);
+					div.style.fontSize = randomInt(10, 20) + "px";
+				}
+
+				poster.appendChild(div);
+			}
+		}
+	</script>
+
+</body>
+
+</html>
